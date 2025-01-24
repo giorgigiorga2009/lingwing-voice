@@ -1,0 +1,91 @@
+@import '@styles/imports';
+
+.container {
+  background-image: url('/assets/images/background-letters.svg'),
+    url('/assets/images/background-wave.svg');
+  background-position: left top, left top;
+  background-repeat: repeat, no-repeat;
+  height: 100dvh;
+  width: 100%;
+  position: relative;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-attachment: local;
+  color: $grey-800;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include mobile {
+    height: 100dvh;
+  }
+}
+
+.tabsWrapper {
+  margin-right: 2.5rem;
+}
+
+.wrapper {
+  width: 70vw;
+  overflow-y: auto;
+  border-radius: 2vw;
+  box-shadow: 0 1px 100px 10px rgba(0 0 0 / 12%);
+
+
+  
+  @include tablet {
+    width: 90vw;
+  }
+  @include mobile {
+    width: 95vw;
+    margin-bottom: -1.5rem;
+}
+}
+
+.title {
+  color: $orange-500;
+  text-align: center;
+  font-size: 3.6vw;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+
+
+  @include mobile {
+    font-size: 3.9vw;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+}
+
+.mainBlock {
+  background-color: white;
+  border-radius: 2vw;
+  // margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 0.1vw 5vw 4vw;
+  box-shadow: 0 1px 100px 10px rgba(0 0 0 / 20%);
+  line-height: 24px;
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+  @include mobile {
+    border-radius: 0.5rem;
+    padding: 2rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: 0;
+    // width: 90vw;
+  }
+}

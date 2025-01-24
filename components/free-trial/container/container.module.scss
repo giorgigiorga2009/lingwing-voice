@@ -1,0 +1,96 @@
+@import '@styles/imports';
+
+.advertiseContainer {
+  background-image: url('../../../public/themes/images/v2/free-trial-parrot.png'),
+    url('../../../public/themes/images/v2/stars.png');
+  background-repeat: no-repeat;
+  background-position: 94% 100%, 0 0;
+  background-size: 300px 90%, auto;
+  background-color: $white-50;
+  border-radius: 2rem;
+  width: 55rem;
+  padding: 1.5rem 3rem;
+  margin: 10rem auto;
+
+  @include mobile {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    background-image: url('../../../public/themes/images/v2/stars.png');
+    background-position: left 2.5rem;
+    background-size: auto;
+    height: 100%;
+    font-size: .6rem;
+  }
+  
+  .continue {
+    perspective: 2px;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 4rem;
+    margin-left: 17%;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-family: SegoeUI, $kaFont;
+    color: white;
+    background-color: $purple-500;
+    border-radius: 3rem;
+    border: none;
+    cursor: pointer;
+    
+    &:active {
+      border: 2px solid $black;
+    }
+    
+    @include mobile {
+      margin: 0 auto;
+      font-size: .6rem;
+    }
+  }
+}
+
+.packagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white-50;
+  width: 70rem;
+  min-height: 60vh;
+  // margin: auto;
+  border-radius: 2rem;
+
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../public/themes/images/v2/stars.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 60vh;
+    border-radius: 2rem;
+    padding: 2rem 2rem 3rem;
+    @include smallWidth{
+      padding-bottom: 1rem;
+      margin-bottom: -1rem;
+    }
+  }
+  @include mobile{
+    width: 85%; 
+  }
+  @include tablet{
+    width: 90%;
+  }
+  @include smallWidth {
+    border-radius: 2rem;
+    width: 80%;
+    padding: 0;
+    margin-bottom: -1rem;
+  }
+  
+}

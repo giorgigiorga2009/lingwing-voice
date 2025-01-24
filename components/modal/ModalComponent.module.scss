@@ -1,0 +1,42 @@
+@import '@styles/imports';
+
+.modalBackdrop {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
+  backdrop-filter: blur(5px); // Blurred background effect
+  z-index:999999;
+}
+
+.container {
+  position: relative;
+  padding: 2rem;
+  .button{
+    border: none;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+  }
+}
+
+.closeButton {
+  background-image: url('../../public/themes/images/v2/clos-popup.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  position: absolute;
+  right: .5rem;
+  top: 0rem;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: cover;
+  border: none;
+}

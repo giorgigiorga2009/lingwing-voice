@@ -1,0 +1,54 @@
+@import '@styles/imports';
+
+.currentTask {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 10vh;
+}
+
+.header {
+  padding: 0.6rem 1.5rem;
+  width: fit-content;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #fce5cc;
+  border-radius: 1.8rem;
+  white-space: nowrap;
+  color: #ff9421;
+  font-family: $kaFont;
+
+  .answer & {
+    display: none;
+  }
+
+  @include mobile {
+    font-size: 0.82rem;
+    padding: 0.5rem 1rem;
+    margin-left: -2rem;
+  }
+}
+
+.arrowDown {
+  margin-left: 3rem;
+  width: 0;
+  height: 0;
+  border-radius: 0 0 0 1rem;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 0.7rem solid #fce5cc;
+  margin-bottom: 0.5rem;
+}
+
+.bubbleContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.prompts {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+}

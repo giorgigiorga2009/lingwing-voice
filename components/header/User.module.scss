@@ -1,0 +1,60 @@
+@import '@styles/imports';
+
+.first_name {
+  width: 95px;
+  position: relative;
+  font-size: 1rem;
+  font-family: SegoeUI;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $white;
+  vertical-align: center;
+  line-height: 1.2rem;
+
+  &.darkMode {
+    color: $black;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  cursor: pointer;
+  margin-left: 1.2rem;
+  background: none;
+  border: none;
+
+  @include smallWidth {
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    .first_name {
+      color: $orange-500;
+    }
+  }
+}
+
+.arrow {
+  background-image: url('/assets/images/arrows/arrow-up-white.png');
+  width: 1.5rem;
+  height: 0.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  &.darkMode {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); // Adjust these values as needed
+  }
+}

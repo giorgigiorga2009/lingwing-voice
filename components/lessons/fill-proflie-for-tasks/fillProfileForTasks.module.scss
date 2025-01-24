@@ -1,0 +1,294 @@
+@import '@styles/imports';
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  animation: fadeInBlurForModals 0.8s forwards;
+  backdrop-filter: blur(5px);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60rem;
+  height: 31rem;
+  background-color: $white;
+  box-shadow: 0 0.11rem 0.3rem 0.005rem $grey-100;
+  border-radius: 2.5rem;
+  padding: 3rem 4rem;
+  background-image: url('/assets/images/bonnus-bg.png');
+  background-repeat: no-repeat;
+  background-position: 46rem 1rem;
+  background-size: contain;
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+
+  @include tablet {
+    width: 96vw;
+    height: auto;
+    padding: 2rem 3rem;
+    background-position: 72.5vw 0;
+  }
+
+  @include mobile {
+    width: 100vw;
+    height: 100vh;
+    padding: 3.5rem 1rem;
+    background-position: 50vw 0;
+    border-radius: 0;
+  }
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+
+  @include tablet {
+    width: 96vw;
+    height: auto;
+    padding: 2rem 3rem;
+    background-position: 72.5vw 0;
+  }
+
+  @include mobile {
+    width: 100vw;
+    height: 100vh;
+    padding: 3.5rem 1rem;
+    background-position: 50vw 0;
+    border-radius: 0;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    color: $purple-600;
+    font-size: 1.4rem;
+  }
+}
+
+.form {
+  width: 40%;
+  border-radius: 20px 0 0 20px;
+
+  & > div {
+    width: 100%;
+    position: relative;
+    margin-top: 42px;
+
+    .phone {
+      margin-left: 10px;
+      max-width: 100%;
+    }
+
+    input {
+      width: 100%;
+      max-width: 25rem;
+      font-family: SegoeUI, 'sans-serif';
+      color: $black;
+      font-size: 0.9rem;
+      padding-left: 20px;
+      height: 2.5rem;
+      border-radius: 3rem;
+      border: 2px solid $white-200;
+
+      &:focus {
+        border: none;
+        outline: 2px solid $purple-500;
+      }
+    }
+
+    label {
+      position: absolute;
+      font-family: SegoeUI, 'sans-serif';
+      color: $grey-800;
+      left: 27px;
+      top: -27px;
+
+      &:lang(ka) {
+        font-family: $kaFont;
+      }
+    }
+  }
+
+  .gender {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding-right: 1rem;
+    margin-top: 1.2rem;
+
+    label {
+      position: static;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-image 0.2s ease-in-out;
+
+      @include smallWidth {
+        font-size: 0.7rem;
+      }
+
+      @include tablet {
+        font-size: 0.8rem;
+      }
+    }
+
+    .maleLabel {
+      background-image: url('/assets/images/icons8-male-50.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+      padding-left: 1rem;
+    }
+
+    .maleLabelActive {
+      background-image: url('/assets/images/icons8-standing-man-50.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+      padding-left: 1rem;
+    }
+
+    .femaleLabel {
+      background-image: url('/assets/images/icons8-woman-50.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+      padding-left: 1rem;
+    }
+
+    .femaleLabelActive {
+      background-image: url('/assets/images/icons8-woman-50-active.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+      padding-left: 1rem;
+    }
+
+    div {
+      width: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input[type='radio'] {
+        // display: none;
+        opacity: 0;
+      }
+    }
+  }
+
+  @include mobile {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 0 20px;
+
+    div {
+      input {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .agree {
+    width: 90%;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: center;
+    font-size: 0.8rem;
+
+    input[type='checkbox'] {
+      accent-color: $purple-500;
+      width: 1.2rem;
+      height: 1.2rem;
+      cursor: pointer;
+    }
+
+    p {
+      color: $grey-800;
+      font-family: SegoeUI, 'sans-serif';
+
+      &:lang(ka) {
+        font-family: $kaFont;
+      }
+
+      a {
+        text-decoration: none;
+        color: $purple-500;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    column-gap: 1rem;
+    margin-top: 6rem;
+
+    @include mobile {
+      margin-top: 1rem;
+    }
+  }
+
+  .continueButton,
+  .skipButton {
+    font-size: 1rem;
+    padding: 0.4rem 1.5rem;
+    border-radius: 1.8rem;
+    font-family: SegoeUI;
+    color: $white;
+    border: none;
+    background-color: $green-210;
+    box-shadow: 2px 3px 0 $green-500;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $green-200;
+    }
+
+    & > a {
+      text-decoration: none;
+      color: $white;
+    }
+
+    @include mobile {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+    }
+
+    @include smallWidth {
+      font-size: 0.7rem;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+
+  .skipButton {
+    background-color: $white-310;
+    box-shadow: 2px 3px 0 $grey-100;
+
+    &:hover {
+      background-color: $white-300;
+    }
+    & > a {
+      text-decoration: none;
+      color: $grey-800;
+    }
+  }
+}

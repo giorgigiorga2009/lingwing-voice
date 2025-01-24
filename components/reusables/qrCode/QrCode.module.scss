@@ -1,0 +1,60 @@
+@import './styles/imports';
+
+.styleqrWrapper{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: .8rem;
+    background-color: $purple-800;
+    padding: 1.1rem;
+    top: initial !important;
+    right: 5%;
+    bottom: 5rem;
+    border-radius: 1rem;
+    z-index: 2;
+    .styleqrTitle{
+      font-family: $kaFont, 'Arial Narrow Bold', sans-serif;
+      font-size: .9rem;
+      color: $white;
+    }
+
+    @include smallDesktopHeight{
+      top: 80%;
+    }
+
+    @include mobile{
+      display: none;
+    }
+    @include tablet{
+      display: none;
+    }
+  }
+  .customStyleqrWrapper{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: .8rem;
+    background-color: $purple-750;
+    padding: 1.1rem;
+    top: 70%;
+    right: 5%;
+    border-radius: 1rem;
+    .styleqrTitle{
+      font-family: $kaFont, 'Arial Narrow Bold', sans-serif;
+      font-size: .9rem;
+      color: $white;
+    }
+
+    @include smallDesktopHeight{
+      top: 80%;
+    }
+
+    @include mobile{
+      display: none;
+    }
+    @include tablet{
+      display: none;
+    }
+  }

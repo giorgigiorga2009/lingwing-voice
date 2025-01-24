@@ -1,0 +1,529 @@
+@import "@styles/imports";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.2rem;
+  position: relative;
+  gap: 8px;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1001;
+
+  &.darkMode {
+    @include mobile {
+      background-color: white;
+      margin-bottom: 0px;
+      padding-bottom: 0px !important;
+      height: 4.185rem !important;
+    }
+  }
+
+  &.landing {
+    // position: fixed;
+  }
+
+  &.m {
+    height: 8.43rem;
+    padding: 1.2rem 2.2rem 2.18rem;
+
+    @include tablet {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    @include mobile {
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 0.625rem;
+      height: 6.185rem;
+    }
+  }
+
+  &.s {
+    background-color: $purple-600;
+    padding: 0.531rem 2.2rem;
+    height: 3.59rem;
+
+    @include tablet {
+      padding: 0.5rem 2.5%;
+    }
+
+    @include mobile {
+      padding: 0.5rem 2.5%;
+    }
+  }
+
+  // &.darkMode {
+  //   // Add any other dark mode styles for the header if needed
+  // }
+
+  // &.hidden {
+  //   display: none;
+  // }
+
+  // @include mobile {
+  //   &.exercise-mode {
+  //     // display: none;
+  //   }
+  // }
+
+  &.exercise-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(76, 30, 111, 1);
+
+    @include mobile {
+      padding: 0.5rem;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .leftBlock,
+    .rightBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-button {
+      cursor: pointer;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .score-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.logo {
+  width: 11.2rem;
+  height: 3.44rem;
+  background-image: url("../../public/assets/images/logo-light.svg");
+  background-repeat: no-repeat;
+  background-size: 11.2rem 2.44rem;
+  background-position: 0 0.8em;
+  position: absolute;
+  // top: 0.3125rem;
+  left: 2.5rem;
+  cursor: pointer;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    // background-color: red;
+  }
+
+  @include tablet {
+    // width: 8, 1rem;
+    // height: 3.9rem;
+    left: 2.5rem;
+    // top: 0.625rem;
+  }
+
+  @include mobile {
+    width: 5rem;
+    height: 2.2rem;
+    background-size: auto 100%;
+    background-position: 0px center;
+    background-size: 2rem 1.1rem;
+
+    left: 3rem;
+    // top: 0.6rem;
+
+    background-image: url("../../public/assets/images/logoSmall.svg") !important;
+  }
+
+  @include smallWidth {
+    width: 5rem;
+    height: 1.2rem;
+  }
+
+  .darkMode & {
+    background-image: url("/assets/images/logo-dark.svg");
+
+    @include mobile {
+      background-image: url("../../public/assets/images/logoSmallDark.svg") !important;
+    }
+  }
+}
+
+header.m .logo {
+  // top: 8px;
+
+  @include tablet {
+    top: 0.75rem;
+  }
+
+  @include mobile {
+    // top: 1.06rem;
+
+    background-image: url("/assets/images/logoSmall.svg");
+    width: 5rem;
+    height: 2.2rem;
+    background-size: auto 100%;
+    background-position: 0px center;
+    background-size: 2rem 1.1rem;
+
+    left: 3rem;
+    top: 0.6rem;
+  }
+}
+
+.singInButton {
+  color: $white;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: none;
+  background: none;
+  font-size: 1rem;
+
+  &:hover {
+    color: $orange-500;
+  }
+
+  &:lang(ka) {
+    // font-family: $kaFontTitle;
+    font-family: "Noto Sans Georgian" !important;
+  }
+
+  .darkMode & {
+    color: black;
+  }
+
+  @include mobile {
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Sans Georgian";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.78563rem;
+    /* 285.7% */
+    text-transform: uppercase;
+  }
+}
+
+.leftBlock {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 15rem;
+
+  .button {
+    background-image: url("/assets/images/3-lines.png");
+    background-size: 1.6rem;
+    // ... other existing styles ...
+
+    .darkMode & {
+      background-image: url("/assets/images/3-lines-black.svg");
+      background-size: 1rem 1.2rem;
+    }
+  }
+
+  @include mobile {
+    width: 6rem;
+    overflow: hidden;
+  }
+}
+
+.taskButton {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  background-image: url("/assets/images/arrows/arrow-down-grey.png");
+  width: 0.69rem;
+  height: 0.44rem;
+  margin-left: 0.3rem;
+}
+
+.label {
+  width: 6rem;
+  margin-left: 0.5rem;
+  color: $white;
+}
+
+.rightBlock {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @include mobile {
+    gap: 0.1rem;
+    height: 2rem;
+    
+  }
+}
+
+.button {
+  border: 2px solid $purple-200;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: $white;
+  cursor: pointer;
+  position: relative;
+  background: none;
+  background-image: url("/assets/images/3-lines.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.6rem;
+
+  &:hover {
+    border: 2px solid $white;
+  }
+
+  @include mobile {
+    width: 2rem;
+    height: 2rem;
+    background-size: 1rem;
+  }
+
+  &.exercise-mode {
+    border: none;
+    position: absolute;
+    right: -97.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("/assets/images/new-line.png");
+    @include mobile {
+      left: 90% !important;
+      position: fixed !important;
+      z-index: 1002;
+      top: 3.5%;
+    }
+  }
+  
+}
+
+.authorization_box {
+  display: flex;
+  align-items: center;
+  // gap: 0.9rem;
+}
+
+.dashboard {
+  margin-left: 1.2rem;
+  height: 1.2rem;
+  padding-left: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  h4 {
+    color: $white;
+    position: relative;
+    text-transform: uppercase;
+
+    &:lang(ka) {
+      font-family: $kaFontTitle;
+    }
+
+    &::before {
+      content: " ";
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      left: -1.8rem;
+      top: 0.1rem;
+      background-image: url("/themes/images/v2/icon-dashboard-purple.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .darkMode & {
+    h4 {
+      color: #333333;
+    }
+  }
+
+  &:hover {
+    h4 {
+      color: $orange-500;
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.exit {
+  background: none;
+  background-image: url("/assets/images/exit.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("/assets/images/exitHover.png");
+  }
+
+  @include mobile {
+    width: 2rem;
+  }
+}
+
+.topScoresBtn {
+  background: none;
+  border: none;
+  background-image: url("/assets/images/trophy.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+
+  &:hover {
+    scale: 110%;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    width: 1.3rem;
+  }
+}
+
+.topScoresContainer {
+  width: 50rem;
+  height: 50rem;
+  background-color: red;
+}
+
+.bgColor {
+  background: linear-gradient($purple-500, $purple-800);
+  border-radius: 0 0 30px 30px;
+
+  &.m {
+    @include mobile {
+      height: 5.185rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 0.625rem;
+
+      .logo {
+        top: 8px;
+
+        @include tablet {
+          top: 0.75rem;
+        }
+
+        @include mobile {
+          top: 0.625rem;
+        }
+      }
+    }
+  }
+}
+
+.back-button {
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: $white;
+  cursor: pointer;
+  position: relative;
+  background: none;
+  background-image: url("/assets/images/left-arr.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.3rem;
+
+  @include mobile {
+      width: 2rem;
+      height: 2rem;
+      background-size: 1rem;
+  }
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  transform: translateX(-50%);
+  right: 25rem;
+  @include mobile{
+    left: 57.5%;
+    top:25%;
+  }
+}
+
+.current-score,
+.divider {
+  color: #fec240;
+  left: 10px;
+  font-family: "BPG Nino Mtavruli";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 1.28px;
+  text-transform: capitalize;
+  z-index: 5000;
+  @include mobile{
+    font-size: 25px;
+  }
+}
+
+.total-score {
+  color: #fff;
+  font-family: "BPG Nino Mtavruli";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 1.28px;
+  text-transform: capitalize;
+  @include mobile{
+    font-size: 25px;
+  }
+}
+
+
+

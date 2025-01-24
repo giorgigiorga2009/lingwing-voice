@@ -1,0 +1,159 @@
+@import '@styles/imports';
+
+.freePackage {
+  // font-size: 2.75rem;
+  font-size: 2rem;
+  color: #7939A9;
+  // margin: 0.5rem;
+  height:3.8rem;
+  margin-bottom:1rem;
+  display: flex;
+  align-items: flex-end;
+
+  @include mobile {
+    font-size: 1rem;
+    margin-bottom:0.5rem;
+    margin-top: -1.6rem;
+  }
+}
+
+.monthPrice {
+  color: $black-800;
+  font-family: SegoeUI;
+  color: #F6A213;
+  font-size: 2.7rem;
+  height:3.8rem;
+  margin-bottom:1rem;
+
+  @include mobile {
+    margin-bottom:0.3rem;
+    margin-top: -1rem;
+    height: 3rem;
+  }
+
+  // @include smallWidth {
+  //   margin-bottom:0.3rem;
+  //   margin-top: -1rem;
+  // }
+
+  display:flex;
+}
+.monthPriceForLastTwo {
+  color: $purple-600;
+}
+.price {
+  @include mobile {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  // @include smallWidth {
+  //   font-size: 2rem;
+  //   margin-top: 1rem;
+  // }
+}
+.currencySymbol {
+  margin-top: -2rem;
+
+  @include smallWidth {
+    margin-top: -2rem;
+  }
+}
+
+.monthAndTotal {
+  font-size: 16px;
+  padding-left: 0.6rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  del {
+    color:#681FA0;
+    font-size:25px;
+    font-weight: 400 !important;
+    font-family: 'BPG Nino Mtavruli';
+  }
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  } 
+  @include mobile {
+    del {
+      color:#681FA0;
+      font-size:1rem;
+      font-weight: 500 !important;
+      font-family: 'BPG Nino Mtavruli';
+    }
+    padding-left: 0rem;
+  }
+  // @include smallWidth {
+  //   del {
+  //     color:#681FA0;
+  //     font-size:1rem;
+  //     font-weight: 500 !important;
+  //     font-family: 'BPG Nino Mtavruli';
+  //   }
+  // }
+}
+
+.totalPrice {
+  font-size: 1.3rem;
+  color: $black-100;
+  font-family: SegoeUI-SemiBold;
+  margin-bottom: 0.6rem;
+}
+
+.monthPriceForFlowPopUp {
+  font-family: 'BPG Nino Mtavruli';
+  font-size: 16px;
+  color: $green-200;
+}
+
+
+.monthPriceFreeTrial{
+  color: $black-800;
+  font-family: SegoeUI;
+  color: #F6A213;
+  font-size: 2rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+
+  display:flex;
+  @include mobile{
+    font-size: 1.2rem;
+    height: 1.5rem;
+  }
+  @include tablet{
+    font-size: 1.2rem;
+    height: 1.5rem;
+  }
+}
+
+.monthAndTotalFreeTrial{
+  font-size: 0.8rem;
+  padding-left: 0.6rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  del {
+    color:#681FA0;
+    font-size: 1rem;
+    font-weight: 400 !important;
+    font-family: 'BPG Nino Mtavruli';
+    @include mobile{
+      font-size: 0.8rem;
+    }
+    @include tablet{
+      font-size: 0.8rem;
+    }
+  }
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+  @include mobile{
+    font-size: 0.6rem;
+  }
+  @include tablet{
+    font-size: 0.7rem;
+    }
+}

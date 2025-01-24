@@ -1,0 +1,188 @@
+@import '@styles/imports.scss';
+
+.optionsWrapper {
+  padding: 1rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+
+  @include desktop{
+    padding: 1rem 0.9rem;
+    padding-bottom: 0;
+    @include height800{
+      padding: 1rem 0.9rem;
+      padding-bottom: 0;
+    }
+  }
+
+  @include tablet {
+    padding: 1rem 0.9rem;
+    padding-bottom: 0;
+  }
+
+  @include mobile {
+    padding: 0.5rem 0.4rem;
+    padding-bottom: 0;
+  }
+
+    @include smallWidth {
+    padding: 0.5rem 0.4rem;
+    padding-bottom: 0;
+  }
+}
+
+.optionContainer {
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  // padding-top: 2rem;
+  padding: 2rem 0 0 0;
+  border: 0.15rem $white-200 solid;
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+  // padding: 0.9rem;
+  width: 20.875rem;
+  height: 4.375rem;
+
+  // @include desktop{
+  //   width: 20rem;
+  //   height: 4rem;
+  // }
+
+  @include mobile {
+    width: 14rem;
+    height: 2rem;
+    padding: 0.8rem 0 0 0;
+    margin-bottom: 0.5rem;
+  }
+
+  @include smallWidth {
+    width: 14.6rem;
+    height: 2.5rem;
+    padding: 1rem 0 0 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.radioInput {
+  width: 28rem;
+  //width: 100%;
+  height: 5.3rem;
+  margin-right: 1rem;
+  appearance: none;
+  border-radius: 0.6rem;
+  outline: none;
+  transition: border-color 0.1s ease-in-out;
+  background-color: $white-50;
+  border: 2px solid $white-300;
+  cursor: pointer;
+
+  &:checked {
+    border-color: $purple-600;
+    background-color: $purple-600;
+  }
+
+  &:hover {
+    border: 2px solid $purple-600;
+  }
+
+  @include mobile {
+    width: 14rem;
+    height: 3rem;
+  }
+  @include smallWidth {
+    width: 14.6rem;
+    height: 3.5rem;
+  }
+}
+
+.purple_tick {
+  position: absolute;
+  top: 0.3rem;
+  right: -0.1rem;
+  transform: translate(-50%, -50%);
+}
+
+.radioLabel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 1.125rem;
+  left: 0rem;
+  cursor: pointer;
+  @include smallWidth {
+    // padding: 0 1rem 0 1rem;
+  }
+}
+
+.priceWrapper {
+  height: 100%;
+  padding: 0 3rem 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $purple-600;
+
+  @include mobile {
+    padding: 0 1rem 0 1rem;
+  }
+
+  @include smallWidth {
+    // font-size: 0.8rem;
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+.labelText {
+  color: $black;
+  font-size: 1rem;
+  font-family: $kaFont;
+  color: $purple-700;
+  text-transform: uppercase;
+  font-weight: 800;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
+
+  @include smallWidth {
+    font-size: 0.8rem;
+    // width: 1rem;
+  }
+}
+
+.checked {
+  color: $white-50;
+  span{
+    color: $white;
+  }
+}
+
+.pHeaderPayWith {
+  margin: 0 0 0.8rem 1.2rem;
+}
+
+.payWithContainer {
+  display: flex;
+  flex-direction: column;
+
+  .payWithTiles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // @include small {
+    //   flex-direction: column;
+    // }
+  }
+}

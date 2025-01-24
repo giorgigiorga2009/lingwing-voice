@@ -1,0 +1,129 @@
+@import '@styles/imports';
+
+.flag {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.eng {
+    background-image: url('/assets/images/flags/circle/small/English.png');
+  }
+
+  &.esp {
+    background-image: url('/assets/images/flags/circle/small/Spanish.png');
+  }
+
+  &.fre {
+    background-image: url('/assets/images/flags/circle/small/French.png');
+  }
+
+  &.ita {
+    background-image: url('/assets/images/flags/circle/small/Italian.png');
+  }
+
+  &.rus {
+    background-image: url('/assets/images/flags/circle/small/Russian.png');
+  }
+
+  &.geo {
+    background-image: url('/assets/images/flags/circle/small/Georgian.png');
+  }
+
+  &.deu {
+    background-image: url('/assets/images/flags/circle/small/German.png');
+  }
+
+  @include mobile {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.arrow {
+  background-image: url('/assets/images/arrows/arrow-down-grey.png');
+  width: 0.69rem;
+  height: 0.44rem;
+  margin-top: 0.4rem;
+}
+
+.button {
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  font-family: SegoeUI, $kaFontTitle;
+  border: none;
+  background: none;
+  padding: 0;
+  
+  display:flex;
+  align-items: center;
+
+  font-family:$notoSansGeorgian;
+  font-size:0.9rem;
+  font-weight:500;
+  line-height:2.3rem;
+  text-transform: lowercase;
+  margin-bottom:0.6rem;
+
+  @include smallDesktopHeight {
+    margin-bottom: 0.4rem
+  }
+
+  &:hover,
+  &:focus {
+    color: $purple-600;
+  }
+}
+
+.dropdownContent {
+  position: absolute;
+  background-color: $white;
+  box-shadow: 0 0 6px $white-200;
+  margin-top: 0.7rem;
+  margin-left: -1.6rem;
+  border-radius: 0.63rem;
+  width: fit-content;
+  z-index: 1001;
+}
+
+.option {
+  color: $black-800;
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 2px solid $white-50;
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: SegoeUI, $kaFont;
+
+  &:last-child {
+    border: none;
+  }
+
+  &:hover {
+    color: $purple-300;
+    background-color: $white-70;
+  }
+
+  &:first-child:hover {
+    border-radius: 0.63rem 0.63rem 0 0;
+  }
+
+  &:last-child:hover {
+    border-radius: 0 0 0.63rem 0.63rem;
+  }
+}
+
+.activeMark {
+  display: flex;
+  height: 12px;
+  width: 12px;
+  background-color: #90b337;
+  border-radius: 50%;
+}

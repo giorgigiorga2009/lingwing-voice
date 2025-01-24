@@ -1,0 +1,280 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  gap: 1.5rem;
+  font-family: SegoeUI-SemiBold;
+  color: $grey-300;
+}
+
+.title {
+  font-family: SegoeUI, $kaFontTitle;
+  color: $purple-600;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  width: 100%;
+  text-align: center;
+
+  // @include mobile {
+  //   font-size: 1.3rem;
+
+
+  //   // color: #FFF;
+
+  //   text-align: center;
+  //   font-family: "Noto Sans Georgian";
+  //   font-size: 1.125rem;
+  //   font-style: normal;
+  //   font-weight: 700;
+  //   line-height: normal;
+  //   text-transform: capitalize;
+
+
+
+
+    
+  // }
+
+
+
+  @include mobile {
+    text-align: center;
+    font-family: $kaFontTitle;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+
+    line-height: normal;
+    text-transform: capitalize;
+    color: white;
+
+    position: relative;
+    align-items: flex-end;
+
+    border-bottom: 1px solid #4C1E6F;
+
+    background: #4C1E6F;
+    margin-bottom: 1.7rem;
+    padding-bottom: 0.8rem;
+    position:fixed;
+    height:5rem;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+.statisticsContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 9rem;
+  background-color: $orange-10;
+  border-radius: 1rem;
+}
+
+%titleBase {
+  padding-left: 3rem;
+  color: $grey-800;
+  font-size: 1.3rem;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.6rem;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.statisticsTitle {
+  @extend %titleBase;
+
+  background-image: url('../../../public/assets/images/certificate.png');
+}
+
+.ratingTitle {
+  @extend %titleBase;
+
+  background-image: url('../../../public/assets/images/quality.png');
+}
+
+.bonusTitle {
+  @extend %titleBase;
+
+  background-image: url('../../../public/assets/images/coin.png');
+}
+
+.timeTitle {
+  @extend %titleBase;
+
+  background-image: url('../../../public/assets/images/clock.png');
+}
+
+.progressWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+.tasksDone {
+  color: $orange-500;
+  font-size: 1.6rem;
+  font-family: SegoeUI, $kaFont;
+}
+
+.tasksLeft {
+  font-size: 1.2rem;
+}
+
+.circle {
+  width: 9rem;
+  height: 9rem;
+  padding: 1rem;
+}
+
+.ratingWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  width: 80%;
+
+  span {
+    font-size: 0.8rem;
+  }
+}
+
+.ratingSpan {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -2rem;
+}
+
+.ratingsWrapper {
+  display: flex;
+  justify-content: space-between;
+  color: $purple-300;
+  font-family: SegoeUI;
+}
+
+.ratingAndBonus {
+  display: flex;
+  flex-grow: 1 2;
+  gap: 2rem;
+  width: 90%;
+}
+
+.ratingContainer {
+  display: flex;
+  flex-grow: 3;
+  height: 9rem;
+  background-color: $orange-10;
+  border-radius: 1rem;
+  justify-content: center;
+}
+
+.bonusContainer {
+  display: flex;
+  flex-grow: 2;
+  height: 9rem;
+  background-color: $orange-10;
+  border-radius: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bonus {
+  color: $purple-600;
+  font-size: 1.6rem;
+  font-family: SegoeUI, $kaFont;
+
+  span {
+    color: $grey-300;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    font-family: SegoeUI-SemiBold;
+  }
+}
+
+.timeContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 12rem;
+  background-color: $orange-10;
+  border-radius: 1rem;
+  padding: 0 2rem;
+}
+
+.descWrapper {
+  display: flex;
+  gap: 4rem;
+  font-size: 0.8rem;
+}
+
+.timeWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.timeSpent {
+  height: 0.7rem;
+  width: 2.5rem;
+  background-color: $purple-500;
+  border-radius: 1rem;
+}
+
+.timeToComplete {
+  height: 0.7rem;
+  width: 2.5rem;
+  background-color: $orange-20;
+  border-radius: 1rem;
+}
+
+.progressContainer {
+  height: 0.7rem;
+  border-radius: 0.9rem;
+  background-color: $orange-20;
+  margin-top: -1rem;
+
+  @include mobile {
+    border-radius: 0;
+  }
+}
+
+.progress {
+  display: flex;
+  background-color: $purple-500;
+  height: 100%;
+  border-radius: 1rem;
+
+  @include mobile {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: $grey-800;
+  margin-top: 0.2rem;
+}
+
+.timeHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  color: $purple-300;
+}

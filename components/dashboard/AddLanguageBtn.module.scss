@@ -1,0 +1,31 @@
+@import '@styles/imports';
+
+.button {
+  width: 100%;
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  font-weight: 700;
+  padding: 1.0938rem 1.875rem 1.0938rem 3.75rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.625rem;
+  color: $white;
+  white-space: nowrap;
+  background-color: $orange-500;
+  margin-bottom: 3.125rem;
+  margin-top: 0.9375rem;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 0.0625rem 0.0625rem $grey-300;
+  background-position: 2rem 1.1rem;
+  background-image: url('/assets/images/dark-plus.png');
+  background-repeat: no-repeat;
+  transition: all 0.3s linear;
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+
+  &:hover {
+    background-color: $orange-450;
+  }
+}

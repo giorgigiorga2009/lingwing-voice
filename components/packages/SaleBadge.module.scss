@@ -1,0 +1,55 @@
+@import '@styles/imports';
+
+.saleBadge {
+    position: absolute;
+    top: -1.4rem;
+    right: -1.4rem;
+    z-index: 8;
+    color: white;
+    background-image: url('/assets/images/sale.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5.5rem;
+    height: 5rem;
+    background-size: 100%;
+
+
+    p {
+        width: 80%;
+        height:45%;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        font-family: $kaNinoMtavruliBold;
+        font-size: 1.1rem;
+        font-style: normal;
+        @include tablet{
+            font-size: 1rem;
+        }
+        @include mobile{
+            font-size: 0.9rem;
+        }
+        @include smallWidth{
+            font-size: 0.9rem;
+        }
+    }
+    @include tablet{
+        width: 4rem;
+        height: 4rem;
+        right: -0.1rem;
+    }
+    @include mobile{
+        width: 4rem;
+        height: 4rem;
+        right: -0.3rem;
+
+        top: -1.4rem;
+    }
+    @include smallWidth{
+        width: 4rem;
+        height: 4rem;
+        right: -0.1rem;
+    }
+}

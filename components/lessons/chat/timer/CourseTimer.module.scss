@@ -1,0 +1,115 @@
+@import "@styles/imports";
+
+.timerContainer {
+    display: flex;
+    align-items: center;
+    // padding: 8px 12px;
+    border-radius: 4px;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mobile {
+        z-index: 2;
+
+        &.exercisePage {
+            left: 17.5% !important;
+            transform: none;
+            z-index: 2;
+        }
+    }
+}
+
+.userName {
+    font-weight: 400;
+    text-align: center;
+    font-family: $kaNinoMtavruli;
+    margin-left: 1rem;
+    font-size: 22px;
+
+    @include mobile {
+        // display: none;
+        // margin-right: 0.6rem;
+        // margin-left: 0;
+        // font-size: 13px;
+
+        margin-right: 1.6rem;
+        margin-left: 0.2rem;
+        font-size: 13px;
+    }
+}
+
+.toggleButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    // margin-right: 8px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.icon {
+    width: 2rem;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("/assets/images/timerpause.svg");
+    background-size: 0.9rem;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .isPaused & {
+        // transform: rotate(180deg);
+        background-image: url("/assets/images/timerplay.svg");
+    }
+
+    @include mobile {
+        width: 1.4rem;
+        height: 1.2rem;
+        background-size: 0.9rem;
+    }
+}
+
+.time {
+    font-family: "Digital", Arial, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.001rem;
+    // line-height: 3.9875rem;
+    /* 265.833% */
+    text-transform: capitalize;
+    margin-top: 0.25rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 7rem;
+
+    .isPaused & {
+        color: rgba(248, 22, 205, 1);
+    }
+
+    @include mobile {
+        font-size: 1.65rem;
+        width: 4.6rem;
+        margin-top: 0.01rem;
+    }
+}
+
+// .timerContainer

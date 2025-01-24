@@ -1,0 +1,68 @@
+@import '@styles/imports';
+
+.ulNav {
+  color: $white;
+
+  @include mobile {
+    font-size: 2.5vw;
+  }
+}
+
+.liNav {
+  list-style-type: none;
+  display: inline;
+  margin: 1vw;
+  cursor: pointer;
+  font-family: SegoeUI, $kaFontTitleBold;
+
+  &:hover {
+    @extend .activeMenu;
+  }
+}
+
+.activeMenu {
+  text-decoration: underline 2px;
+  text-underline-offset: -1.2rem;
+}
+
+.subTitle {
+  color: $purple-500;
+  padding: 2vw 0 0;
+  @include mobile {
+    font-size: 4.5vw;
+
+    p {
+      font-size: 4rem;
+    }
+  }
+}
+
+.certificateImage {
+  width: 100%;
+  height: auto;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.imageContainer {
+  display: flex;
+  background-color: #f7f7f7;
+  width: 350px;
+  height: 150px;
+  border-radius: 20px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.imagePartner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100px;
+  max-width: 260px;
+  border-radius: 10px;
+}

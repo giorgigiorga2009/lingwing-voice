@@ -1,0 +1,14 @@
+@import '@styles/imports';
+
+.error {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  margin-top: -0.8rem;
+  margin-bottom: 0;
+  color: $red;
+  font-family: SegoeUI;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+}

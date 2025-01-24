@@ -1,0 +1,562 @@
+@import '@styles/imports';
+
+.learnMenuWrapper {
+  width: 40rem;
+
+  height: 100vh;
+    //  height: calc(var(--vh, 1vh) * 100);
+
+  position: absolute;
+  // top:0px;
+  // left:0px;
+  // z-index:9999;
+
+
+  @include tablet {
+   width:100%;
+  }
+
+
+  @include mobile {
+   width:100%;
+   height: calc(var(--vh, 1vh) * 100);
+  }
+
+
+
+
+  &.showContainer {
+    display: block;
+
+
+    @include tablet {
+      width: 100%;
+      height: 100vh;
+      background-color: red;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(3px);
+      z-index: 99999;
+      left: 0px;
+    }
+
+
+    @include mobile {
+      width: 100%;
+      // height: 100vh;
+      // height: calc(var(--vh, 1vh) * 100);
+      
+
+      top:0px;
+
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(3px);
+      z-index: 99999;
+    }
+
+  }
+}
+
+.foldersContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  max-width: 40rem;
+  // background-color: red;
+  top: 9rem;
+  // z-index:9999;
+  // gap: 1.4rem;
+  // margin-right: 54rem;
+  align-items: flex-start;
+  font-family: SegoeUI, $kaFontTitle;
+  color: $grey-300;
+  font-size: 0.9rem;
+  // transform: translateX(115%);
+  transition: transform 0.3s ease-out;
+  // background-color: red;
+  cursor: pointer;
+  transform: translateX(0);
+
+
+  .header {
+    display: none;
+  }
+
+  &.showContainer {
+    transform: translateX(-10rem) !important;
+
+    .menuTrigger {
+
+      &::after {
+        transform: rotateZ(90deg) rotateY(-180deg);
+        // transition:1s ease-out;
+      }
+    }
+  }
+
+  .menuTrigger {
+    font-family: $notoSansGeorgian;
+    display: flex;
+    position: absolute;
+    transform: translateY(-50%) translateX(-110%) rotateZ(-90deg);
+    // background-color: red;
+    // left: -50px;
+    // top: 50%;
+    top: 50%;
+
+    cursor: pointer;
+
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    color: #8837C9;
+
+    // background-color: green;
+
+    text-align: center;
+    // font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    // line-height: 3.9875rem;
+    /* 290% */
+    text-transform: uppercase;
+
+
+
+    &::after {
+      content: '';
+
+      display: block;
+      width: 1rem;
+      height: 1rem;
+
+      background-image: url('/assets/images/side-menu-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 1rem 1rem;
+      // transform:rotate(90deg);
+
+      transition: 0.3s;
+      transform: rotateZ(90deg) rotateY(0);
+
+    }
+
+
+
+  }
+
+  &.visible {
+    display: flex;
+    transform: translateX(0%);
+    transition: transform 0.4s ease-out;
+
+
+    .folderName {
+      // background-color: red;
+      opacity:1;
+      transition: opacity 0.5s ease-out;
+
+    }
+
+
+    @include tablet {
+
+      top: 0px;
+      z-index: 9999;
+      // height: calc(var(--vh, 1vh) * 100);
+      height: 100%;
+      /* background: purple; */
+      transform: translate(0) !important;
+      margin: 0px;
+      padding: 0px;
+      left: 0;
+      width: 20rem;
+      background-color: $white;
+
+      background-image: url(/assets/images/chat_sidemenu_bg.svg);
+      background-repeat: no-repeat;
+      background-position: -7rem calc(100vh - 30.7rem);
+      background-size: 27rem 33.7rem;
+
+      border-radius: 0 1.875rem 0 0;
+      overflow: hidden;
+      border: 0;
+      cursor: default;
+
+      .header {
+        width: 100%;
+        height: 10rem;
+        background-color: rgba(76, 30, 111, 1);
+        margin-bottom: 3rem;
+        display: block;
+
+        @include smallDesktopHeight {
+          margin-bottom: 1.8rem
+        }
+
+
+        .backButton {
+          width: 1.376rem;
+          height: 1.376rem;
+          background-image: url('/assets/images/back.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 1.3rem 1.3rem;
+          position: absolute;
+          left: 1.5rem;
+          top: 1rem;
+          cursor: pointer;
+        }
+
+        .headerContent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+
+          .userName {
+            color: #FFF;
+            text-align: center;
+            font-family: Inter;
+            font-size: 0.8125rem;
+            font-style: normal;
+            font-weight: 800;
+            // line-height: 3.9875rem;
+            /* 490.769% */
+            text-transform: lowercase;
+          }
+        }
+      }
+    }
+
+
+
+    // @include mobile {
+    //   display: none;
+    // }
+
+    @include mobile {
+      top: 0px;
+      z-index: 9999;
+      height: 100%;
+      /* background: purple; */
+      transform: translate(0) !important;
+      margin: 0px;
+      padding: 0px;
+      left: 0;
+      width: 20em;
+      background-color: $white;
+
+      background-image: url('/assets/images/chat_sidemenu_bg.svg');
+      background-repeat: no-repeat;
+      background-position: -7rem calc(100vh - 30.7rem);
+      background-size: 27rem 33.7rem;
+
+      border-radius: 0 1.875rem 0 0;
+      overflow: hidden;
+      border: 0;
+
+      cursor: default;
+
+      .header {
+        width: 100%;
+        height: 9rem;
+        background-color: rgba(76, 30, 111, 1);
+        margin-bottom: 1.2rem;
+        display: block;
+
+        @include smallHeight {
+          margin-bottom: 1.5rem
+        }
+
+
+        .backButton {
+          width: 1.376rem;
+          height: 1.376rem;
+          background-image: url('/assets/images/back.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 1.3rem 1.3rem;
+          position: absolute;
+          left: 1.5rem;
+          top: 1rem;
+          cursor: pointer;
+        }
+
+        .headerContent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+
+          .userName {
+            color: #FFF;
+            text-align: center;
+            font-family: Inter;
+            font-size: 0.8125rem;
+            font-style: normal;
+            font-weight: 800;
+            // line-height: 3.9875rem;
+            /* 490.769% */
+            text-transform: lowercase;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.coursesDropdownContainer {
+
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+
+.folderName {
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #A8A9AB;
+  font-family: $notoSansGeorgian;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+  /* 226.783% */
+  text-transform: lowercase;
+  opacity:0;
+  transition: opacity 0.3s ease-out;
+
+
+  &.courseButton {
+    margin-bottom: 0.8rem;
+
+
+    @include smallDesktopHeight {
+      margin-bottom: 0.4rem
+    }
+  }
+
+  &.ratingButton {
+    margin-bottom: 0.8rem;
+
+    @include smallDesktopHeight {
+      margin-bottom: 0.4rem
+    }
+  }
+
+  &.resetProgressButton {
+    margin-bottom: 0.8rem;
+
+    @include smallDesktopHeight {
+      margin-bottom: 0.4rem
+    }
+  }
+
+  @include tablet {
+    margin-left: 1rem;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-family: $notoSansGeorgian;
+
+    font-weight: 500;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+
+
+    background-repeat: no-repeat;
+    background-size: 1.1rem 1.1rem;
+    background-position: left center;
+    padding-left: 2rem;
+
+
+    &.courseButton {
+      margin-bottom: 1.5rem;
+      background-image: url('/assets/images/chat/course-icon.svg');
+
+      @include smallDesktopHeight {
+        margin-bottom: 1.8rem
+      }
+    }
+
+    &.statisticsButton {
+      background-image: url('/assets/images/chat/statistic-icon.svg');
+    }
+
+    &.grammarButton {
+      background-image: url('/assets/images/chat/grammar-icon.svg');
+
+    }
+
+    &.vocabularyButton {
+      background-image: url('/assets/images/chat/vocabulary-icon.svg');
+    }
+
+    &.ratingButton {
+      margin-bottom: 1.5rem;
+      background-image: url('/assets/images/chat/rating-icon.svg');
+
+      @include smallDesktopHeight {
+        margin-bottom: 1.8rem
+      }
+    }
+
+    &.modeButton {
+      background-image: url('/assets/images/chat/mode-icon.svg');
+    }
+
+    &.menuButton {
+      background-image: url('/assets/images/chat/menu-icon.svg');
+    }
+
+    &.switchCourseButton {
+      background-image: url('/assets/images/chat/switchcourse-icon.svg');
+    }
+
+    &.resetProgressButton {
+      margin-bottom: 1.5rem;
+      background-image: url('/assets/images/chat/resetprogress-icon.svg');
+
+      @include smallDesktopHeight {
+        margin-bottom: 1.8rem
+      }
+    }
+
+    &.helpButton {
+      background-image: url('/assets/images/chat/help-icon.svg');
+    }
+
+
+
+
+
+
+
+
+  }
+
+
+  @include mobile {
+    margin-left: 1rem;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-family: $notoSansGeorgian;
+
+    font-weight: 500;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+
+
+    background-repeat: no-repeat;
+    background-size: 1.1rem 1.1rem;
+    background-position: left center;
+    padding-left: 2rem;
+
+    @include smallHeight {
+      font-size: 0.8rem;
+      line-height: 2rem;
+
+    }
+
+
+    &.courseButton {
+      background-image: url('/assets/images/chat/course-icon.svg');
+      margin-bottom: 1.9rem;
+
+      @include smallHeight {
+        margin-bottom: 0.9rem
+      }
+    }
+
+    &.statisticsButton {
+      background-image: url('/assets/images/chat/statistic-icon.svg');
+    }
+
+    &.grammarButton {
+      background-image: url('/assets/images/chat/grammar-icon.svg');
+
+    }
+
+    &.vocabularyButton {
+      background-image: url('/assets/images/chat/vocabulary-icon.svg');
+    }
+
+    &.ratingButton {
+      background-image: url('/assets/images/chat/rating-icon.svg');
+      margin-bottom: 1.9rem;
+
+      @include smallHeight {
+        margin-bottom: 0.9rem
+      }
+    }
+
+    &.modeButton {
+      background-image: url('/assets/images/chat/mode-icon.svg');
+    }
+
+    &.menuButton {
+      background-image: url('/assets/images/chat/menu-icon.svg');
+    }
+
+    &.switchCourseButton {
+      background-image: url('/assets/images/chat/switchcourse-icon.svg');
+    }
+
+    &.resetProgressButton {
+      background-image: url('/assets/images/chat/resetprogress-icon.svg');
+
+      margin-bottom: 1.9rem;
+
+      @include smallHeight {
+        margin-bottom: 0.9rem
+      }
+    }
+
+    &.helpButton {
+      background-image: url('/assets/images/chat/help-icon.svg');
+    }
+
+
+
+
+
+
+
+
+  }
+
+  &:hover {
+    color: #692e96;
+    cursor: pointer;
+  }
+}
+
+.activeButton {
+  color: #692e96;
+}

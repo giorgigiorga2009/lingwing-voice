@@ -1,0 +1,133 @@
+@import '@styles/imports.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  font-family: SegoeUI-SemiBold;
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+  @include mobile {
+    font-size: 0.9rem;
+  }
+}
+
+.differentBG {
+  background-color: $yellow-50;
+}
+
+.buble {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 0.3rem solid $orange-300;
+  background: $purple-600;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.1s;
+    border: 0.4rem solid $orange-300;
+  }
+}
+
+.header {
+  flex: 0 0 50%;
+  text-align: start;
+  cursor: pointer;
+
+  h3 {
+    font-size: 1.35rem;
+    color: $black-800;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    color: $grey-700;
+  }
+
+  @include mobile {
+    flex: 0 0 80%;
+  }
+}
+
+.premiumHeader {
+  flex: 0 0 40%;
+}
+
+.rocketParrot {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 13rem;
+  height: auto;
+
+  @include mobile {
+    width: 9rem;
+    top: 2rem;
+    right: 2rem;
+  }
+  @include smallWidth {
+    width: 7rem;
+    top: 4rem;
+  }
+}
+
+.button {
+  width: 13.75rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  color: $orange-650;
+  border: 0.14rem solid $orange-300;
+  background-color: $yellow-70;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  font-family: SegoeUI;
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
+}
+.premiumButton {
+  background-color: $purple-600;
+  color: $white;
+  font-size: 1.25rem;
+  border: none;
+  margin-bottom: 1rem;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+.buttonDiv {
+  @include mobile {
+    flex: 0 0 100%;
+  }
+}
+.premiumButtonDiv {
+  flex: 0 0 100%;
+}
+
+.monthlyPayment {
+  color: $grey-700;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

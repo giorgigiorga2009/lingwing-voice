@@ -1,0 +1,25 @@
+@import '@styles/imports';
+
+.button {
+  height: 2.7rem;
+  color: $white;
+  background-color: $purple-600;
+  // font-family: $kaFontTitle;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  margin-top: 1rem;
+  width: fit-content;
+  border: none;
+
+  &:hover {
+    background-color: $purple-500;
+    box-shadow: 0 1px 3px 0 rgba(60 64 67 / 30.2%),
+      0 4px 8px 3px rgba(60 64 67 / 14.9%);
+    transition: box-shadow 0.08s linear,
+      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

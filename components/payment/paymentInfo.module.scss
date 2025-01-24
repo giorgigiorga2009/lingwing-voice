@@ -1,0 +1,86 @@
+@import '@styles/imports';
+
+.container {
+  background-color: $white-100;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 12rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+
+  // @include desktop{
+  //   width: 100%;
+  //   height: 12rem;
+  //   @include height800{
+  //     width: 100%;
+  //     height: 10rem;
+  //   }
+  // }
+
+  @include smallDesktopHeight{
+    height: 12rem;
+    width: 100%;
+  padding: 0.5rem 1rem;
+
+  }
+
+  @include mobile {
+    height: 8rem;
+    width: 16rem;
+    padding: 1rem 1rem;
+    padding-top: 0.5rem;
+  }
+
+  @include smallWidth {
+    height: 8rem;
+    width: 16rem;
+    padding: 1rem 1rem;
+    padding-top: 0.5rem;
+  }
+
+  &.noDecoration {
+    box-shadow: -3px 0 4px -2px rgba(0, 0, 0, 0.25), 3px 0 4px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 0;
+  }
+
+  .header {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    color: $purple-600;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    font-family: $kaFont;
+
+    @include mobile {
+      font-size: 0.7rem;
+    }
+
+    @include smallWidth {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.7rem;
+  font-family: $kaFont;
+
+  @include mobile {
+    font-size: 0.4rem;
+  }
+
+  @include smallWidth {
+    font-size: 0.4rem;
+  }
+}

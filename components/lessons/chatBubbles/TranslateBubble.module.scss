@@ -1,0 +1,306 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-family: SegoeUI, $kaFont;
+
+  &.answer {
+    margin-left: auto;
+  }
+
+  @include mobile {
+    font-size: 0.9rem;
+  }
+}
+
+.avatar {
+  display: none;
+
+  .answer & {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+    margin-right: -2.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+.taskDescription {
+  %baseIcon {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    margin: 0 0 0 -2.5rem;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+    background-position: bottom center;
+
+    @include mobile {
+      width: 2rem;
+      height: 2rem;
+      background-size: 1.1rem;
+      margin: 0 0 0 -2.45rem;
+    }
+  }
+
+  .mistakecorrectionIcon {
+    @extend %baseIcon;
+    background-size:1.8rem;
+
+    // background-color: $red-100;
+    // background-image: url('/assets/images/tasks/mistakecorrection.png');
+    background-image: url('/assets/images/tasks/mistakecorrection_new.svg');
+
+
+    @include mobile {
+
+      background-size:1.7rem;
+    }
+
+  }
+
+  .omittedwordsIcon {
+    @extend %baseIcon; 
+    background-size:1.5rem;
+    // background-color: rgb(211 238 255);
+    // background-image: url('/assets/images/tasks/omittedwords.png');
+    background-image: url('/assets/images/tasks/omittedwords_new.svg');
+    @include mobile {
+      background-size:1.5rem;
+    }
+  }
+
+  .translateIcon { 
+    @extend %baseIcon;
+    background-size:1.8rem;
+
+    // background-color: $purple-50;
+    // background-image: url('/assets/images/tasks/translate.png');
+    background-image: url('/assets/images/tasks/translate_new.svg');
+
+    @include mobile {
+      background-size:1.7rem
+    }
+  }
+
+
+  .welcomeIcon { 
+    @extend %baseIcon;
+    background-size:1.4rem;
+
+    // background-color: $purple-50;
+    // background-image: url('/assets/images/tasks/translate.png');
+    
+
+      background-image: url('/assets/images/welcome/lingoicon.svg');
+
+   
+   
+
+    @include mobile {
+      background-size:1.7rem
+    }
+  }
+ 
+  .replayIcon { 
+    @extend %baseIcon;
+    background-size:1.5rem;
+    // background-color: $green-100;
+    // background-image: url('/assets/images/tasks/replay.png');
+    background-image: url('/assets/images/tasks/replay_new.svg');
+
+    @include mobile {
+      background-size:1.5rem;
+    }
+  }
+
+  .dictationIcon {
+    @extend %baseIcon;
+    background-size:1.5rem;
+    // background-color: $pink-100;
+    // background-image: url('/assets/images/tasks/dictation.png');
+    background-image: url('/assets/images/tasks/dictation_new.svg');
+
+    @include mobile {
+      background-size:1.5rem;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  font-family: SegoeUI, $kaFont;
+  min-width: 13rem;
+  max-width: 29rem;
+  line-height: 1.6rem;
+  
+
+  @include mobile {
+    min-width: 12rem;
+    max-width: 16rem;
+    line-height: 1.1rem;
+  }
+
+  span {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.taskText {
+  display: flex;
+  color: $black-800;
+  justify-content: center;
+  font-weight: bold;
+  padding: 1rem 1.8rem;
+  background-color: #f2f2f2;
+  border-radius: 2rem 2rem 2rem 0.3rem;
+  font-family: $kaFont;
+  min-height:2.6rem;
+
+  
+
+  .true & {
+    transform: scale(0);
+    transform-origin: 0 0;
+    animation: bounce 700ms linear both;
+    animation-delay: 300ms;
+  }
+
+  span {
+    color: $grey-700;
+    font-style: italic;
+    
+  }
+
+  .answer & {
+    display: none;
+  }
+
+  .replay & {
+    span {
+      display: inline-block;
+      margin-right: 0.4rem;
+      font-style: normal;
+
+      &::first-letter {
+        color: $black;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+.correctText {
+  display: flex;
+  justify-content: center;
+  font-family: SegoeUI, $kaFont;
+  color: $white;
+  padding: 1rem 2.5rem;
+  background-color: #692e96;
+  border-radius: 2rem 2rem 0.3rem;
+  
+
+  .taskDescription & {
+    display: none;
+  }
+
+  @include mobile {
+    min-width: 12rem;
+    max-width: 15rem;
+    padding: 0.7rem 1.2rem;
+    line-height: 1.1rem;
+  }
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 35rem;
+  color: $black;
+  padding: 0.8rem 2rem;
+  background-color: #f2f2f2;
+  border-radius: 2rem 2rem 2rem 0.3rem;
+  min-height:2.6rem;
+
+  .true & {
+    transform: scale(0);
+    transform-origin: 0 0;
+    animation: bounce 700ms linear both;
+    animation-delay: 400ms;
+  }
+
+  .answer & {
+    display: none;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  4.7% {
+    transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  9.41% {
+    transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  14.11% {
+    transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  18.72% {
+    transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  24.32% {
+    transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  29.93% {
+    transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  35.54% {
+    transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  41.04% {
+    transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  52.15% {
+    transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  63.26% {
+    transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  85.49% {
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}

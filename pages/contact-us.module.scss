@@ -1,0 +1,303 @@
+@import '@styles/imports.scss';
+
+.background {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: url('../public/assets/images/background-letters.svg'),
+    url('../public/assets/images/background-wave.svg') no-repeat;
+  background-attachment: local;
+  background-position: auto, 5rem, 7rem;
+
+  @include mobile {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  @include tablet{
+    @include height800{
+      // padding-bottom: 1rem;
+      overflow-y: auto;
+    }
+  }
+  @include desktop{
+    // @include height800{
+      // padding-bottom: 1rem;
+      overflow-y: auto;
+    // }
+  }
+
+
+  .footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0 0;
+  }
+  
+  .container {
+    // position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    @include tablet{
+      height: auto;
+    }
+  }
+  
+  h1 {
+    position: relative;
+    text-align: center;
+    font-family: SegoeUI, 'sans-serif';
+    // margin-top: 250px;
+    color: $orange-500;
+    font-size: 3.7rem;
+    margin: 0 0 0 0;
+    margin-top: 5rem;
+    @include smallDesktopHeight{
+      font-size: 2.7rem;
+    }
+    @include tablet{
+      font-size: 2.5rem;
+    }
+    @include mobile {
+      font-size: 1.8rem;
+      margin-top: 4rem;
+    }
+  }
+  h2 {
+    color: #FFF;
+
+    text-align: center;
+    font-family: "Noto Sans Georgian";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    @include smallDesktopHeight{
+      font-size: 1.4rem;
+    }
+    @include tablet{
+      font-size: 1.2rem;
+    }
+    @include mobile {
+      font-size: 1rem;
+    }
+  }
+
+  .Form {
+    position: relative;
+    // width: 80%;
+    // max-width: 1000px;
+    width: 62rem;
+    height: 35rem;
+    padding: 2rem 4.5rem;
+    border-radius: 2vw;
+    background-color: $white-70;
+    box-shadow: 0 1px 100px 10px $black-25;
+    z-index: 2;
+    @include smallWidth {
+      padding: 1.5rem 4.5rem;
+    }
+
+    .send {
+      font-size: 3rem;
+      margin-bottom: 250px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 45px;
+      padding-bottom: 7.5rem;
+      .message {
+        width: 100%;
+        height: 200px;
+        .error {
+          top: 12.5rem;
+        }
+        @include smallDesktopHeight{
+          height: 10rem;
+        }
+        @include mobile {
+          height: 5rem;
+        }
+        @include smallWidth{
+          height: 4rem;
+          // padding-bottom: 0;
+        }
+      }
+
+      #emailandsubmit {
+        width: 100%;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        input {
+          width: 53%;
+        }
+
+        button {
+          background-color: $purple-500;
+          padding: 15px 60px;
+          border: none;
+          border-radius: 25px;
+          text-transform: uppercase;
+          font-family: SegoeUI, Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 17px;
+          font-weight: bold;
+          color: $white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $purple-600;
+          }
+
+          &:active {
+            border: 2px solid $black;
+          }
+          @include mobile {
+            width: 100%;
+            height: 3rem;
+            font-size: 1rem;
+            padding: 0;
+          }
+        }
+
+        @include mobile {
+          input {
+            width: 100%;
+          }
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+
+    }
+
+
+    textarea {
+      width: 100%;
+      height: 12.5rem;
+      padding: 1.375rem;
+      border-radius: 24px;
+      font-family: SegoeUI, 'sans-serif';
+      outline: none;
+      border: 1px solid $grey-800;
+      resize: none;
+
+      @include smallDesktopHeight{
+        height: 10rem;
+      }
+      
+      @include tablet {
+        height: 10rem;
+      }
+
+      @include mobile {
+        height: 5.2rem;
+        // padding: 1rem;
+      }
+      @include smallWidth{
+        height: 5rem;
+      }
+    }
+
+    form div label {
+      position: absolute;
+      margin-left: 25px;
+      font-weight: bold;
+      font-family: SegoeUI, 'sans-serif';
+      top: 35px;
+      font-size: 16px;
+      color: $grey-300;
+      transition: 300ms;
+      margin-top: -20px;
+      @include mobile {
+        font-size: 0.8rem;
+        top: 2rem;
+      }
+      @include smallWidth{
+        font-size: 0.8rem;
+        top: 1.9rem;
+      }
+    }
+
+    form div {
+      position: relative;
+      width: 100%;
+      height: 52px;
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+      flex-wrap: wrap;
+
+      .error {
+        position: absolute;
+        top: 52px;
+        left: 20px;
+        color: $red;
+        font-family: SegoeUI, 'sans-serif';
+        font-weight: 100;
+        @include mobile {
+          font-size: 13px;
+        }
+      }
+
+      .labelanimUp {
+        top: -0.5rem;
+      }
+
+      input {
+        width: 100%;
+        height: 52px;
+        font-family: SegueUI, sans-serif;
+        font-size: 14px;
+        border-radius: 50px;
+        border: 1px solid $grey-800;
+        padding: 14px 20px;
+        outline: none;
+        @include mobile {
+          height: 2.8rem;
+        }
+        @include smallWidth{
+          height: 2.4rem;
+        }
+      }
+      @include mobile{
+        height: 2rem;
+      }
+    }
+    @include smallDesktopHeight{
+      // height: 30rem;
+      margin-bottom: 1.5rem;
+      height: 32rem;
+    }
+    @include tablet{
+      width: 90%;
+      height: auto;
+    }
+    @include mobile {
+      // padding: 10px;
+      width: 90%;
+      height: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+  }
+  
+}

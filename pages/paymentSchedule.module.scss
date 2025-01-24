@@ -1,0 +1,44 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  font-family: SegoeUI;
+  align-items: center;
+  // justify-content: center;
+  justify-content: space-between;
+  background-image: url('/assets/images/background-letters.svg'),
+    url('/assets/images/background-wave.svg');
+  background-position: left top, left top;
+  background-repeat: repeat, no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-attachment: local;
+  color: $grey-800;
+  z-index: 0;
+
+  & .rocketParrot {
+    display: none;
+    position: absolute;
+    width: 22vw;
+    height: auto;
+    right: 8%;
+    top: 20%;
+
+    @include desktop {
+      display: inherit;
+    }
+  }
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+}
+
+.rocketParrot {
+  z-index: -1;
+}

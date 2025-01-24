@@ -1,0 +1,20 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  height: 8rem;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 1rem;
+
+  @include mobile {
+    margin-bottom: 0;
+    gap: 1rem;
+    height: 5rem;
+  }
+}

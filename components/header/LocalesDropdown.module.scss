@@ -1,0 +1,106 @@
+@import '@styles/imports';
+
+.button {
+  cursor: pointer;
+  // width: 6rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  height: 3.59rem;
+  border: none;
+  background: none;
+
+  // @include smallWidth {
+  //   width: auto;
+  // }
+
+  h6 {
+    color: $white;
+    font-size: 1rem;
+    font-weight: 900;
+
+    @include smallWidth {
+      display: none;
+    }
+
+    &:lang(ka) {
+      font-family: $kaFontTitle;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    h6 {
+      color: $orange-500;
+    }
+  }
+
+  @include mobile {
+    gap:0.1rem;
+  }
+}
+
+.dropdownTitle {
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.arrow {
+  background-image: url('/assets/images/arrows/arrow-down-grey.png');
+  width: 0.69rem;
+  height: 0.44rem;
+
+  @include mobile {
+    transform:translateY(0.3rem)
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  position: absolute;
+  left: -4rem;
+  background-color: $white;
+  box-shadow: 0 0 6px $white-200;
+  margin-top: 0.7rem;
+  border-radius: 0.63rem;
+  width: 10rem;
+  z-index: 1001;
+}
+
+/* Links inside the dropdown */
+.option {
+  color: $black;
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  height: 3rem;
+  width: 100%;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid $white-200;
+  font-weight: 650;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white-70;
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  &:first-child:hover {
+    border-radius: 0.63rem 0.63rem 0 0;
+  }
+
+  &:last-child:hover {
+    border-radius: 0 0 0.63rem 0.63rem;
+  }
+}

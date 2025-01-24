@@ -1,0 +1,64 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px);
+  }
+}
+
+.textContainer {
+  padding: 0.6rem 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #fce5cc;
+  border-radius: 1.8rem;
+  white-space: nowrap;
+  color: #ff9421;
+  font-family: SegoeUI, 'Noto Sans Georgian SemiBold';
+
+  position: absolute;
+  z-index: 55;
+  margin-left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.arrow {
+  margin-left: 3rem;
+  width: 0;
+  height: 0;
+  border-radius: 0 0 0 1rem;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 0.7rem solid #fce5cc;
+  margin-bottom: 0.5rem;
+  position: absolute;
+  bottom: -17px;
+  z-index: 50;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}

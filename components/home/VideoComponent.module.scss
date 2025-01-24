@@ -1,0 +1,106 @@
+@import '@styles/imports';
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //   padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-color: transparent;
+  // max-height: 420px;
+  border-radius: 1.5rem;
+  overflow: hidden; // Add this line
+}
+
+.video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  &:state(webkit-media-controls-panel),
+  &:state(webkit-media-controls-play-button),
+  &:state(webkit-media-controls-start-playback-button),
+  &:state(webkit-media-controls-enclosure) {
+    display: none !important;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: red;
+  }
+}
+
+.playPauseButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+
+   
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+
+
+
+
+.errorMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  text-align: center;
+}
+
+.noControls {
+  &:state(webkit-media-controls),
+  &:state(webkit-media-controls-overlay-play-button),
+  &:state(webkit-media-controls-play-button),
+  &:state(webkit-media-controls-start-playback-button) {
+    display: none !important;
+    -webkit-appearance: none;
+  }
+}
+
+// Add these new styles
+.video::-webkit-media-controls {
+  display: none !important;
+}
+
+.video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.video,
+.noControls {
+  &::-webkit-media-controls,
+  &::-webkit-media-controls-panel,
+  &::-webkit-media-controls-play-button,
+  &::-webkit-media-controls-start-playback-button,
+  &::-webkit-media-controls-enclosure,
+  &::-webkit-media-controls-overlay-play-button,
+  &:state(webkit-media-controls-play-button) {
+    display: none !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}

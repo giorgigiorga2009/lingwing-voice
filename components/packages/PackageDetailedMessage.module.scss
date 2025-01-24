@@ -1,0 +1,25 @@
+.detailedMessage {
+    border-radius: 15px;
+    background: rgba(155, 149, 139, 0.10);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+
+    position: absolute;
+    bottom: 0;
+
+    transform: translateY(calc(100% + 10px));
+    opacity: 0.5;
+    transition: opacity 0.25s ease-in-out;
+
+    p {
+        color: #451E63;
+        text-align: center;
+        font-family: "Noto Sans Georgian";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.8px;
+        padding: 0px 0.7rem;
+        text-wrap: center;
+        /* 165% */
+    }
+}

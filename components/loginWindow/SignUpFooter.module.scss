@@ -1,0 +1,23 @@
+@import '@styles/imports';
+
+.footer {
+  font-size: 0.7rem;
+  height: 2.2rem;
+  border-top: 2px solid $white-200;
+  background-color: $white-t;
+  padding: 0.5rem 1.4rem;
+  margin-top: 1rem;
+  text-align: center;
+  width: 128%;
+  color: $grey-800;
+
+  @include mobile {
+    width: 110%;
+  }
+}
+
+.link {
+  color: $purple-200;
+  cursor: pointer;
+  margin-right: 0.3rem;
+}

@@ -1,0 +1,86 @@
+@import '@styles/imports';
+
+.wrapper {
+  margin-top: 1.5rem;
+  position: relative;
+  @extend .commonScroll;
+}
+
+.title {
+  margin-top: 1rem;
+  padding: 0.3rem 1.5rem 0.3rem 3rem;
+  background-color: $orange-200;
+  color: $orange-500;
+  width: fit-content;
+  border-radius: 0.8rem 0.8rem 0 0;
+  text-align: center;
+  font-family: SegoeUI;
+  background-image: url('/assets/images/tasks/dialog.png');
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 10% 70%;
+}
+
+.dialog {
+  height: auto;
+  max-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 2px solid $white-200;
+  border-radius: 0 1rem 1rem;
+  font-family: SegoeUI, $kaFont;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.description {
+  margin: 0 1.2rem 1.2rem 1rem;
+  font-size: 1.1rem;
+
+  span {
+    display: inline-block;
+    margin-right: 0.4rem;
+    font-style: normal;
+    color: $grey-300;
+
+    &::first-letter {
+      color: $orange-650;
+    }
+  }
+}
+
+.bubbleContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.currentTask {
+  position: relative;
+  align-self: flex-start;
+  background-color: $white-100;
+  border-radius: 1.3rem 1.3rem 1.3rem 0.3rem;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  height: 8rem;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 1rem;
+
+  @include mobile {
+    margin-bottom: 0;
+    gap: 1rem;
+    height: 5rem;
+  }
+}

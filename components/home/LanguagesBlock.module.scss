@@ -1,0 +1,263 @@
+@import '@styles/imports';
+
+.block {
+  display: flex;
+  padding: 0 2.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  @include tablet {
+    width: 40rem;
+    max-width: 100%;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    padding: 0 1rem;
+    gap: 0.6rem;
+    // margin-top: 2rem;
+    .item {
+      flex: 0 0 calc(18%);
+    }
+  }
+}
+
+.start {
+  top: -2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  position: absolute;
+  width: 100%;
+  z-index: 7;
+  background-size: contain;
+  background-position: center;
+  transition: all 0.25s linear;
+  background-color: $orange-300;
+  font-family: SegoeUI-SemiBold;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include smallDesktopHeight {
+    font-size: 1rem;
+  }
+}
+
+.parrot {
+  position: absolute;
+  bottom: 0;
+  right: -4rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 7;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.25s linear;
+
+  .eng & {
+    background-image: url('/assets/images/languages_background/eng_parrot.png');
+  }
+
+  .esp & {
+    background-image: url('/assets/images/languages_background/esp_parrot.png');
+  }
+
+  .ita & {
+    background-image: url('/assets/images/languages_background/ita_parrot.png');
+  }
+
+  .fre & {
+    background-image: url('/assets/images/languages_background/fre_parrot.png');
+  }
+
+  .rus & {
+    background-image: url('/assets/images/languages_background/rus_parrot.png');
+  }
+
+  .geo & {
+    background-image: url('/assets/images/languages_background/geo_parrot.png');
+  }
+
+  .deu & {
+    background-image: url('/assets/images/languages_background/ger_parrot.png');
+  }
+}
+
+.tileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11.9rem;
+  width: 7.75rem;
+  border-radius: 0.813rem;
+  box-shadow: 0 2px 2px 1px $black-t;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.15s linear;
+  text-transform: capitalize;
+
+  @include smallWidth {
+    width: 4.6rem !important;
+    height: 7rem !important;
+  }
+
+  @include mobile {
+    width: 5rem;
+    height: 8rem;
+
+    @include smallHeight {
+      width:4.3rem !important;
+      height:5.9rem !important;
+    }
+  }
+
+  @include tablet {
+    width: 6rem;
+    height: 10rem;
+  }
+
+  @include smallDesktopHeight {
+    width: 6rem;
+    height: 10rem;
+  }
+
+  &.eng {
+    background-image: url('/assets/images/languages_background/eng_dark.png');
+  }
+
+  &.esp {
+    background-image: url('/assets/images/languages_background/esp_dark.png');
+  }
+
+  &.ita {
+    background-image: url('/assets/images/languages_background/ita_dark.png');
+  }
+
+  &.fre {
+    background-image: url('/assets/images/languages_background/fre_dark.png');
+  }
+
+  &.rus {
+    background-image: url('/assets/images/languages_background/rus_dark.png');
+  }
+
+  &.geo {
+    background-image: url('/assets/images/languages_background/geo_dark.png');
+  }
+
+  &.deu {
+    background-image: url('/assets/images/languages_background/ger_dark.png');
+  }
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+
+    &.eng {
+      background-image: url('/assets/images/languages_background/eng_light.jpg');
+    }
+
+    &.esp {
+      background-image: url('/assets/images/languages_background/esp_light.jpg');
+    }
+
+    &.ita {
+      background-image: url('/assets/images/languages_background/ita_light.jpg');
+    }
+
+    &.fre {
+      background-image: url('/assets/images/languages_background/fre_light.jpg');
+    }
+
+    &.rus {
+      background-image: url('/assets/images/languages_background/rus_light.jpg');
+    }
+
+    &.geo {
+      background-image: url('/assets/images/languages_background/geo_light.jpg');
+    }
+
+    &.deu {
+      background-image: url('/assets/images/languages_background/ger_light.jpg');
+    }
+
+    .languageFlag {
+      top: 2.3rem;
+    }
+
+    .start {
+      top: 0;
+      font-size:0.8rem;
+    }
+
+    .parrot {
+      right: 0;
+    }
+  }
+}
+
+.flag {
+  width: 5rem;
+  height: 5rem;
+  z-index: 7;
+  transition: all 0.25s linear;
+
+  @include tablet {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  @include mobile {
+    width: 4rem;
+    height: 4rem;
+
+    @include smallHeight {
+      width:2.2rem !important;
+      height:2.2rem !important;
+    }
+  }
+
+  @include smallWidth {
+    width: 3rem !important;
+    height: 3rem !important;
+
+    @include smallHeight {
+      width:2.5rem !important;
+      height:2.5rem !important;
+    }
+  }
+}
+
+.title {
+  top: 0.75rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: SegoeUI-SemiBold;
+  color: $white;
+  font-size: 1.25rem;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+
+  @include mobile {
+    font-size: 0.7rem;
+    
+    @include smallHeight {
+      font-size: 0.5625rem;
+
+    }
+  }
+
+  @include smallDesktopHeight {
+    font-size: 1rem;
+  }
+}

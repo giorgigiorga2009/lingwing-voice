@@ -1,0 +1,164 @@
+@import '@styles/imports';
+
+.secondPageContainer {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    // top: 30%;
+    background-color: #F6F6F6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}
+
+.secondPageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+    @include mobile {
+        height: calc(var(--vh, 1vh) * 100);
+
+    }
+}
+
+.secondPageTitle {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.secondPageBody {
+    width: 45%;
+    height: 70vh;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+        width: 90%;
+
+        @include height800 {
+            height: calc(100vh - 17rem);
+        }
+    }
+
+
+}
+
+
+.parrotRocket {
+    background-image: url('/assets/images/rocketParrot.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: scaleX(-1);
+
+    bottom: 3rem;
+    left: 0;
+    width: 27rem;
+    height: 18rem;  
+
+    @include smallHeight {
+        width: 20rem;
+        height: 13rem;  
+    }
+
+
+    @include mobile {
+        top: calc(100% - 7.5rem);
+        left: 5%;
+        width: 10.25rem;
+        height: 7.25rem;
+    }
+}
+
+.vector {
+    background-image: url('../../public/themes/images/v2/Vector.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    // top: 0;
+    right: -13rem;
+    width: 22rem;
+    height: 22rem;
+    transform: rotate(45deg);
+
+    @include mobile {
+        background-image: url('/assets/images/moon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 10.63rem;
+        height: 10.38rem;
+        background-position: bottom;
+        transform: rotate(0deg);
+
+    }
+
+}
+
+.star1 {
+    background-image: url('../../public/themes/images/v2/star1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.star2 {
+    background-image: url('../../public/themes/images/v2/star2.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 16%;
+    left: 2%;
+    width: 2rem;
+    height: 2rem;
+}
+
+.star3 {
+    background-image: url('../../public/themes/images/v2/star3.svg');
+    background-size: contain;
+    position: absolute;
+    right: 28%;
+    bottom: 90%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.star4 {
+    background-image: url('../../public/themes/images/v2/star4.svg');
+    background-size: contain;
+    position: absolute;
+    right: 5%;
+    top: 55%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.star5 {
+    background-image: url('../../public/themes/images/v2/star5.svg');
+    background-size: contain;
+    position: absolute;
+    right: 20%;
+    top: 90%;
+    width: 3rem;
+    height: 3rem;
+}

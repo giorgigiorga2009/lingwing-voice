@@ -1,0 +1,200 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  height: 100vh;
+  width: 100%;
+  background-color: $purple-600;
+  background-image: url('/assets/images/bg-white-letters.svg'),
+    -webkit-radial-gradient(center, circle cover, rgba(255, 255, 255, 0.15) 0, transparent
+          42%, transparent 100%);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/images/logout/logoutPlane.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 50rem auto;
+  padding: 8rem 5rem 8rem 2rem;
+  height: fit-content;
+  overflow: none;
+
+  @include mobile {
+    flex-direction: column-reverse;
+    background-position: bottom;
+    background-size: 0;
+    gap: 2rem;
+    padding: 0;
+    margin: 5rem 0;
+  }
+  @include tablet {
+    background-position: bottom 5rem left 5rem;
+    background-size: 50%;
+    padding-left: 4rem;
+  }
+}
+
+.parrot {
+  max-width: 25rem;
+  width: 25vw;
+  height: 29rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('/assets/images/parrot.png');
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 26.4rem;
+  width: 25rem;
+  gap: 3rem;
+  padding-left: 1rem;
+
+  @include mobile {
+    width: 90%;
+    gap: 2rem;
+    height: fit-content;
+  }
+  @include tablet {
+    width: 30.4rem;
+  }
+}
+
+.title {
+  color: $yellow-600;
+  font-size: 2.12rem;
+  text-shadow: 2px 2px 1px $purple-600;
+  font-family: HVDComicSerifPro;
+
+  @include mobile {
+    font-size: 1.37rem;
+  }
+}
+
+.subTitle {
+  font-size: 1.75rem;
+  color: $white;
+  font-family: HVDComicSerifPro;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.appLinksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.market {
+  width: 8.75rem;
+  height: 2.75rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0rem 0rem 1rem $white;
+    transition: 0.1s;
+  }
+
+  &.google {
+    background-image: url('/assets/images/google_play.png');
+  }
+
+  &.apple {
+    background-image: url('/assets/images/apple-store.png');
+  }
+
+  @include mobile {
+    width: 6.8rem;
+    height: 2rem;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  gap: 0.5rem;
+}
+
+.star {
+  background-image: url('/assets/images/ratingStar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1.06rem;
+  width: 1.06rem;
+
+  @include mobile {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+}
+
+.phoneContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 30.62rem;
+
+  @include mobile {
+    width: 13rem;
+    height: 26.55rem;
+  }
+}
+
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30.63rem;
+  width: 15rem;
+  background-image: url('/assets/images/iphone.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  @include mobile {
+    width: 13rem;
+    height: 26.55rem;
+  }
+}
+
+.screen {
+  max-width: 13rem;
+  height: 23rem;
+  overflow: hidden;
+
+  @include mobile {
+    max-width: 11.2rem;
+    height: 20rem;
+  }
+}

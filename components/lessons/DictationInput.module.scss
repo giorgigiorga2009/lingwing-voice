@@ -1,0 +1,98 @@
+@import '@styles/imports';
+
+.input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 72%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: SegoeUI, $kaFont;
+  resize: none;
+  height: 4.4rem;
+  background-color: $white-100;
+  border: none;
+  border-radius: 50px;
+  padding: 1.2rem 1rem 0.8rem 2rem;
+  color: $black-800;
+
+  @include mobile {
+    height: 3rem;
+    padding: 0.7rem 1rem 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  &:focus {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    border: 2px solid $purple-500;
+  }
+}
+
+.inputDone {
+  width: 75%;
+  background-color: $green-100;
+  transition: 0.3s ease-in-out;
+
+  &:focus {
+    border: 2px solid $green-150;
+  }
+
+  // @include mobile {
+  //   width: 73%;
+  // }
+}
+
+.mistake {
+  transition: 0.2s ease-in-out alternate;
+  animation: bounce 0.7s;
+}
+
+@keyframes bounce {
+  1%,
+  99% {
+    border: 2px solid $red;
+    background-color: $red-100;
+  }
+
+  0% {
+    transform: translateX(0);
+    transition-timing-function: ease-in;
+  }
+
+  37% {
+    transform: translateX(5px);
+    transition-timing-function: ease-out;
+  }
+
+  55% {
+    transform: translateX(-5px);
+    transition-timing-function: ease-in;
+  }
+
+  73% {
+    transform: translateX(4px);
+    transition-timing-function: ease-out;
+  }
+
+  82% {
+    transform: translateX(-4px);
+    transition-timing-function: ease-in;
+  }
+
+  91% {
+    transform: translateX(2px);
+    transition-timing-function: ease-out;
+  }
+
+  96% {
+    transform: translateX(-2px);
+    transition-timing-function: ease-in;
+  }
+
+  100% {
+    transform: translateX(0);
+    transition-timing-function: ease-in;
+  }
+}

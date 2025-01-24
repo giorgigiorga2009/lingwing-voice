@@ -1,0 +1,386 @@
+@import '@styles/imports';
+
+.container {
+  margin-bottom: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // gap: 6rem;
+  z-index: 100;
+  width: 100%;
+
+  @include tablet {
+    bottom: 3rem;
+    gap: 1.5rem;
+  }
+
+  @include mobile {
+    // bottom: 3rem;
+    // gap: 1rem;
+    // padding: 2rem;
+  }
+}
+
+
+.startArrow {
+  width: 14.6rem;
+  height: 14.6rem;
+  opacity: 60%;
+  position: absolute;
+  background-image: url(/assets/images/start_arrow.gif);
+  top: -7.6rem;
+  right: -9.4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9.4rem;
+  transform: rotateY(180DEG) rotateZ(156DEG);
+  background-size: 19rem;
+
+
+  @include mobile {
+  
+    background-size: 10rem;
+  }
+}
+
+.link {
+  position: fixed;
+  display: flex;
+  bottom: 7em;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @include smallHeight {
+    bottom:4rem;
+  }
+
+  @include smallWidth {
+    bottom: 12rem;
+  }
+
+  @include mobile {
+    bottom: 10rem;
+
+    @include height800 {
+      bottom: 8rem;
+    }
+
+    @include smallHeight {
+      bottom: 6rem;
+    }
+  }
+
+  @include tablet {
+    bottom: 11rem;
+  }
+
+
+
+}
+
+.usersAmount {
+  position: relative;
+  display: flex;
+  font-size: 2.5rem;
+  color: $purple-300;
+  font-variant-numeric: normal;
+  width: 11.2rem;
+  height: 3rem;
+  overflow: hidden;
+
+  font-family: 'FuturaBold';
+  
+
+  .smallSpace {
+    margin-right: 0.2rem;
+  }
+
+  .digit {
+    position: absolute;
+    top: 0.5rem;
+    opacity: 0;
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        @if $i > 3 {
+          left: #{($i - 1) *
+            1.7 +
+            1}rem;
+        } @else {
+          left: #{($i - 1) * 1.7}rem;
+        }
+        animation: slideIn#{$i} 2s infinite;
+        animation-delay: #{($i - 1) * 0.1}s;
+      }
+      @include mobile{
+        &:nth-child(#{$i}) {
+          @if $i > 3 {
+            left: #{($i - 1) *
+              .8 +
+              .5}rem;
+          } @else {
+            left: #{($i - 1) * .8}rem;
+          }
+        }
+      }
+    }
+    @include tablet{
+      top: 0.6rem;
+    }
+    @include mobile{
+      top: 0.05rem;
+    }
+
+  }
+  @for $i from 1 through 6 {
+    $visible-until: 60.9% - (5% * ($i - 1));
+    $visible-end: $visible-until + 0.1%;
+    @keyframes slideIn#{$i} {
+      0% {
+        transform: translateY(-8%);
+        opacity: 1;
+      }
+      #{$visible-until} {
+        transform: translateY(-8%);
+        opacity: 1;
+      }
+      #{$visible-end} {
+        transform: translateY(-8%);
+        opacity: 0;
+      }
+      61.1% {
+        transform: translateY(-110%);
+        opacity: 0;
+      }
+      61.2% {
+        transform: translateY(-105%);
+        opacity: 1;
+      }
+      85% {
+        transform: translateY(110%);
+        opacity: 1;
+      }
+      85.1% {
+        transform: translateY(105%);
+        opacity: 0;
+      }
+      85.2% {
+        transform: translateY(-110%);
+        opacity: 0;
+      }
+      85.3% {
+        transform: translateY(-105%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-8%);
+        opacity: 1;
+      }
+    }
+  }
+
+@include mobile {
+  // font-size: 1.3rem;
+  // width: 5.3rem;
+  // height: 1.3rem;
+
+  font-size: 1.2rem;
+  width: 5.3rem;
+  
+  height: 1.5rem;
+}
+ 
+@include smallDesktopHeight {
+  // font-size: 2.5rem;
+  // width: 13rem;
+  // height: 3.5rem;
+}
+}
+
+.title {
+  display: flex;
+  color: $white;
+  font-size: 1.5rem;
+  // line-height:1.9rem;
+  gap: 0.8rem;
+  align-items: center;
+  text-transform: uppercase !important;
+  // font-family: $kaNinoMtavruli;
+
+
+  @include mobile {
+    font-size: 0.85rem;
+    margin-top: 3rem;
+    gap: 0.3rem;
+    line-height: 1.8rem;
+
+
+    .usersAmount {
+      // font-family:$kaFontTitle;
+      font-weight: 500;
+
+      text-transform: uppercase;
+      transform:translateY(0.125rem) !important;
+    } 
+
+
+    @include smallHeight {
+      // font-size: 0.8rem;
+      margin-top: 1.8rem;
+      // font-size:1.3rem;
+      // font-family: $notoSansGeorgian;
+      
+      // span {
+      //   // font-family:$kaFontTitle;
+      //   font-size: 0.9rem;
+      //   padding-top: 0.08rem;
+      //   height: 1.2rem;
+      //   font-family: $notoSansGeorgian !important;
+      //   font-weight:500;
+
+      //   .usersAmount {
+      //     font-family: $notoSansGeorgian !important;
+      //     font-weight:500;
+      //     font-size:1rem;
+
+      //     font-family: 'FuturaBold';
+
+      //   }
+      // }
+
+    }
+  }
+
+  @include tablet {
+    margin-top: 1.5rem;
+  }
+
+
+
+  @include smallDesktopHeight {
+    font-size: 1.2rem;
+
+    .usersAmount {
+      font-size: 2rem;
+      // transform: translateY(0.6rem);
+    }
+  }
+}
+
+.bubbleUp {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  z-index: 0;
+  width: 3rem;
+  height: 1.38rem;
+  background-image: url('/assets/images/bubble-up.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bubbleDown {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 1.75rem;
+  height: 0.875rem;
+  background-image: url('/assets/images/bubble-down.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 0 2.5rem;
+  height: 3.45rem;
+  bottom: 18%;
+  cursor: pointer;
+  background-color: $orange-500;
+  border-radius: 1.88rem;
+  box-shadow: -1px 1px 1px $black-t;
+  z-index: 2;
+
+
+  @include smallHeight{ 
+    padding:0 2rem;
+    height:3rem;
+  }
+
+  @include mobile {
+    width: 18rem;
+
+    @include smallHeight {
+      height: 2.5rem !important;
+      width:auto;
+    }
+  }
+
+  @include smallWidth {
+    width: 17rem !important;
+    height: 3rem !important;
+
+    @include smallHeight {
+      height: 2.5rem !important;
+      width:auto !important;
+    }
+  }
+
+  // @include desktop{
+  //   bottom: 15%;
+  // }
+
+  &:hover {
+    transition: all 0.2s linear;
+    transform: translateY(-1px);
+    background-color: $orange-450;
+    box-shadow: 0 2px 10px $black-t;
+
+    .bubbleUp {
+      display: block;
+      top: -1.38rem;
+      left: 4rem;
+    }
+
+    .bubbleDown {
+      display: block;
+      bottom: -0.8rem;
+      right: 5rem;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  color: $white;
+  font-family: SegoeUI, $kaFont;
+  text-align: center;
+
+
+  @include smallHeight{
+    font-size:1.2rem;
+  }
+
+  @include mobile {
+    height: 2.5rem;
+    max-width: 20rem;
+    font-size: 1rem;
+
+
+    @include smallHeight {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      font-family: $kaFontTitleBold
+    }
+  }
+}

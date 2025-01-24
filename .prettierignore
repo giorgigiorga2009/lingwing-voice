@@ -1,0 +1,11 @@
+# Ignore artifacts:
+public
+styles
+.next
+.idea
+.husky
+devops
+
+yarn.lock
+
+README.md

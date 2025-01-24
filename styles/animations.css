@@ -1,0 +1,26 @@
+@keyframes fadeInBlurForModals {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.commonScroll ::-webkit-scrollbar-thumb {
+  background: #d7d7d7;
+  border-radius: 1rem;
+}
+.commonScroll ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1rem;
+}
+.commonScroll ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.commonScroll * {
+  scrollbar-width: thin;
+  /* Firefox 64 and later */
+}/*# sourceMappingURL=animations.css.map */

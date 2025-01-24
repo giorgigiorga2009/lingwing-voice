@@ -1,0 +1,191 @@
+@import '@styles/imports';
+
+.paymentSchedule {
+  display: flex;
+  row-gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  max-width: 33.125rem;
+  margin-top: 35rem;
+  background: linear-gradient(
+    to top,
+    $white-100 7rem,
+    $white 7rem 41rem,
+    $white-100 41rem
+  );
+  border-radius: 1.5rem;
+  padding: 1.2rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+
+  &:lang('ka') {
+    font-family: $kaFont;
+  }
+
+  @include mobile {
+    padding: 0.6rem;
+  }
+}
+
+.scheduleHeader {
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 1.5rem;
+
+  @include tablet {
+    font-size: 1.1rem;
+  }
+
+  @include mobile {
+    font-size: 0.9rem;
+  }
+}
+
+.table {
+  width: 60%;
+  border-collapse: collapse;
+
+  .checkListPng {
+    margin-top: 0.2rem;
+  }
+
+  th,
+  td {
+    padding: 0.3rem;
+    text-align: center;
+    border-bottom: 1px solid $white-200;
+
+    @include mobile {
+      font-size: 0.9rem;
+    }
+  }
+  th {
+    background-color: $white-100;
+  }
+  td {
+    // @include small {
+    //   font-size: 0.7rem;
+    // }
+    @include smallWidth {
+      font-size: 0.6rem;
+    }
+  }
+
+  tr:hover {
+    background-color: $white-100;
+    cursor: pointer;
+  }
+}
+
+// checkBox
+
+.checkBoxContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+  // @include small{
+  //   display: flex;
+  //   flex-direction: column;
+  //   font-size: .7rem;
+  // }
+}
+
+.checkBoxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.customCheckBox {
+  position: absolute;
+  top: -0.3rem;
+  left: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  border: 0.15rem solid $purple-600;
+
+  @include mobile {
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.customCheckBox:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkBoxContainer input:checked ~ .customCheckBox:after {
+  display: block;
+}
+
+.checkBoxContainer .customCheckBox:after {
+  left: 0.7rem;
+  top: 0.3rem;
+  width: 0.45rem;
+  height: 0.85rem;
+  border: solid $purple-600;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+
+  @include mobile {
+    left: 0.4rem;
+    top: 0.2rem;
+    width: 0.35rem;
+    height: 0.75rem;
+  }
+}
+
+// terms and conditions
+.termsAndConditions {
+  color: $black-800;
+}
+
+.a {
+  text-decoration: none;
+  color: $purple-600;
+}
+
+// btn
+.continueBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7rem;
+
+  .btn {
+    font-family: SegoeUI;
+    color: $white-50;
+    background-color: $orange-450;
+    border-radius: 1.75rem;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+    border: none;
+    transform: translateY(0);
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-0.1rem);
+    }
+
+    &:disabled {
+      background-color: $white-200;
+    }
+
+    &:lang(ka) {
+      font-family: $kaFont;
+    }
+  }
+}

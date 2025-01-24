@@ -1,0 +1,281 @@
+@import '@styles/imports';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: $grey-800;
+  width: 100%;
+  font-family: SegoeUI, $kaFont;
+  padding: 2.4rem 5% 1.4rem;
+  border-top: 2px solid $white-100;
+
+  &.true {
+    border-radius: 1rem;
+    border: 2px solid $purple-500;
+    background-color: $white-50;
+
+
+    @include mobile {
+
+      border-radius: 0.625rem;
+      border: 1px solid #4C1E6F;
+      background: #FAFAFA;
+    }
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  @include mobile {
+    gap: 1rem;
+    margin: 0px 4%;
+    box-sizing: border-box;
+    width: 92%;
+
+    border: 0;
+  }
+}
+
+.yourChoice {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.9rem;
+  background-color: $purple-500;
+  color: $white;
+  padding: 0.2rem 0.6rem 0.3rem;
+  border-radius: 0 0.8rem;
+  margin-top: -2.5rem;
+  margin-right: -5.8%;
+
+
+  color: #FFF;
+
+  text-align: center;
+  font-family: $kaFont;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+
+
+  @include mobile {
+    margin-top: -2.4rem;
+    margin-right: -1.185rem;
+    border-radius: 0 0.5rem;
+  }
+}
+
+.title {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  font-size: 1.5rem;
+  font-family: SegoeUI, $kaFontTitle;
+  color: $purple-600;
+  top: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 1;
+
+
+  @include mobile {
+    text-align: center;
+    font-family: $notoSansGeorgian;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+
+    line-height: normal;
+    text-transform: capitalize;
+    color: white;
+
+    position: relative;
+    align-items: flex-end;
+
+    border-bottom: 1px solid #4C1E6F;
+
+    background: #4C1E6F;
+    margin-bottom: 1.7rem;
+    padding-bottom: 0.8rem;
+    position:fixed;
+  }
+
+}
+
+.modeName {
+  font-size: 1.3rem;
+  margin-right: 5%;
+
+  @include mobile {
+    color: #676767;
+
+    text-align: center;
+    font-family: $kaFont;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    order: 1
+  }
+
+}
+
+.dots {
+  display: flex;
+  gap: 2vw;
+
+
+  @include mobile {
+    order: 2;
+
+  }
+}
+
+.purpleDot {
+  border-radius: 1rem;
+  background-color: $purple-200;
+  height: 1rem;
+  width: 1rem;
+
+
+  @include mobile {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+.greyDot {
+  border-radius: 1rem;
+  background-color: $white-100;
+  height: 1rem;
+  width: 1rem;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include mobile {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+
+.time {
+  background-image: url('../../../public/assets/images/time-left.png');
+  background-repeat: no-repeat;
+  background-size: 1.4rem;
+  background-position: 5%;
+  background-color: $purple-300;
+  padding: 0.2rem 0.8rem 0.3rem 2.2rem;
+  border-radius: 2rem;
+  color: $white;
+  margin-right: auto;
+
+  @include mobile {
+    color: #FFF;
+
+    text-align: center;
+    font-family: "Noto Sans Georgian";
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    order: 3;
+    margin-right: 0rem;
+    margin-left: auto;
+    background-size: 1.2rem
+  }
+
+}
+
+.learnMore {
+  width: fit-content;
+  color: $purple-500;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  padding: 0;
+  margin-top: -1rem;
+
+  @include mobile {
+    color: #7835AB;
+
+    font-family: $notoSansGeorgian;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+}
+
+.content {
+
+  @include mobile {
+    font-size: 0.875rem;
+    line-height: normal;
+    font-family: $kaFont;
+  }
+}
+
+.desc {
+  font-size: 0.85rem;
+}
+
+.button {
+  border-radius: 2rem;
+  border: 2px solid $purple-500;
+  height: 2.4rem;
+  width: 9rem;
+  background-color: $purple-50;
+  color: $purple-500;
+  font-family: SegoeUI;
+  font-size: 1rem;
+  align-self: center;
+
+  &:lang(ka) {
+    font-family: $kaFontTitle;
+  }
+
+  &:hover {
+    background-color: $purple-100;
+    box-shadow: 0 1px 3px 0 rgba(60 64 67 / 30.2%),
+      0 4px 8px 3px rgba(60 64 67 / 14.9%);
+    transition: box-shadow 0.08s linear,
+      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
+  @include mobile {
+    color: #7835AB;
+
+    text-align: center;
+    font-family: $kaFont;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+
+    height: 2.1rem;
+    width: 8.1rem;
+
+    border-radius: 1.0625rem;
+    border: 1px solid #4C1E6F;
+
+    opacity: 0.8;
+    background: #DBCEEC;
+  }
+}

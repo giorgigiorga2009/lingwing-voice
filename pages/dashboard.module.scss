@@ -1,0 +1,100 @@
+@import '@styles/imports';
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: $white-100;
+}
+
+.content {
+  padding: 3.5rem 1.6rem;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  @include tablet {
+    padding: 3.438rem 0.8rem;
+  }
+
+  @include mobile {
+    padding: 3.438rem 0.8rem;
+  }
+}
+
+.left_bar {
+  width: 25%;
+  max-width: 18rem;
+
+  @include tablet {
+    width: 100%;
+    max-width: none;
+  }
+
+  @include mobile {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  color: $black-800;
+  margin-bottom: 0.625rem;
+  white-space: nowrap;
+
+  @include smallWidth {
+    white-space: normal;
+  }
+}
+
+.heading2 {
+  color: $grey-100;
+  font-size: 1.4rem;
+  margin-bottom: 2.2rem;
+}
+
+.title,
+.heading2 {
+  line-height: 1.2;
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+
+  @include tablet {
+    margin-left: 0.7rem;
+  }
+
+  @include mobile {
+    margin-left: 0.7rem;
+  }
+}
+
+.started_courses {
+  width: 75%;
+  max-width: 52rem;
+  margin-top: 3.94rem;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.promo_slider_bottom {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}

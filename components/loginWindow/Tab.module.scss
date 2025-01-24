@@ -1,0 +1,23 @@
+@import '@styles/imports';
+
+.tab {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 2.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: $grey-800;
+
+  &.active {
+    border-bottom: 2px solid $purple-500;
+    color: $purple-600;
+  }
+
+  &:hover {
+    color: $purple-600;
+  }
+}

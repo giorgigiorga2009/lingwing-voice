@@ -1,0 +1,27 @@
+@import '@styles/imports';
+
+.contactUs {
+  font-size: 1.2rem;
+  text-align: center;
+  color: $black-100;
+  margin: 3rem;
+}
+
+.moreInfo {
+  color: $black-800;
+  padding-right: 1rem;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+}
+
+.phoneNumber {
+  font-family: SegoeUIBlack;
+  color: $purple-600;
+  text-decoration: none;
+
+  &:hover {
+    color: $purple-300;
+  }
+}

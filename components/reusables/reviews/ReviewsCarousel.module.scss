@@ -1,0 +1,381 @@
+@import '@styles/imports';
+
+.containerWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0;
+  margin-top: 2rem;
+  @include mobile{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0;
+    margin-top: 2rem;
+  }
+}
+
+.carousel {
+  width: 100%; 
+  max-width: 40vw; 
+  height: auto;
+  border: none;
+  overflow: hidden;
+  margin: 0 auto;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  @include mobile {
+    width: 100%; 
+    max-width: 95vw; 
+    height: auto;
+    border: none;
+    overflow: hidden;
+    margin: 0 auto;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+  }
+}
+
+.label {
+  font-family: SegoeUI-SemiBold;
+  font-size: 1rem;
+  color: $grey-700;
+  margin-top: 0.5rem;
+  z-index: 10;
+
+  &:hover {
+    text-decoration: underline;
+    color: $black;
+  }
+
+  @include mobile {
+    font-size:0.7rem;
+    font-family: $notoSansGeorgian;
+  }
+}
+
+.review {
+  // padding: 1rem;
+  width: 90%;
+  background: -webkit-radial-gradient(top, #c669fb, #7835ab);
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  @include mobile{
+    width: 95%;
+    background: -webkit-radial-gradient(top, #c669fb, #7835ab);
+    border-radius: 0.5rem;
+    margin: 0 auto;
+  }
+}
+
+.reviewContent {
+  width: 100%;
+  padding: 1.5rem;
+  padding-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include mobile {
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  @include tablet{
+    margin-left: -1rem;
+  }
+  @include mobile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: -1rem;
+  }
+}
+
+.avatarContainer {
+  margin-right: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $orange-500;
+@include tablet{
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: 0.2rem;
+}
+
+  @include mobile {
+    margin-right: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $orange-500;
+  }
+  @include smallWidth{
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  @include tablet{
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  @include mobile{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  @include smallWidth{
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.userName {
+  color: #fff;
+  // font-size: 1rem;
+  @include tablet{
+    font-size: 0.85rem;
+  }
+  @include mobile{
+    font-size: 0.65rem;
+  }
+  @include smallWidth{
+    font-size: 0.55rem;
+  }
+}
+
+.stars {
+  display: flex;
+  margin-bottom: 1rem;
+    // justify-content: center;
+  // align-items: center;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  height: 2.5rem;
+  width: fit-content;
+  gap: 0.3rem;
+  @include tablet{
+    top: 1.4rem;
+    right: 0.3rem;
+  }
+
+  @include mobile {
+    position: absolute;
+    right: 0;
+    height: 1rem;
+    width: fit-content;
+    gap: 0;
+    top: 0.9rem;
+    // left:50%;
+    // transform:translateX(-50%)
+  }
+  @include smallWidth{
+    top: 0.7rem;
+  }
+}
+
+.star {
+  background-image: url('/assets/images/ratingStar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.25rem;
+  @include tablet{
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+  @include mobile {
+    background-image: url('/assets/images/ratingStar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+}
+
+.quote {
+  flex-grow: 1;
+}
+
+.text {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  max-width: 96%;
+  width: auto;
+  font-family: $kaFont;
+  text-align: center;
+  height: 4rem;
+  color:white;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  @include tablet{
+    font-size: 0.7rem;
+    height: 3.2rem;
+  }
+  @include mobile {
+    font-size: 0.7rem;
+    color: #666;
+    line-height: 1.4;
+    max-width: 100%;
+    width: auto;
+    font-family: $kaFont;
+    text-align: center;
+    height: 4rem;
+    color:white;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+
+
+.label {
+  font-family: SegoeUI-SemiBold;
+  font-size: 1rem;
+  // color: #ffffff;
+  // margin-top: 1.5rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.leftArrow {
+  position: absolute;
+  left: 0rem; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url('../../../public/themes/images/v2/arrow-icon2.svg'); /* Replace with your arrow image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  @include tablet {
+    left: 0rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  @include mobile {
+    left: 0rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  @include smallWidth{
+    left: 0rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
+.rightArrow {
+  position: absolute;
+  right: 0rem; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url('../../../public/themes/images/v2/arrow-icon.svg'); /* Replace with your arrow image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  
+  @include tablet {
+    position: absolute;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  @include mobile {
+    position: absolute;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  @include smallWidth{
+    position: absolute;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
+.wizardPage {
+  @include mobile {
+    display: none;
+  }
+  @include smallWidth {
+    display: none;
+  }
+}

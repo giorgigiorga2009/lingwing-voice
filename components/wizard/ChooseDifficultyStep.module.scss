@@ -1,0 +1,12 @@
+@import '@styles/imports';
+
+.levelsContainer {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 100%;
+
+  @include mobile {
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+  }
+}

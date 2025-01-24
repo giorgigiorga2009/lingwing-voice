@@ -1,0 +1,272 @@
+@import '@styles/imports';
+
+.optionContainer {
+  width: 99%;
+  height: 6.5rem;
+  border: 1px solid $white-100;
+  border-radius: 0.5rem;
+  background-color: $white;
+  display: flex;
+  margin: 0.1rem auto;
+  margin-top: 0.3rem;
+  align-items: center;
+  padding: 1rem;
+  user-select: none;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+
+  @include mobile {
+    height: 5.5rem;
+    padding: 0.7rem;
+  }
+
+  @include smallWidth {
+    height: 5rem;
+    padding: 0.7rem;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courseLogo {
+  width: 4.688rem;
+  height: 4.688rem;
+  border: 7px solid $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-shadow: 0 0 15px $white-300;
+  border-radius: 50%;
+
+  &.course-1 {
+    background-image: url('../../public/assets/images/wizard/mountain-course-1.png');
+  }
+
+  &.course-2 {
+    background-image: url('../../public/assets/images/wizard/mountain-course-2.png');
+  }
+
+  &.course-3 {
+    background-image: url('../../public/assets/images/wizard/mountain-course-3.png');
+  }
+  &.course-4 {
+    background-image: url('../../public/assets/images/wizard/mountain-course-4.png');
+  }
+
+  @include mobile {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  @include smallWidth {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 4px solid $white;
+  }
+}
+
+.courseName {
+  color: $purple-500;
+  font-size: 1.15rem;
+  margin-top: -1.2rem;
+  text-shadow: -2px -2px 0 #fff, -2px -1px 0 #fff, -2px 0 0 #fff,
+    -2px 1px 0 #fff, -2px 2px 0 #fff, -1px -2px 0 #fff, -1px -1px 0 #fff,
+    -1px 0 0 #fff, -1px 1px 0 #fff, -1px 2px 0 #fff, 0 -2px 0 #fff,
+    0 -1px 0 #fff, 0 0 0 #fff, 0 1px 0 #fff, 0 2px 0 #fff, 1px -2px 0 #fff,
+    1px -1px 0 #fff, 1px 0 0 #fff, 1px 1px 0 #fff, 1px 2px 0 #fff,
+    2px -2px 0 #fff, 2px -1px 0 #fff, 2px 0 0 #fff, 2px 1px 0 #fff,
+    2px 2px 0 #fff;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
+
+  @include smallWidth {
+    font-size: 0.65rem;
+    margin-top: -0.8rem;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: 2rem;
+
+  @include mobile {
+    padding-left: 1rem;
+  }
+
+  @include smallWidth {
+    padding-left: 0.5rem;
+  }
+}
+
+.title {
+  font-family: SegoeUI-SemiBold;
+  color: $grey-800;
+
+  @include mobile {
+    font-size: 0.875rem;
+  }
+
+  @include smallWidth {
+    font-size: 0.8rem;
+  }
+}
+
+.amountOfStudents {
+  display: flex;
+  font-size: 0.875rem;
+  gap: 0.3rem;
+
+  @include mobile {
+    font-size: 0.75rem;
+  }
+
+  @include smallWidth {
+    font-size: 0.65rem;
+  }
+
+  .number {
+    color: $orange-500;
+    font-weight: 700;
+    @include mobile {
+      font-size:0.5rem;
+    }
+  }
+
+  .text {
+    color: $grey-600;
+    
+
+    @include mobile {
+      font-size:0.5rem;
+    }
+  }
+}
+
+.buttons {
+  position: absolute;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    right: 1rem;
+  }
+
+  @include smallWidth {
+    gap: 0.4rem;
+    right: 1rem;
+  }
+}
+
+.aboutButton {
+  border: 2px solid $grey-100;
+  border-radius: 1.25rem;
+  color: $grey-600;
+  font-size: 0.9rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  min-width: 2.4rem;
+  line-height: 2.3rem;
+  width: fit-content;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-family:$kaFont; 
+  
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+
+  &:hover {
+    background-color: $white-50;
+    box-shadow: 0 1px 3px 0 rgba(60 64 67 / 10.2%),
+      0 4px 8px 3px rgba(60 64 67 / 10.9%);
+    transition: box-shadow 0.08s linear,
+      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @include mobile {
+    // font-size: 0.7rem;
+    // padding: 0 0.5rem;
+    // height: 2.3rem;
+
+
+    font-size: 0.7rem;
+    padding: 0 0.6rem;
+    height: 2.1rem;
+  }
+
+  @include smallWidth {
+    span {
+      display: none;
+    }
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    // background-image: url('../../public/assets/images/info.png');
+    // padding: 0 0.4rem;
+
+
+    font-size: 0.6rem;
+    padding: 0 0.5rem;
+    height: 2rem;
+  }
+}
+
+.startButton {
+  border-radius: 1.25rem;
+  color: $white;
+  background-color: $orange-500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.5rem;
+  width: fit-content;
+  padding: 0 1.2rem;
+  transition: box-shadow 0.08s linear,
+    min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family:$kaFont;
+
+  &:hover {
+    background-color: $orange-450;
+    box-shadow: 0 1px 3px 0 rgba(60 64 67 / 30.2%),
+      0 4px 8px 3px rgba(60 64 67 / 14.9%);
+    transition: box-shadow 0.08s linear,
+      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @include mobile {
+    font-size: 0.7rem;
+    padding: 0 0.6rem;
+    height: 2.1rem;
+  }
+
+  @include smallWidth {
+    // font-size: 0.7rem;
+    // padding: 0 0.8rem;
+    // height: 2.3rem;
+
+
+    font-size: 0.6rem;
+    padding: 0 0.5rem;
+    height: 2rem;
+  }
+}

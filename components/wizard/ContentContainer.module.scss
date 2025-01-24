@@ -1,0 +1,23 @@
+@import '@styles/imports';
+
+.container {
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include desktop {
+    margin: 2.625rem auto;
+    width: 52rem;
+  }
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include mobile {
+    margin: 3rem auto;
+    padding: 0 0.5rem;
+  }
+}

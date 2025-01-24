@@ -1,0 +1,87 @@
+@import './styles/imports';
+
+.wrapper {
+  width: 10%;
+  padding: 2.18rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 60%;
+  z-index: 100;
+  display:none;
+
+
+  @include tablet {
+    height: auto;
+    margin-bottom: 1.87rem;
+    display:block;
+  }
+
+  @include mobile {
+    display:block;
+
+    height: auto;
+    // margin-bottom: 1.87rem;
+    width:auto;
+    height:50px;
+    margin:0px;
+    padding:0px;
+    display:block;
+    position: absolute;
+    top:initial;
+    
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    position:absolute;
+    z-index:5;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    bottom:4rem;
+  }
+}
+
+// .wrapper h3 {
+//   font-family: SegoeUI;
+//   color: $white;
+//   font-size: 0.875rem;
+//   font-weight: 700;
+//   line-height: 1.1;
+
+//   &:lang(ka) {
+//     font-family: $kaFont;
+//   }
+// }
+
+// .wrapper h3 strong {
+//   color: $orange-500;
+//   font-size: 1.5rem;
+//   margin-top: 0.9375rem;
+// }
+
+.store_box {
+  margin-top: 3.56rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.94rem;
+  align-items: flex-start;
+  z-index: 100;
+
+  @include tablet {
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+
+  @include mobile {
+    flex-flow: row wrap;
+    justify-content: center;
+    // margin-top: 1.25rem;
+    margin:0px;
+    padding:0px;
+    display:block;
+    text-align: center;
+  }
+}

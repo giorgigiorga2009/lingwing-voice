@@ -1,0 +1,131 @@
+@import '@styles/imports';
+
+.container {
+  background-image: url('../../public/assets/images/background-wave-course.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: relative;
+  padding: 144px 24px 100px;
+  background-color: $white;
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+    margin-top: -6px;
+  }
+}
+
+.leftContainer {
+  @include desktop {
+    max-width: 30%;
+  }
+}
+
+.rightContainer {
+  background-image: url('../../public/assets/images/scrore-stars.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: relative;
+
+  @include tablet {
+    background-position: 44vw 0;
+    min-width: 27vw;
+  }
+
+  @include desktop {
+    background-position: 16vw 11%;
+    width: 30%;
+  }
+}
+
+.title {
+  font-family: HVDComicSerifPro, $kaFont;
+  font-size: 5vh;
+  line-height: 7vh;
+  color: $purple-600;
+  margin-top: 4rem;
+
+  @include tablet {
+    font-size: 5vh;
+    line-height: 4vh;
+  }
+
+  @include mobile {
+    font-size: 4vh;
+    line-height: 4vh;
+  }
+}
+
+.bubbleContainer {
+  position: relative;
+  right: 1rem;
+
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5vh;
+  padding-left: 4vw;
+  background-color: $yellow-100;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  width: 45vh;
+  height: 27vh;
+
+  @include mobile {
+    left: -3vw;
+    width: 31vh;
+    height: 20vh;
+  }
+}
+
+.totalPractitionersNum {
+  position: absolute;
+  top: 4vh;
+  left: 6vh;
+  font-family: SegoeUIBlack, bpg_arial_2009, $kaFont;
+  color: $orange-500;
+  font-size: 8vh;
+  margin: 0;
+  overflow: hidden;
+
+  @include mobile {
+    top: 3vh;
+    left: 5vh;
+    font-size: 6vh;
+  }
+}
+
+.peoplePracticing {
+  position: absolute;
+  font-family: SegoeUI, $kaFont;
+  font-size: 3vh;
+  top: 11vh;
+  color: $purple-600;
+  line-height: 3.5vh;
+  left: 6vh;
+
+  @include mobile {
+    top: 10vh;
+    left: 5vh;
+    font-size: 2.5vh;
+    margin-top: 0;
+  }
+}
+
+.description {
+  position: relative;
+  bottom: 3vh;
+  font-family: SegoeUI, bpg_arial_2009, $kaFont;
+  font-size: 1.2rem;
+  color: $black-800;
+  margin-bottom: 2vh;
+
+  @include mobile {
+    font-size: 2vh;
+  }
+}
+
+.topUsers {
+  margin-top: 8vh;
+}

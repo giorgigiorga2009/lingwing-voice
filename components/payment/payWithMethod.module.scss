@@ -1,0 +1,156 @@
+@import '@styles/imports.scss';
+
+.payWithContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .pHeaderPayWith {
+    margin: 0 0 0 0;
+    font-size: 1rem;
+    color: $purple-700;
+    text-transform: lowercase;
+    font-style: normal;
+    font-weight: 700;
+    font-family: $kaFont;
+    @include mobile {
+      font-size: 0.8rem;
+    }
+    @include smallWidth {
+      // height: 7.25rem;
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.payWithTiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &.selected {
+    .payWithTile:not(.selectedTile) {
+      display: none;
+    }
+  }
+}
+
+.payWithTile {
+  position: relative;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+
+  &.selectedTile {
+    transform: scale(1.1);
+  }
+
+  .purple_tick_for_payment_option {
+    position: absolute;
+    top: -0.4rem;
+    left: 5.2rem;
+  }
+}
+
+.payWithInput {
+  appearance: none;
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 0.169rem;
+  border: 2px solid $white-300;
+  outline: none;
+  transition: border-color 0.1s ease-in-out;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 5rem;
+  cursor: pointer;
+  @include smallWidth {
+    width: 6rem;
+    height: 2rem;
+  }
+
+  &:hover {
+    border: 2px solid $purple-600;
+  }
+
+  &:checked {
+    border: 2px solid $purple-600;
+  }
+}
+
+.freeTrial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &.selected {
+    .payWithTile:not(.selectedTile) {
+      display: none;
+    }
+  }
+  @include mobile{
+    .payWithTile{
+      font-size: 0;
+    }
+  }
+  @include tablet{
+    .payWithTile{
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.freeTrialTile{
+  .purple_tick_for_payment_option {
+    position: absolute;
+    top: -0.4rem;
+    left: 5.2rem;
+    @include mobile{
+      width: 1rem;
+      height: 1rem;
+      left: 3.5rem;
+      top: -0.2rem;
+    }
+    @include tablet{
+      left: 4.5rem;
+    }
+  }
+}
+
+.freeTrialInput{
+  appearance: none;
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 0.169rem;
+  border: 2px solid $white-300;
+  outline: none;
+  transition: border-color 0.1s ease-in-out;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 5rem;
+  cursor: pointer;
+  @include smallWidth {
+    width: 6rem;
+    height: 2rem;
+  }
+
+  &:hover {
+    border: 2px solid $purple-600;
+  }
+
+  &:checked {
+    border: 2px solid $purple-600;
+  }
+  @include mobile{
+    width: 4rem;
+    height: 2rem;
+    background-size: 3rem;
+  }
+  @include tablet{
+    width: 5rem;
+    height: 2.5rem;
+    background-size: 4rem;
+  }
+}

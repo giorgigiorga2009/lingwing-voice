@@ -1,0 +1,57 @@
+@import '@styles/imports';
+
+.container {
+  width: 6.25rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0 0.75rem 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @include tablet {
+    width: 5rem;
+  }
+
+  @include mobile {
+    width: 5rem;
+  }
+}
+
+.circle_transparent {
+  width: 7.8125rem;
+  height: 8rem;
+  margin-top: -0.5625rem;
+  margin-right: -1.8125rem;
+  border-radius: 50%;
+  background: $yellow-100;
+}
+
+.circle {
+  width: 7.4375rem;
+  height: 7.4375rem;
+  margin: 0.25rem -0.3125rem 0 0;
+  border-radius: 50%;
+  float: right;
+  background-color: $yellow-200;
+}
+
+.icon_airplane {
+  width: 6.25rem;
+  height: 6.25rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 0.9375rem;
+  background-image: url('/themes/images/v2/standart-level-icon1.png');
+  margin-left: 0.625rem;
+
+  @include tablet {
+    height: 4.375rem;
+    width: 4.375rem;
+  }
+
+  @include mobile {
+    height: 4.375rem;
+    width: 4.375rem;
+  }
+}

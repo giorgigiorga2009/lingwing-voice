@@ -1,0 +1,86 @@
+@import '@styles/imports';
+
+.title {
+  font-size: 2rem;
+  color: $grey-800;
+  font-family: SegoeUI;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+
+  @include smallWidth {
+    font-size: 1rem;
+  }
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 3rem;
+  animation: fadeInDown 1s 1 alternate;
+
+  @include mobile {
+    padding: 0.4rem;
+  }
+}
+
+.flagsContainer {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+}
+
+.flag {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid $white;
+  box-shadow: 0 0 7px $grey-100;
+
+  @include mobile {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @include smallWidth {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
+
+.smallFlag {
+  width: 1.44rem;
+  height: 1.44rem;
+  border: 3px solid $white;
+  position: absolute;
+  bottom: -0.2rem;
+  right: -0.5rem;
+  box-shadow: 0 0 7px $grey-100;
+
+  @include mobile {
+    right: -18%;
+    bottom: -5%;
+  }
+
+  @include smallWidth {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}

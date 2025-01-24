@@ -1,0 +1,415 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+  width: 15rem;
+}
+
+.text {
+  color: $white;
+  font-family: SegoeUI;
+  font-size: 0.88rem;
+  padding-left: 5%;
+  border-radius: 100%;
+  width: 7rem;
+  text-transform: uppercase;
+
+  .grey & {
+    color: $grey-800;
+  }
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+}
+
+.followButton {
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 100%;
+  border: 2px solid $purple-200;
+  line-height: 2.18rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  background-size: 1.25rem;
+
+  .grey & {
+    border: 2px solid $grey-100;
+  }
+
+  &.facebook {
+    background-image: url('/assets/images/networks/facebook-light-icon.svg');
+
+    .grey & {
+      background-image: url('/assets/images/networks/facebook-dark-icon.svg');
+    }
+  }
+
+  &.instagram {
+    background-image: url('/assets/images/networks/instagram-light-icon.svg');
+
+    .grey & {
+      background-image: url('/assets/images/networks/instagram-dark-icon.svg');
+    }
+  }
+
+  &.linkedin {
+    background-image: url('/assets/images/networks/linkedin-light-icon.svg');
+
+    .grey & {
+      background-image: url('/assets/images/networks/linkedin-dark-icon.svg');
+    }
+  }
+
+  &.youtube {
+    background-image: url('/assets/images/networks/youtube-light-icon.svg');
+
+    .grey & {
+      background-image: url('/assets/images/networks/youtube-dark-icon.svg');
+    }
+  }
+
+  &.tiktok {
+    background-image: url('/assets/images/networks/tiktok-light-icon.svg');
+
+    .grey & {
+      background-image: url('/assets/images/networks/tiktok-dark-icon.svg');
+    }
+  }
+
+  &:hover {
+    border: 2px solid $white;
+
+    .grey & {
+      border: 2px solid $black;
+    }
+  }
+
+  @include tablet {
+    width: 2rem;
+    height: 2rem;
+  }
+
+
+  @include mobile {
+
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    // border: 2px solid white !important;
+    opacity: 0.5;
+     
+    .grey & {
+      border: 2px solid rgba(51,51,51,1) !important;
+    }
+
+    &.instagram {
+      background-image: url('/assets/images/networks/social-ig-light.svg');
+      background-size: 1rem;
+      
+      .grey & {
+        background-image: url('/assets/images/networks/social-ig-dark.svg');
+      }
+    }
+
+    &.facebook {
+      background-image: url('/assets/images/networks/social-fb-light.svg');
+      background-size: auto 1rem;
+
+      .grey & {
+        background-image: url('/assets/images/networks/social-fb-dark.svg');
+      }
+    } 
+
+    &.tiktok {
+      background-image: url('/assets/images/networks/social-tk-light.svg');
+      background-size: auto 1rem;
+
+      .grey & {
+        background-image: url('/assets/images/networks/social-tk-dark.svg');
+      }
+    }
+
+    &.linkedin {
+      background-image: url('/assets/images/networks/social-in-light.svg');
+      background-size: auto 0.7rem;
+
+      .grey & {
+        background-image: url('/assets/images/networks/social-in-dark.svg');
+      }
+    }
+
+    &.youtube {
+
+      display: none;
+      // background-image: url('/assets/images/networks/youtube-light-icon.svg');
+
+      .grey & {
+        // background-image: url('/assets/images/networks/youtube-dark-icon.svg');
+      }
+    }
+
+
+    &:hover {
+      opacity: 1;
+    }
+
+
+    @include smallHeight {
+      width: 1.3rem !important;
+      height: 1.3rem !important;
+
+
+      &.instagram {
+        background-image: url('/assets/images/networks/social-ig-light.svg');
+        background-size: 0.7rem;
+
+        .grey & {
+          background-image: url('/assets/images/networks/social-ig-dark.svg');
+        }
+      }
+
+      &.facebook {
+        background-image: url('/assets/images/networks/social-fb-light.svg');
+        background-size: auto 0.7rem;
+
+        .grey & {
+          background-image: url('/assets/images/networks/social-fb-dark.svg');
+        }
+      }
+
+      &.tiktok {
+        background-image: url('/assets/images/networks/social-tk-light.svg');
+        background-size: auto 0.7rem;
+
+        .grey & {
+          background-image: url('/assets/images/networks/social-tk-dark.svg');
+        }
+      }
+
+      &.linkedin {
+        background-image: url('/assets/images/networks/social-in-light.svg');
+        background-size: auto 0.6rem;
+
+        .grey & {
+          background-image: url('/assets/images/networks/social-in-dark.svg');
+        }
+      }
+
+      &.youtube {
+
+        display: none;
+        // background-image: url('/assets/images/networks/youtube-light-icon.svg');
+
+        .grey & {
+          // background-image: url('/assets/images/networks/youtube-dark-icon.svg');
+        }
+      }
+
+
+
+    }
+
+  }
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  // position: relative;
+  z-index: 20;
+  bottom: 3rem;
+  left: 2.2rem;
+  height: 3rem;
+
+  @include tablet {
+    bottom: 5rem;
+    left: 1.8rem;
+  }
+
+  @include mobile {
+    // display: none;
+
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(0);
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100%;
+    height: auto !important;
+    box-sizing: border-box;
+    height: 11rem !important;
+    margin-bottom: 1rem;
+
+
+    @include smallHeight {
+      height:8.7rem !important;
+    }
+
+
+  }
+}
+.isDashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: sticky;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+
+  .text {
+    padding-left: 0.5rem;
+  }
+  @include tablet {
+    padding-left: 0rem;
+  }
+
+  @include mobile {
+    // display: none;
+
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(0);
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100%;
+    height: auto !important;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+
+
+    @include smallHeight {
+      height:8.7rem !important;
+    }
+
+
+  }
+  // bottom: 6rem;
+}
+
+.customWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  z-index: 20;
+  bottom: 3rem;
+  left: 2.2rem;
+  height: 3rem;
+
+  @include tablet {
+    bottom: 5rem;
+    left: 1.8rem;
+  }
+
+  @include mobile {
+    background-image: url(/assets/images/parrot.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: -0.4rem 0rem;
+
+    .text {
+      display: none;
+    }
+
+    .container {
+      // flex-direction: column;
+      // align-items: flex-end;
+      // width:auto;
+      // float:right;
+      // position:absolute;
+      // left:100%;
+      // transform:transalteX(-100%)
+      // background-color: red;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      padding-right: 5%;
+
+
+
+
+      a {
+        width: 1.3rem;
+        height: 1.3rem;
+        border-color: rgba(148, 108, 178, 1);
+      }
+    }
+
+    // display: none;
+  }
+}
+
+.contactUsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 20;
+  // bottom: 3rem;
+  height: 6rem;
+
+  @include smallDesktopHeight {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+    bottom: 5rem;
+    left: 1.8rem;
+  }
+
+  @include mobile {
+    display: none;
+    background-image: url(/assets/images/parrot.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: -0.4rem 0rem;
+
+    .text {
+      display: none;
+    }
+
+    .container {
+      // flex-direction: column;
+      // align-items: flex-end;
+      // width:auto;
+      // float:right;
+      // position:absolute;
+      // left:100%;
+      // transform:transalteX(-100%)
+      // background-color: red;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      padding-right: 5%;
+
+
+
+
+      a {
+        width: 1.3rem;
+        height: 1.3rem;
+        border-color: rgba(148, 108, 178, 1);
+      }
+    }
+
+    // display: none;
+  }
+}

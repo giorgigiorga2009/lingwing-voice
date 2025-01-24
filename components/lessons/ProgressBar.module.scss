@@ -1,0 +1,184 @@
+@import '@styles/imports';
+
+.progressBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; 
+  max-width: 40rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  font-family: SegoeUI, $kaFont;
+  position:relative;
+
+  @include mobile {
+    margin-bottom: 0rem;
+    display:none;
+
+    &.course {
+      display:flex;
+      margin-bottom: 1rem;
+      // z-index:9999;
+    }
+  }
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.scoreText {
+  font-size: 1.2rem;
+  color: $grey-100;
+}
+
+.scoreNumber {
+  color: $purple-300;
+  font-size: 1.2rem;
+  animation-name: animate__bounceIn;
+  animation-duration: 0.5s;
+}
+
+.percent {
+  font-size: 1rem;
+  line-height: 2.5rem;
+  color: $grey-100;
+  position: absolute;
+  right: 0.5rem;
+}
+
+.progressContainer {
+  height: 0.69rem;
+  border-radius: 1rem;
+  background-color: $white-t2;
+
+  @include mobile {
+    border-radius: 0;
+  }
+}
+
+.progress {
+  display: flex;
+  background-color: $purple-500;
+  height: 100%;
+  border-radius: 1rem;
+
+  @include mobile {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+
+@keyframes animate__bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.lines {
+  display: flex;
+
+  .lineWrapper {
+    height: 12px;
+    position: relative;
+
+    .circle {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* transform: translateY(10px); */
+      padding-bottom: 2px;
+      border-radius: 50%;
+      font-size: 12px;
+      transform: translateX(-11px) translateY(-6px);
+      position: absolute;
+      top: 2px;
+      cursor: pointer;
+      z-index: 4;
+      // box-shadow: 0px 0px 2px 1px rgb(204 214 229 / 56%);
+      font-family: SegoeUI, 'Helvetica Neue GEO 75 MT';
+      // animation: animate 500 1700ms linear;
+      // transition: 500ms ease-in-out;
+      // &:hover {
+      //   transform: translateX(-11px) translateY(-6px) rotateX(720deg) scale(1.5);
+      // }
+    }
+
+    // @keyframes animate {
+    //   50% {
+    //     transform: translateX(-11px) translateY(-6px) rotateX(720deg) scale(1.5);
+    //   }
+    //   100% {
+    //     transform: translateX(200px) translateY(-6px) rotateX(720deg) scale(1.5)
+    //       rotateZ(720deg);
+    //   }
+    // }
+
+    .textUnder {
+      height: 100%;
+      width: 100%;
+      text-wrap: nowrap;
+      display: flex;
+      font-size: 8px;
+      position: absolute;
+      white-space: nowrap;
+      align-items: center;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: SegoeUI, 'Helvetica Neue GEO 75 MT';
+
+      p:first-child {
+        margin: auto;
+      }
+
+      p:nth-child(2) {
+        position: absolute;
+        right: 20px;
+        top: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+    }
+
+    .textOver {
+      height: 100%;
+      text-wrap: nowrap;
+      display: flex;
+      font-size: 8px;
+      white-space: nowrap;
+      align-items: center;
+      // transform: translateX(10%);
+      z-index: 2;
+      font-family: SegoeUI, 'Helvetica Neue GEO 75 MT';
+
+      position: relative;
+      width: 100%;
+
+      .overline {
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        transition: 200ms;
+        border-radius: 1rem;
+      }
+    }
+  }
+}

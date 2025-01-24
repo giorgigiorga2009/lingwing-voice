@@ -1,0 +1,32 @@
+@import '@styles/imports.scss';
+
+.featuresContainer {
+  display: flex;
+  column-gap: 3.5vw;
+  // padding: 0.8rem;
+  background-color: $white-100;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+
+  div {
+    font-size: 0.9rem;
+    color: $grey-600;
+    row-gap: 0.7rem;
+  }
+  h3 {
+    font-size: 1rem;
+    color: $grey-800;
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tickOrDash {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}

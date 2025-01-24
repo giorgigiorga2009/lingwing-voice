@@ -1,0 +1,123 @@
+@import '@styles/imports';
+
+.grammarContainer {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.title {
+  margin-top: 1rem;
+  padding: 0.3rem 1.5rem 0.3rem 3rem;
+  background-color: $orange-200;
+  color: $orange-500;
+  width: fit-content;
+  border-radius: 0.8rem 0.8rem 0 0;
+  text-align: center;
+  font-family: SegoeUI, $kaFont;
+  background-image: url('/assets/images/tasks/grammar.png');
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 10% 70%;
+}
+
+
+.buttonDisabled {
+  border-radius:1.38rem;
+  background-color: #C1C1BF !important;
+}
+
+
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  height: 4.4rem;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 0 0 1rem 1rem;
+  // margin-bottom: 1rem;
+  // border-top: 3px solid $orange-10;
+
+  @include mobile {
+    margin-bottom: 0;
+    gap: 1rem;
+    height: 5rem;
+  }
+}
+
+.textContainer {
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  min-height: 25rem;
+  padding: 0.5rem 0.5rem 1rem;
+  border-radius: 0 1rem 1rem;
+  border: $orange-10 solid 3px;
+  overflow: auto;
+}
+
+.button {
+  display: flex;
+  width: 12.5rem;
+  height: 3rem;
+  border: 0;
+  align-items: center;
+  justify-content: center;
+  background: $purple_650;
+  color: $white;
+  border-radius: 1.9rem;
+  font-family: SegoeUI, $kaFont;
+  font-size: 0.93rem;
+  line-height:3.99rem;
+  transform:translateX(-2.5rem);
+  cursor: pointer;
+
+  &:not(.buttonDisabled) {
+    &:hover {
+      background: $purple-600;
+
+      &::before {
+        content: '';
+        width: 30px;
+        height:100%;
+        display:block;
+        position:absolute;
+        left:1rem;
+        background-image: url('/assets/images/tasks/grammar_left_star.svg');
+        background-repeat: no-repeat;
+        background-position: 0px center;
+      }
+
+      &::after {
+        content: '';
+        width: 30px;
+        height:100%;
+        display:block;
+        position:absolute;
+        right:1rem;
+        background-image: url('/assets/images/tasks/grammar_right_star.svg');
+        background-repeat: no-repeat;
+        background-position: 100% center;
+      }
+    }
+  }
+}
+
+.text {
+  width: 90%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.inputDone {
+  background-color: $green-100 !important;
+  transition: 0.3s ease-in-out;
+
+  &:focus {
+    border: 2px solid $green-150;
+  }
+}

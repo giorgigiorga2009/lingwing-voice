@@ -1,0 +1,43 @@
+@import '@styles/imports';
+
+.container {
+  border-radius: 1.125rem;
+  border-top: 0.06rem solid $white-200;
+  margin-bottom: 1.56rem;
+  animation: options 500ms ease-in-out forwards;
+}
+
+.container_first_one {
+  @include tablet {
+    border-radius: 0;
+    border-bottom-left-radius: 1.125rem;
+    border-bottom-right-radius: 1.125rem;
+  }
+
+  @include mobile {
+    border-radius: 0;
+    border-bottom-left-radius: 1.125rem;
+    border-bottom-right-radius: 1.125rem;
+  }
+}
+
+.carousel_in_courses_box {
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+@keyframes options {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

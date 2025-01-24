@@ -1,0 +1,47 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  margin: 0;
+  height: 7.4rem;
+}
+
+.selector {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+
+  label {
+    position: absolute;
+    font-size: 0.9rem;
+  }
+
+  .country {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+    height: 2.5rem;
+    background-color: $white;
+    padding: 0 1rem;
+    font-family: SegoeUI, $kaFont;
+    color: $black;
+    border-radius: 2rem;
+    border: 2px solid $grey-100;
+
+    &:focus {
+      border: 2px solid $grey-800;
+    }
+
+    @include mobile {
+      width: 100%;
+      font-size: .7rem;
+    }
+  }
+}

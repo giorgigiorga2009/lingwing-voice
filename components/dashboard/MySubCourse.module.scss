@@ -1,0 +1,211 @@
+@import '@styles/imports';
+
+.container {
+  height: 5rem;
+  padding: 0.875rem 2.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.125rem;
+  border-top: 0.3rem solid $white-100;
+  background-color: $white;
+
+  @include tablet {
+    gap: 0;
+  }
+
+  @include mobile {
+    height: 6rem;
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+    padding-top: 0.01rem;
+    gap: 0;
+  }
+
+  // @include smallWidth {
+  //   height: 7.375rem;
+  //   padding-left: 2.1875rem;
+  //   padding-top: 0.7rem;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   gap: 1rem;
+  //   padding-left: 0.9375rem;
+  // }
+
+  &:last-child {
+    border-bottom-right-radius: 1.125rem;
+    border-bottom-left-radius: 1.125rem;
+  }
+}
+
+.container_first_child {
+  @include tablet {
+    border-top-left-radius: 1.125rem;
+    border-top-right-radius: 1.125rem;
+  }
+
+  @include mobile {
+    border-top-left-radius: 1.125rem;
+    border-top-right-radius: 1.125rem;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  height: 2rem;
+  gap: 0.5rem;
+  margin-right: 0.2rem;
+  // border: 1px solid black;
+
+  @include mobile {
+    gap: 0.5rem;
+
+    flex-direction: column;
+    align-items: start;
+    height: 4rem;
+  }
+
+  // @include smallWidth {
+  //   width: 100%;
+  //   gap: 0.4375rem;
+  //   flex-direction: row;
+  // }
+}
+.details_1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 2rem;
+  gap: 0.5rem;
+  margin-right: 0.2rem;
+
+  @include mobile {
+    h6 {
+
+      margin-left: 0.1rem;
+    }
+  }
+
+  @include smallWidth {
+    width: 100%;
+    gap: 0.4375rem;
+  }
+}
+
+.progress,
+.percent,
+.title,
+.start_course_btn {
+  font-family: SegoeUI, $kaFont;
+}
+
+.progress {
+  color: $orange-500;
+  font-size: 1.5rem;
+  width: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include tablet {
+    width: 4.475rem;
+  }
+
+  @include mobile {
+    width: 3.625rem;
+    font-size: 1.125rem;
+  }
+}
+
+.percent {
+  position: relative;
+  left: 0.1875rem;
+  top: -0.0313rem;
+
+  @include tablet {
+    font-size: 1.3rem;
+  }
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  color: $grey-600;
+  white-space: nowrap;
+  font-family: SegoeUI, $kaFont;
+
+  @include tablet {
+    margin-left: 0;
+  }
+
+  @include mobile {
+    font-size: 1.125rem;
+  }
+
+  .course_level {
+    color: $grey-800;
+    margin-left: 0.625rem;
+  }
+}
+
+.link {
+  @include smallWidth {
+    // width: 70%;
+  }
+
+  .start_course_btn {
+    position: relative;
+    border: 0.125rem solid $orange-500;
+    border-radius: 1.25rem;
+    color: $white;
+    background-color: $orange-500;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.4375rem 1.5rem;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    font-family: SegoeUI, $kaFont;
+
+    &:hover {
+      border-color: $orange-450;
+      background-color: $orange-450;
+      transform: translateY(-0.0313rem);
+      box-shadow: 0 0.125rem 0.625rem rgba($black, 0.08);
+    }
+
+    @include mobile {
+      padding: 0.3rem 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    // @include smallWidth {
+    //   // width: 100%;
+    //   padding: 0.3rem 1.5rem;
+    //   font-size: 0.9rem;
+    //   margin-bottom: 0;
+    // }
+  }
+}
+
+.wizardCourse {
+  @include mobile {
+    display: none;
+  }
+}
+.alphabet {
+  color: $grey-300;
+  font-size: 1.25rem;
+  width: 7.6rem;
+  
+  @include smallWidth {
+    width: 0;
+    }
+}

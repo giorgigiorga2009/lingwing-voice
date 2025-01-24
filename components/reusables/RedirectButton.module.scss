@@ -1,0 +1,46 @@
+@import '@styles/imports.scss';
+
+.link {
+  align-self: center;
+
+  @include desktop {
+    align-self: start;
+  }
+}
+
+.button {
+  font-size: 1.1rem;
+  padding: 1.1rem 4rem;
+  font-family: SegoeUI, bpg_arial_2009;
+  background-color: $orange-650;
+  color: $white;
+  border-radius: 5.1rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  @include smallWidth {
+    padding: 1rem 3.5rem;
+    font-size: 0.9rem;
+  }
+  @include tablet {
+    padding: 19px 96px;
+    font-size: 1.1rem;
+  }
+  @include desktop {
+    padding: 1.1rem 5rem;
+    font-size: 1.4rem;
+  }
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+}
+.button:hover {
+  background-color: $orange-500;
+}
+.button:active {
+  background-color: $orange-450;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}

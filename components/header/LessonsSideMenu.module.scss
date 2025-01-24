@@ -1,0 +1,64 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.content {
+  overflow: scroll;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.footerMenu {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid $orange-10;
+  padding-top: 1rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-position: center center;
+    border-radius: 0.8rem;
+    padding: 1.6rem;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-color: $orange-10;
+      scale: 105%;
+    }
+  }
+}
+
+.statisticsIcon {
+  background-image: url('/assets/images/statistics.png');
+  background-size: 1.8rem;
+}
+
+.grammarIcon {
+  background-image: url('/assets/images/allGrammar.png');
+  background-size: 2.3rem;
+}
+
+.vocabularyIcon {
+  background-image: url('/assets/images/vocabulary.png');
+  background-size: 2.2rem;
+}
+
+.changeModeIcon {
+  background-image: url('/assets/images/changeMode.png');
+  background-size: 1.8rem;
+}
+
+.activeButton {
+  background-color: $purple-200 !important;
+}

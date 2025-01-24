@@ -1,0 +1,46 @@
+@import '@styles/imports';
+
+.container {
+  width: 100%;
+  position: relative;
+
+  input {
+    border: 2px solid $grey-100;
+  }
+
+  label {
+    position: absolute;
+    transform: translateY(170%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-family: SegoeUI, $kaFont;
+  }
+
+  .labelTop {
+    transform: translateY(0);
+    font-size: 0.9rem;
+    color: $grey-700;
+  }
+  label,
+  .labelTop {
+    @include mobile {
+      font-size: 0.7rem;
+    }
+  }
+}
+.error {
+  // position: absolute;
+  // display: flex;
+  // top: 3.5rem;
+  font-size: 0.9rem;
+  min-width: 100%;
+  @include mobile {
+    span{
+      position: absolute;
+      display: flex;
+      width: 80%;
+      font-size: 0.6rem;
+      margin-left: 0;
+    }
+  }
+}

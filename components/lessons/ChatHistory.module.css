@@ -1,0 +1,11 @@
+.chatHistory {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.chatHistoryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}/*# sourceMappingURL=ChatHistory.module.css.map */

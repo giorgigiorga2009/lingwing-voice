@@ -1,0 +1,31 @@
+@import './styles/imports';
+
+.avatar {
+  height: 2.18rem;
+  width: 2.18rem;
+  border-radius: 100%;
+  border: 3px solid $orange-500;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @include mobile {
+    width: 1.625rem;
+    height: 1.625rem;
+    flex-shrink: 0;
+  }
+}
+
+.Image {
+  width: 2rem;
+  height: auto;
+}
+.avatarLeaenMenu{
+  @extend .avatar;
+  @include mobile {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

@@ -1,0 +1,100 @@
+@import '@styles/imports';
+
+.flag {
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.small {
+    &.eng {
+      background-image: url('/assets/images/flags/circle/small/English.png');
+    }
+
+    &.esp {
+      background-image: url('/assets/images/flags/circle/small/Spanish.png');
+    }
+
+    &.ita {
+      background-image: url('/assets/images/flags/circle/small/Italian.png');
+    }
+
+    &.fre {
+      background-image: url('/assets/images/flags/circle/small/French.png');
+    }
+
+    &.rus {
+      background-image: url('/assets/images/flags/circle/small/Russian.png');
+    }
+
+    &.geo {
+      background-image: url('/assets/images/flags/circle/small/Georgian.png');
+    }
+
+    &.deu {
+      background-image: url('/assets/images/flags/circle/small/German.png');
+    }
+
+    &.ukr {
+      background-image: url('/assets/images/flags/circle/small/Ukrainian.png');
+    }
+
+    &.chi {
+      background-image: url('/assets/images/flags/circle/small/Chinese.png');
+    }
+  }
+
+  &.big {
+    border-radius: 100%;
+
+    &.eng {
+      background-image: url('/assets/images/flags/circle/big/English.png');
+    }
+
+    &.esp {
+      background-image: url('/assets/images/flags/circle/big/Spanish.png');
+    }
+
+    &.ita {
+      background-image: url('/assets/images/flags/circle/big/Italian.png');
+    }
+
+    &.fre {
+      background-image: url('/assets/images/flags/circle/big/French.png');
+    }
+
+    &.rus {
+      background-image: url('/assets/images/flags/circle/big/Russian.png');
+    }
+
+    &.geo {
+      background-image: url('/assets/images/flags/circle/big/Georgian.png');
+    }
+
+    &.deu {
+      background-image: url('/assets/images/flags/circle/big/German.png');
+    }
+
+    &.tur {
+      background-image: url('/assets/images/flags/circle/big/Turkish.png');
+    }
+
+    &.ben {
+      background-image: url('/assets/images/flags/circle/big/Bengali.png');
+    }
+
+    &.ukr {
+      background-image: url('/assets/images/flags/circle/big/Ukrainian.png');
+    }
+
+    &.chi {
+      background-image: url('/assets/images/flags/circle/big/Chinese.png');
+    }
+  }
+
+  @include mobile {
+    width: 65%;
+    height: 65%;
+  }
+}

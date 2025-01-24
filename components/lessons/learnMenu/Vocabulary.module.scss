@@ -1,0 +1,105 @@
+@import '@styles/imports';
+
+.header {
+  position: relative;
+}
+
+.title {
+  font-family: $kaFontTitle;
+  color: $purple-600;
+  margin-top: -0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem 0 1rem;
+
+    @include mobile {
+    text-align: center;
+    font-family: $notoSansGeorgian;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+
+    line-height: normal;
+    text-transform: capitalize;
+    color: white;
+
+    position: relative;
+    align-items: flex-end;
+
+    border-bottom: 1px solid #4C1E6F;
+
+    background: #4C1E6F;
+    margin-bottom: 1.7rem;
+    padding-bottom: 0.8rem;
+    position:fixed;
+    height:5rem;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    width:100%;
+    top:0px;
+    margin-top:0px;
+  }
+}
+
+.container {
+  select,
+  input {
+    font-family: SegoeUI, $kaFont;
+    border-radius: 2rem;
+    padding: 0.5rem 0.1rem;
+    text-align: center;
+    border: 2px solid $white-200;
+    color: $purple-200;
+    margin: 0.3rem;
+    font-size: 0.75rem;
+    outline-color: $purple-500;
+    cursor: pointer;
+  }
+}
+
+.table {
+  font-size: 0.85rem;
+  font-family: SegoeUI, $kaFont;
+  color: $grey-700;
+  border-collapse: collapse;
+  margin-top: 2rem;
+
+  thead,
+  tbody {
+    display: block;
+  }
+
+  thead {
+    color: $grey-800;
+    cursor: pointer;
+  }
+
+  tbody {
+    overflow-y: auto;
+    height: calc(100vh - 28rem);
+
+
+    @include mobile {
+      height: calc(100vh - 7rem);
+    }
+  }
+
+  tbody tr,
+  thead tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  tbody tr {
+    &:nth-child(odd) {
+      background-color: $orange-10;
+    }
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,208 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: $white-70;
+  background-image: url('../../public/assets/images/palm-without-parrot.png'),
+    url('../../public/assets/images/silver-wave.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 99%;
+  height: auto;
+  padding: 4rem 1.5rem 7.75;
+  min-height: 100vh;
+
+  @include smallWidth {
+    min-height: 0;
+    background-position: center;
+  }
+
+  @include mobile {
+    padding: 3.75rem 1.5rem 0.75rem;
+    background-position: bottom;
+    background-size: 100%;
+    background-size: 35rem, auto;
+  }
+
+  @include tablet {
+    min-height: 116vh;
+    background-position: 50% 70%;
+    background-size: 35rem, auto;
+  }
+
+  @include desktop {
+    background-image: url('../../public/assets/images/course-yahoo-parrot.png'),
+      url('../../public/assets/images/silver-wave.svg');
+    background-position: 50% 70%;
+    background-size: 30rem, auto;
+  }
+}
+
+.title {
+  color: $red-200;
+  font-size: 7.2vh;
+  font-weight: 200;
+  font-family: HVDComicSerifPro, bpg_arial_2009, $kaFont;
+  text-align: center;
+
+  @include mobile {
+    font-size: 5vh;
+    margin-top: 6rem;
+  }
+
+  @include tablet {
+    margin-top: 10rem;
+  }
+
+  @include desktop {
+    margin-top: 10rem;
+  }
+}
+
+.quotesContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin: 2rem 0;
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10rem;
+  }
+}
+
+.quote {
+  background-color: $white;
+  padding: 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 1.3rem;
+  max-width: 22rem;
+  font-size: 2.2vh;
+  color: $black-600;
+  line-height: 1.2;
+  font-family: SegoeUI, $kaFont;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover {
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+  }
+
+  @include mobile {
+    font-size: 1.85vh;
+    max-width: 18rem;
+  }
+}
+
+.quote:nth-child(odd):hover,
+.quote:nth-child(even):hover {
+  transform: rotate(0deg);
+  transition: all 0.5s ease;
+}
+
+.quote:nth-child(odd) {
+  position: relative;
+  right: 12vw;
+
+  @include desktop {
+    right: 0;
+    left: -8vw;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -1rem; /* Adjust the distance of the triangle from the right */
+      transform: translateY(-50%) rotate(180deg);
+      width: 0;
+      height: 0;
+      border-top: 1rem solid transparent; /* Adjust the size of the triangle */
+      border-bottom: 1rem solid transparent; /* Adjust the size of the triangle */
+      border-right: 1rem solid $white; /* Adjust the color and size of the triangle */
+    }
+  }
+}
+
+.quote.quote:nth-child(even) {
+  position: relative;
+  left: 12vw;
+
+  @include desktop {
+    right: -8vw;
+    left: 8vw;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -1rem; /* Adjust the distance of the triangle from the right */
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 1rem solid transparent; /* Adjust the size of the triangle */
+      border-bottom: 1rem solid transparent; /* Adjust the size of the triangle */
+      border-right: 1rem solid $white; /* Adjust the color and size of the triangle */
+    }
+  }
+}
+.quote:nth-child(1) {
+  @include desktop {
+    transform: rotate(-8deg);
+    right: 0;
+  }
+}
+
+.quote:nth-child(2) {
+  @include desktop {
+    transform: rotate(7deg);
+    right: 0;
+  }
+}
+
+.quote:nth-child(3) {
+  @include desktop {
+    transform: rotate(6deg);
+    right: 0;
+  }
+}
+
+.quote:nth-child(4) {
+  @include desktop {
+    transform: rotate(3deg);
+    right: 0;
+  }
+}
+
+.quote:nth-child(5) {
+  @include desktop {
+    transform: rotate(-6deg);
+    right: 0;
+  }
+}
+
+.quote:nth-child(6) {
+  @include desktop {
+    transform: rotate(10deg);
+    right: 0;
+  }
+}
+
+.engParrot {
+  display: none;
+
+  @include tablet {
+    display: initial;
+    position: absolute;
+    max-width: 10.5rem;
+    height: auto;
+    transform: scale(-1, 1);
+    bottom: 1rem;
+    left: 4%;
+  }
+}

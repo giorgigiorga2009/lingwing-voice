@@ -1,0 +1,240 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  & > a {
+    text-decoration: none;
+  }
+}
+
+.mainPart {
+  text-align: center;
+  color: $grey-100;
+
+  &:hover {
+    color: $grey-800;
+  }
+  & > p {
+    @include mobile {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.firstTitle {
+  color: $grey-800;
+}
+
+// Images
+.firstImage,
+.secondImage,
+.thirdImage,
+.fourthImage {
+  cursor: pointer;
+  transition: 0.4s;
+
+
+  @include mobile {
+    width:4rem;
+    height:4rem;
+    background-size:contain;
+  }
+}
+
+.firstImage {
+  background-image: url('/themes/images/v2/bon-initialion.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.secondImage {
+  background-image: url('/themes/images/v2/bon-registration.png');
+  width: 6.5rem;
+  height: 6.5rem;
+
+  &:hover {
+    background-image: url('/themes/images/v2/bon-registration-active.png');
+  }
+}
+.thirdImage {
+  background-image: url('/themes/images/v2/bon-bonus.png');
+  width: 6.5rem;
+  height: 6.5rem;
+
+  &:hover {
+    background-image: url('/themes/images/v2/bon-bonus-active.png');
+  }
+}
+.fourthImage {
+  background-image: url('/themes/images/v2/bon-get-more.png');
+  width: 6.5rem;
+  height: 6.5rem;
+
+  &:hover {
+    background-image: url('/themes/images/v2/bon-get-more-active.png');
+  }
+}
+
+// Arrows
+
+.firstArrow,
+.secondArrow,
+.thirdArrow {
+  @include mobile {
+    display: none;
+  }
+}
+
+.firstArrow {
+  background-image: url('/themes/images/v2/bon-arr-active.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+
+.secondArrow {
+  background-image: url('/themes/images/v2/bon-arr-top.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+
+.thirdArrow {
+  background-image: url('/themes/images/v2/bon-arr.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+// this is for after daily task limit expired
+
+.firstImageAfterLimitExpired {
+  background-image: url('/themes/images/v2/bon-initialion.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.secondImageAfterLimitExpired {
+  background-image: url('/themes/images/v2/bon-registration-active.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.thirdImageAfterLimitExpired {
+  background-image: url('/themes/images/v2/bon-bonus-active.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.fourthImageAfterLimitExpired {
+  background-image: url('/themes/images/v2/bon-get-more.png');
+  width: 6.5rem;
+  height: 6.5rem;
+  transition: 0.4s;
+
+  &:hover {
+    background-image: url('/themes/images/v2/bon-get-more-active.png');
+  }
+}
+
+.firstArrowAfterLimitExpired,
+.secondArrowAfterLimitExpired,
+.thirdArrowAfterLimitExpired {
+  @include mobile {
+    display: none;
+  }
+}
+
+.firstArrowAfterLimitExpired {
+  background-image: url('/themes/images/v2/bon-arr-active.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+
+.secondArrowAfterLimitExpired {
+  background-image: url('/themes/images/v2/bon-arr-active-top.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+.thirdArrowAfterLimitExpired {
+  background-image: url('/themes/images/v2/bon-arr.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+
+// this is for after Pay pop up
+
+.firstImageAfterPayment {
+  background-image: url('/themes/images/v2/bon-initialion.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.secondImageAfterPayment {
+  background-image: url('/themes/images/v2/bon-registration-active.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.thirdImageAfterPayment {
+  background-image: url('/themes/images/v2/bon-bonus-active.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.fourthImageAfterPayment {
+  background-image: url('/themes/images/v2/bon-get-more-active.png');
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.firstArrowAfterPayment,
+.secondArrowAfterPayment,
+.thirdArrowAfterPayment {
+  @include mobile {
+    display: none;
+  }
+}
+
+.firstArrowAfterPayment {
+  background-image: url('/themes/images/v2/bon-arr-active.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+
+.secondArrowAfterPayment {
+  background-image: url('/themes/images/v2/bon-arr-active-top.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+
+.thirdArrowAfterPayment {
+  background-image: url('/themes/images/v2/bon-arr-active.png');
+  width: 2.6rem;
+  height: 1rem;
+  transform: translateY(-1.5rem);
+}
+
+
+
+.firstImage,
+.secondImage,
+.thirdImage,
+.fourthImage {
+
+
+
+  @include mobile {
+    width:4rem;
+    height:4rem;
+    background-size:contain;
+  }
+}

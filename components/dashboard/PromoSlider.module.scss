@@ -1,0 +1,183 @@
+@import '@styles/imports';
+
+.container {
+  height: 9rem;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.25rem;
+
+  @include tablet {
+    margin-bottom: 1.875rem;
+  }
+
+  @include mobile {
+    height: 10.625rem;
+    margin-bottom: 1.875rem;
+  }
+
+  @include smallWidth {
+    height: 13.75rem;
+  }
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  visibility: hidden;
+  transition: opacity 1s, visibility 0s linear 1s;
+  opacity: 0;
+  position: absolute;
+  border-radius: 1.125rem;
+  padding: 1.25rem;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $orange-650;
+
+  @include mobile {
+    padding-top: 1.563rem;
+  }
+}
+
+.slide_active {
+  visibility: visible;
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  font-family: SegoeUI, $kaFont;
+
+  span {
+    color: $black;
+    margin: 0 0.125rem;
+  }
+}
+
+.button {
+  padding: 0.375rem 1.875rem 0.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 0.1875rem solid $brown;
+  border-radius: 1.875rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.563rem;
+  justify-content: center;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $orange-500;
+    transform: translateY(-0.0625rem);
+    box-shadow: 0 0.125rem 0.625rem rgba($black, 0.08);
+  }
+
+  h6 {
+    font-size: 1.125rem;
+    font-family: SegoeUI, $kaFont;
+    color: $white;
+  }
+
+  @include smallWidth {
+    height: 3.75rem;
+  }
+}
+
+.slide_liberty {
+  background: $liberty-black;
+
+  .button {
+    border: 0.1875rem solid $google;
+
+    &:hover {
+      background-color: $red;
+    }
+  }
+}
+
+.parrot_img,
+.premium_img,
+.liberty_img,
+.add_friends_img,
+.premium_icon {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.parrot_img {
+  width: 7.375rem;
+  height: 8.625rem;
+  bottom: 0;
+  right: 3.063rem;
+  background-image: url('/themes/images/v2/banner-parrot.png');
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.add_friends_img,
+.premium_img {
+  left: 1.75rem;
+  bottom: 1.25rem;
+  width: 8.938rem;
+  height: 6.5rem;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.premium_img {
+  background-image: url('/themes/images/v2/banner-stars.png');
+}
+
+.add_friends_img {
+  background-image: url('/themes/images/v2/banner-add-friends.png');
+}
+
+.liberty_img {
+  height: 5.25rem;
+  width: 15.219rem;
+  padding: 3.125rem 0.625rem 0.625rem;
+  left: 0.625rem;
+  bottom: 0.625rem;
+  background-image: url('/themes/images/banners/liberty.png');
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.premium_icon {
+  position: static;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url('/themes/images/v2/banner-link-star.png');
+  margin-top: 0.3125rem;
+
+  @include mobile {
+    display: none;
+  }
+}

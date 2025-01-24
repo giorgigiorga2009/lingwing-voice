@@ -1,0 +1,282 @@
+@import '@styles/imports';
+
+.regReminder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  animation: fadeInBlurForModals 0.8s forwards;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+
+  @include mobile {
+    top: 3rem;
+    overflow-y: auto;
+    padding: 4rem 0;
+    align-items: baseline;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  width: 90%;
+  max-width: 55rem;
+  // /height: fit-content;
+  font-family: SegoeUI, $kaFont;
+  background-color: $white-50;
+  box-shadow: 0 0.11rem 0.3rem 0.005rem $grey-100;
+  border-radius: 3rem;
+  padding: 3rem 4rem;
+  background-image: url('/assets/images/bonnus-bg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 13rem;
+
+  @include mobile {
+    padding: 1.8rem 1.7rem;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.header {
+  color: $purple-600;
+  font-size: 1.3rem;
+  margin: 0;
+
+  @include mobile {
+    font-size: 1.1rem;
+  }
+}
+
+.paragraph {
+  padding: 1.5rem 0;
+  color: $black-100;
+
+
+  @include mobile {
+    padding: 0.1rem 0;
+    font-size:0.9rem;
+    display:flex;
+    flex-wrap:wrap;
+  }
+
+  & span {
+    font-size: 1.1rem;
+    padding-right: 0.5rem;
+
+    @include mobile {
+      font-size: 0.9rem;
+    }
+  }
+
+  &.number {
+    color: $purple-600;
+  }
+
+  .blackedOut {
+    color: $black;
+  }
+
+  .activated {
+    color: $black-800;
+
+    span {
+      color: $liberty-black;
+    }
+  }
+}
+
+.mainPart {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  @include mobile {
+    justify-content: center;
+    row-gap: 0;
+    //  transform: none;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  @include smallWidth {
+    column-gap: 0.1rem;
+  }
+}
+
+.cardNumbers {
+  margin-top: 2rem;
+}
+
+.checkBoxContainer {
+  font-size: 1.2rem;
+  color: $black-800;
+
+
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  column-gap: 1rem;
+
+  @include mobile {
+    margin-top: 1rem;
+  }
+}
+
+.orangeButton,
+.coursesButton,
+.regButton {
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 1.8rem;
+  font-family: SegoeUI, $kaFontTitle;
+  color: $white;
+  border: none;
+  background-color: $green-210;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $green-200;
+  }
+
+  & > a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  @include mobile {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  @include smallWidth {
+    font-size: 0.7rem;
+  }
+}
+
+.priceWrapper {
+  position: absolute;
+  display: flex;
+  column-gap: 0.3rem;
+  top: 2.8rem;
+  left: 5rem;
+
+  p:nth-child(1) {
+    font-family: 'BPG Nino Mtavruli';
+    font-size: 16px;
+    color: #333;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.monthlyPrice {
+  font-family: 'BPG Nino Mtavruli';
+  font-size: 16px;
+  color: $green-200;
+}
+
+.orangeButton {
+  background-color: $white-100;
+  border: 2px solid $green-200;
+
+  &:hover {
+    background-color: $white-200;
+  }
+
+  & > a {
+    color: $grey-800;
+  }
+}
+
+.coursesButton {
+  background-color: $white-310;
+
+  &:hover {
+    background-color: $white-300;
+  }
+
+  & > a {
+    text-decoration: none;
+    color: $grey-800;
+  }
+}
+
+@keyframes bonBubleAnimOne {
+  0% {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mainPart > * {
+  opacity: 0;
+  animation: bonBubleAnimOne 1s ease-in 1 forwards;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: forwards;
+
+  &:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 1.4s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 1.4s;
+  }
+
+  &:nth-child(5) {
+    animation-delay: 1.8s;
+  }
+
+  &:nth-child(6) {
+    animation-delay: 1.8s;
+  }
+
+  &:nth-child(7) {
+    animation-delay: 2.2s;
+  }
+}

@@ -1,0 +1,300 @@
+@import '@styles/imports';
+
+.courseInfo {
+  display: flex;
+  padding: 1.5rem;
+  // height: 45.75rem;
+  color: $white;
+  text-align: center;
+  justify-content: center;
+  background-image: url('/assets/images/background-letters.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-color: $purple-600;
+
+  @include smallWidth {
+    height: 50rem;
+    align-items: start;
+    padding: 0 1.5rem;
+  }
+
+  @include mobile {
+    height: 50rem;
+  }
+
+  @include tablet {
+    height: 50rem;
+  }
+
+  @include desktop {
+    height: 41rem;
+  }
+}
+
+.parrot {
+  max-width: 9.688rem;
+  // transform: scale(-1, 1);
+  margin-top: 6%;
+  display: none;
+
+  @include desktop {
+    display: initial;
+    max-width: 28.5rem;
+    height: 31.5rem;
+    width: auto;
+    margin: 8rem 4vw 1rem 0;
+  }
+}
+
+.flagstyle {
+  width: 5rem;
+  height: auto;
+
+  @include mobile {
+    width: 4rem;
+  }
+}
+
+.bubbleContainer {
+  position: relative;
+  top: 7rem;
+  right: 7.5rem;
+  display: none;
+
+  @include desktop-wide {
+    display: block;
+  }
+}
+
+.bubbleContainerEsp {
+  position: relative;
+  top: 0.5rem;
+  right: 12rem;
+  rotate: -28deg;
+  display: none;
+
+  @include desktop-wide {
+    display: block;
+  }
+}
+
+.bubble {
+  max-width: 15.25rem;
+  height: 14rem;
+  filter: drop-shadow(4px 8px 0px $black-800);
+}
+
+.bubbleText {
+  position: absolute;
+  bottom: 68.5%;
+  left: 55%;
+  color: $purple-600;
+  font-size: 4.063rem;
+  font-weight: bolder;
+  transform: translate(-50%, -50%);
+  font-family: HVDComicSerifPro, bpg_arial_2009, $kaFont;
+}
+
+.smallSizeParrot {
+  max-width: 12.188rem;
+  margin-top: 8%;
+  height: 15.625rem;
+  transform: scale(-1, 1);
+
+  @include smallWidth {
+    max-width: 11rem;
+    margin-top: 20%;
+  }
+
+  @include tablet {
+    display: initial;
+    margin-top: 10%;
+  }
+
+  @include desktop {
+    display: none;
+    max-width: none;
+  }
+}
+
+.adSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('/assets/images/logoutPlane.png');
+  background-position: 0 60vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include smallWidth {
+    background-position: 0 88%;
+  }
+
+  @include mobile {
+    background-position: 0 85%;
+    margin-top: 4rem;
+  }
+
+  @include tablet {
+    background-position: 0 32rem;
+  }
+
+  @include desktop {
+    background-position: 0 77%;
+    max-width: 38rem;
+    // margin-right: 5rem;
+  }
+}
+
+.statsContainer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include smallWidth {
+    text-align: left;
+  }
+
+  @include desktop {
+    align-items: start;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-top: 7%;
+
+  @include mobile {
+    max-height: 11vh;
+  }
+
+  @include desktop {
+    // margin-bottom: .5rem;
+  }
+
+  img {
+    margin-left: -0.5rem;
+
+    @include desktop {
+      height: 5.188rem;
+    }
+  }
+
+  h2 {
+    font-weight: 100;
+    font-family: HVDComicSerifPro, bpg_arial_2009, $kaFont;
+
+    @include mobile {
+      font-size: 1.7rem;
+    }
+
+    @include tablet {
+      max-width: none;
+      font-size: 5vw;
+    }
+
+    @include desktop {
+      max-width: none;
+      font-size: 2.9vw;
+    }
+  }
+}
+
+.slogan {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-top: -2%;
+  text-align: start;
+  font-family: SegoeUI, $kaFont;
+
+  @include mobile {
+    font-size: 1.1rem;
+  }
+
+  @include tablet {
+    margin: 0.25rem 0;
+  }
+
+  @include desktop {
+    margin: -1.563rem 0;
+  }
+}
+
+.speciesContainer {
+  margin-bottom: 5.875rem;
+  display: flex;
+
+  @include smallWidth {
+    margin-bottom: 13%;
+  }
+
+  @include mobile {
+    margin-bottom: 10rem;
+    font-size: 1rem;
+  }
+
+  @include tablet {
+    display: flex; // do we need those displays?
+    margin-bottom: 10.25rem;
+  }
+
+  @include desktop {
+    display: flex;
+    margin-bottom: 25%;
+  }
+}
+
+.numbersList {
+  display: initial;
+
+  @include tablet {
+    display: initial;
+  }
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.speciesNumber {
+  font-size: 1.125rem;
+  font-weight: 700;
+  max-width: 12.5rem;
+  text-align: start;
+
+  @include mobile {
+    font-size: 0.95rem;
+  }
+
+  @include tablet {
+    max-width: 12.5rem;
+    margin-right: 5rem;
+  }
+
+  @include desktop {
+    width: 9.375rem;
+    margin-right: 1.875rem;
+  }
+
+  p:first-child {
+    font-size: 1.875rem;
+    color: $orange-300;
+    font-weight: 800;
+    margin-bottom: -1.5rem;
+
+    @include desktop {
+      font-size: 3.125rem;
+    }
+  }
+}
+
+.statsNum {
+  font-family: SegoeUIBlack, $kaFont;
+}
+
+.speciesText {
+  font-family: SegoeUI, $kaFont;
+}

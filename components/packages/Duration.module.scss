@@ -1,0 +1,258 @@
+@import '@styles/imports';
+
+.duration {
+  width: 100%;
+  color: $purple-300;
+  text-align: center;
+  border-radius: 15px;
+  // border-bottom: solid $white-100;
+  // background-color: white;
+  font-size: 1.5rem;
+  font-family: SegoeUI;
+  z-index: 1;
+  white-space: nowrap;
+  // transform:scale(1.005) translateY(-10px);
+  // box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25); 
+  @include mobile {
+    font-size: 1rem;
+  }
+  // @include smallWidth {
+  //   font-size: 1.2rem;
+  // }
+}
+
+.packageTitles {
+  width: 100%;
+  color: $purple-300;
+  text-align: center;
+  border-radius: 15px;
+  // border-bottom: solid $white-100;
+  background-color: white;
+  font-size: 2.6rem;
+  font-family: SegoeUI;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  transform: scale(1.005) translateY(-10px);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+
+  @include mobile {
+    font-size: 1rem;
+    height: 2rem;
+    border-radius: 10px;
+  }
+}
+
+.titleText {
+  font-size: 1.5rem;
+  color: #F6A213;
+  // padding-top: 0.4rem;
+  
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+  @include tablet{
+    font-size: 1.3rem;
+  }
+  @include mobile {
+    font-size: 1rem;
+    &:lang(ka) {
+      font-size: 1.05rem;
+    }
+  }
+  // @include smallWidth {
+  //   &:lang(ka) {
+  //     font-size: 1.05rem;
+  //   }
+  // }
+  // @include mobile{
+  //   font-size: 1rem;
+  // }
+  // @include smallWidth{
+  //   font-size: 0.5rem;
+  // }
+}
+
+
+.saveAmount {
+  text-align: center;
+  border-radius: 6px;
+  background: rgba(182, 182, 183, 0.13);
+  height:2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0 0.6rem;
+  // margin-bottom:0.5rem;
+
+
+
+  .titleText {
+    color: #7939A9;
+
+    text-align: center;
+    font-family: "Noto Sans Georgian";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25.71px;
+    text-transform: uppercase;
+    padding-top: 0.2rem;
+
+    &:lang(ka) {
+      font-family: $kaNinoMtavruli;
+    }
+    @include tablet{
+      font-size: 0.8rem;
+    }
+    @include mobile{
+      font-size: 0.5rem;
+    }
+    // @include smallWidth{
+    //   font-size: 0.6rem;
+    // }
+  }
+  @include tablet{
+    height: 1.5rem;
+    border-radius: 0.3rem;
+  }
+  @include mobile{
+    height: 0.9rem;
+    border-radius: 0.3rem;
+  }
+  // @include smallWidth{
+  //   height: 1rem;
+  //   border-radius: 0.3rem;
+  // }
+}
+
+.freePackageName {
+  @extend .duration;
+
+  font-size: 1.2rem;
+  color: $purple-600;
+  // padding: 15px 0 5px;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+  @include mobile {
+    font-size: 0.8rem;
+    // border: 1px solid black;
+  }
+}
+
+.months {
+  padding-left: 6px;
+  // font-size: 1.3rem;
+  font-size: 1.2rem;
+  color: $purple-600;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+    margin-top: 18px;
+  }
+  @include mobile {
+    font-size: 0.8rem;
+  }
+}
+.plus_one_month {
+  padding-left: 6px;
+  font-size: 1.2rem;
+  color: #F6A213;
+  white-space: nowrap;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+    margin-top: 18px;
+  }
+  @include mobile {
+    font-size: 0.7rem;
+  }
+}
+.plus_symbol {
+  padding-left: 6px;
+  font-size: 1.3rem;
+  color: $purple-600;
+  color: #F6A213;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.packageTitles__freeTrial{
+  width: 100%;
+  color: $purple-300;
+  text-align: center;
+  border-radius: 0.5rem;
+  // border-bottom: solid $white-100;
+  background-color: white;
+  font-size: 2.6rem;
+  font-family: SegoeUI;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  transform: scale(1.005) translateY(-10px);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  @include mobile{
+    font-size: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+  }
+  @include tablet{
+    font-size: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+  }
+}
+.duration__freeTrial{
+  font-size: 1.2rem;
+  @include tablet{
+    font-size: 0.8rem;
+  }
+  @include mobile{
+    font-size: 1rem;
+  }
+  @include smallWidth{
+    font-size: 0.8rem;
+  }
+}
+
+.months__freeTrial{
+  font-size: 1rem;
+  font-family: 'Noto Sans Georgian';
+  @include tablet{
+    font-size: 0.7rem;
+  }
+  @include mobile{
+    font-size: 1rem;
+  }
+  @include smallWidth{
+    font-size: 0.8rem;
+  }
+}
+
+.titleText__freeTrial{
+  font-size: 1.1rem;
+  color: #F6A213;
+  padding-top: 0.4rem;
+
+  &:lang(ka) {
+    font-family: $kaNinoMtavruli;
+  }
+  @include tablet{
+    font-size: 0.8rem;
+  }
+  @include mobile{
+    font-size: 0.8rem;
+  }
+  @include smallWidth{
+    font-size: 0.8rem;
+    padding-top: 0.2rem;
+  }
+}

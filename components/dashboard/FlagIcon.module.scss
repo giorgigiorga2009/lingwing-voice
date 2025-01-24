@@ -1,0 +1,24 @@
+@import '@styles/imports';
+
+.flag_icon_small,
+.flag_icon_big {
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0.0625rem 0 0.1875rem rgba($black, 0.15);
+  border: 0.125rem solid $white;
+}
+
+.flag_icon_small {
+  width: 2.25rem;
+  height: 2.25rem;
+
+  @include tablet {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.flag_icon_big {
+  width: 4.25rem;
+  height: 4.156rem;
+}

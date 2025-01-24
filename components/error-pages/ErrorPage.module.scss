@@ -1,0 +1,340 @@
+@import '@styles/imports';
+
+.error_container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #FEFFFF 0%, #FEFFFF 2%, #afc4fa 100%);
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.second_image {
+    width: 90%;
+    max-width: 100rem;
+    height: auto;
+    margin-top: 3rem;
+}
+
+.error_inner_contant {
+    margin-top: 5rem;
+}
+
+.error_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error_button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.button {
+    all: unset;
+    background-color: $purple-600;
+    border-radius: 2.5rem;
+    height: 3.43rem;
+    width: 32.3rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.error_text_h3 {
+    color: $purple-700;
+    font-size: 1.875rem;
+    margin: 0;
+    width: 32.3rem;
+    text-align: center;
+}
+
+.error_text_body {
+    color: $grey-800;
+    font-size: 1rem;
+    width: 30rem;
+    text-align: center;
+}
+
+.error_code {
+    position: relative;
+    font-size: 18rem;
+    margin-bottom: -6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    
+    &::after {
+        content: '404';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(186, 194, 194, 0.1);
+        z-index: 1;
+    }
+
+    &::before {
+        content: '404';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        background-image: url("/themes/images/error404/wave.png");
+        background-repeat: no-repeat;
+        background-size: 100rem;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: fillUp 6s linear alternate infinite;
+    }
+}
+
+.error_code_500 {
+    position: relative;
+    font-size: 18rem;
+    margin-bottom: -6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    
+    &::after {
+        content: '500';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(186, 194, 194, 0.1);
+        z-index: 1;
+    }
+
+    &::before {
+        content: '500';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        background-image: url("/themes/images/error404/wave.png");
+        background-repeat: no-repeat;
+        background-size: 100rem;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: fillUp 6s linear alternate infinite;
+    }
+}
+
+// animation
+@keyframes fillUp {
+    0% {
+        background-position: 13rem 7rem;
+    }
+    100% {
+        background-position: 8rem -9rem;
+    }
+}
+
+/* responsive */
+@media (max-width: 1800px) {
+    .error_code,
+    .error_code_500 {
+        font-size: 17rem;
+    }
+    @keyframes fillUp {
+        0% {
+            background-position: 4rem 7rem;
+        }
+        100% {
+            background-position: 1rem -9rem;
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .error_code,
+    .error_code_500 {
+        font-size: 17rem;
+    }
+    @keyframes fillUp {
+        0% {
+            background-position: -2rem 7rem;
+        }
+        100% {
+            background-position: -4rem -9rem;
+        }
+    }
+}
+
+@media (max-width: 1330px) {
+    .error_code,
+    .error_code_500 {
+        font-size: 17rem;
+        background-size: 80rem;
+    }
+    @keyframes fillUp {
+        0% {
+            background-position: -8rem 7rem;
+        }
+        100% {
+            background-position: -11rem -9rem;
+        }
+    }
+}
+
+@media (max-width: 1124px) {
+    .error_code,
+    .error_code_500 {
+        font-size: 17rem;
+        background-size: 1rem;
+    }
+    @keyframes fillUp {
+        0% {
+            background-position: -16rem 7rem;
+        }
+        100% {
+            background-position: -20rem -9rem;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .error_code,
+    .error_code_500 {
+        font-size: 14rem;
+    }
+    .error_code::before,
+    .error_code_500::before {
+        background-size: 90rem;
+    }
+    @keyframes fillUp {
+        0% {
+            background-position: -16rem 4rem;
+        }
+        100% {
+            background-position: -20rem -9rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .second_image {
+        margin-top: 4rem;
+        width: 100%;
+        margin-left: -5rem;
+    }
+
+    .error_text h3 {
+        width: 25rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .error_text_body {
+        font-size: 1rem;
+        width: 24rem;
+        text-align: center;
+    }
+
+    .button {
+        width: 25rem;
+    }
+
+    .error_code,
+    .error_code_500 {
+        font-size: 10rem;
+    }
+    .error_code::before,
+    .error_code_500::before {
+        background-size: 70rem;
+    }
+    @keyframes fillUp {
+        0% {
+            background-position: -14rem 4rem;
+        }
+        100% {
+            background-position: -16rem -9rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        width: 8rem;
+        text-align: center;
+        color: white;
+    }
+
+    .error_text h3 {
+        margin-top: -3.125rem;
+        width: 18.75rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .error_text_body {
+        font-size: 0.8rem;
+        width: 17rem;
+        text-align: center;
+    }
+
+    .button {
+        width: 18rem;
+    }
+
+    .second_image {
+        width: 45rem;
+        margin-top: 6rem !important;
+        margin-left: -23rem;
+    }
+
+    .error_code,
+    .error_code_500 {
+        font-size: 7rem;
+    }
+    .error_code::before,
+    .error_code_500::before {
+        background-size: 60rem;
+    }
+    @keyframes fillUp {
+        0% {
+            background-position: -16rem 0rem;
+        }
+        100% {
+            background-position: -20rem -7rem;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .second_image {
+        width: 45rem;
+        margin-top: 6rem !important;
+        margin-left: -26rem;
+    }
+}

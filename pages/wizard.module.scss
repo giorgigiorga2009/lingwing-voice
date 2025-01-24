@@ -1,0 +1,60 @@
+@import '@styles/imports';
+
+.container {
+  position: relative;
+  overflow-x: hidden;
+  // overflow: scroll;
+  width: 100%;
+  height: 100svh;
+  background-color: $white-50;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  // min-height: 56rem;
+  // min-height: 54rem;
+  // min-height: 100vh;
+  // height: 90vh;
+  position: relative;
+  // overflow: hidden;
+  // margin-bottom: 1rem;
+
+  @include tablet { // for new footer
+    // margin-bottom: 4rem;
+    min-height: 92vh;
+  }
+  // @include smallDesktopHeight {
+  //   min-height: 44rem;
+  // }
+}
+.footer {
+  position: relative;
+}
+
+.ball {
+  position: fixed;
+  background-image: url('/assets/images/wizard/background-ball.png');
+  background-size: contain;
+  width: 50rem;
+  height: 47.37rem;
+  bottom: 0;
+  right: -7rem;
+
+  @include tablet {
+    bottom: -3rem;
+    right: -12rem;
+  }
+
+  @include mobile {
+    right: -9rem;
+    width: 33rem;
+    height: 30rem;
+  }
+}
+
+.loginModal {
+  border: 1px solid $white-300;
+}

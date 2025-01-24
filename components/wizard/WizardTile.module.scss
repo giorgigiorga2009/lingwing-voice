@@ -1,0 +1,75 @@
+@import '@styles/imports';
+
+.container {
+  z-index: 200;
+  width: 9.6rem;
+  height: 11.67rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.2s linear;
+  border: none;
+  background: none;
+
+  @include tablet {
+    width: 8rem;
+  }
+
+  @include mobile {
+    height: 7.5rem;
+  }
+
+  @include smallDesktopHeight {
+    height: 10rem;
+    width: 6rem;
+  }
+}
+
+.title {
+  text-transform: capitalize;
+  font-family: SegoeUI;
+  font-size: 1rem;
+  color: $grey-800;
+  cursor: pointer;
+  margin-top: 1.5rem;
+
+  &:lang(ka) {
+    font-family: $kaFontTitleBold;
+  }
+
+  @include mobile {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.93rem;
+  height: 8.93rem;
+  border-radius: 75%;
+  box-shadow: 0 2px 2px 1px rgba(109 106 106 / 30%);
+  cursor: pointer;
+  background-color: $white;
+
+  &:hover {
+    background-color: $orange-500;
+  }
+
+  @include tablet {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  @include mobile {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  @include smallDesktopHeight {
+    width: 7rem;
+    height: 7rem;
+  }
+}

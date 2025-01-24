@@ -1,0 +1,19 @@
+$input-border-width: 0.125rem;
+
+
+.link{
+    color: inherit;
+    text-decoration: none;
+}
+
+.swalPopup{
+    // background-color: $white-100;/
+    border-radius: 1.5rem;
+    @include mobile {
+        width: 28rem;
+    }
+    @include smallWidth{
+        width: 20rem;
+    }
+
+  }

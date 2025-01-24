@@ -1,0 +1,43 @@
+@import '@styles/imports';
+
+.messageLeft {
+  color: $black;
+  max-width: 28rem;
+  min-width: 12rem;
+  align-self: flex-start;
+  background-color: $white-100;
+  border-radius: 1.3rem 1.3rem 1.3rem 0.3rem;
+  padding: 0 1rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.messageRight {
+  color: $black;
+  align-self: flex-end;
+  min-width: 12rem;
+  background-color: $purple-50;
+  border-radius: 1.3rem 1.3rem 0.3rem;
+  padding: 0 1rem;
+  margin: 0 0 1rem 1rem;
+}
+
+.translationLeft {
+  color: $grey-300;
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+  font-family: SegoeUI, $kaFont;
+}
+
+.translationRight {
+  color: rgb(145 127 168);
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+  font-family: SegoeUI, $kaFont;
+}
+
+.enumerator {
+  float: right;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: $purple-500;
+}

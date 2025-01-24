@@ -1,0 +1,77 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  height: 2.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 1.5rem;
+  gap: 1rem;
+  color: $white;
+  font-size: 1rem;
+  font-family: SegoeUI, $kaFontTitle;
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  &.facebook {
+    background-color: $facebook;
+  }
+
+  &.google {
+    background-color: $google;
+  }
+
+  &.twitter {
+    background-color: $twitter;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 3px 0 rgba(60 64 67 / 30.2%),
+      0 4px 8px 3px rgba(60 64 67 / 14.9%);
+    transition: box-shadow 0.08s linear,
+      min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.icon {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2rem;
+
+  .facebook & {
+    background-image: url('/assets/images/networks/facebook-light-icon-auth.svg');
+  }
+
+  .google & {
+    background-image: url('/assets/images/networks/google-light-icon-auth.svg');
+  }
+
+  .twitter & {
+    background-image: url('/assets/images/networks/twitter-light-icon-auth.svg');
+  }
+}
+
+.text {
+  display: flex;
+  gap: 0.35rem;
+
+  .network {
+    text-transform: capitalize;
+  }
+}

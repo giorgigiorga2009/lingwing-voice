@@ -1,0 +1,66 @@
+@import './styles/imports';
+
+.wrapper {
+  background-image: url('/assets/images/mb-app-star.png');
+  background-repeat: no-repeat;
+  background-color: $purple-500;
+  box-shadow: 0 1px 5px $grey-700;
+  height: 19.8rem;
+  border-radius: 0.75rem;
+  margin-bottom: 9.375rem;
+  width: 100%;
+  padding: 2.18rem;
+
+  @include tablet {
+    height: auto;
+    margin-bottom: 1.87rem;
+  }
+
+  @include mobile {
+    height: auto;
+    margin-bottom: 1.87rem;
+  }
+}
+
+.wrapper h3 {
+  font-family: SegoeUI;
+  color: $white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.1;
+
+  &:lang(ka) {
+    font-family: $kaFont;
+  }
+}
+
+.wrapper h3 strong {
+  color: $orange-500;
+  font-size: 1.5rem;
+  margin-top: 0.9375rem;
+}
+
+.store_box {
+  margin-top: 3.56rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.94rem;
+  align-items: center;
+
+  @include tablet {
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+
+  @include mobile {
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+}
+
+.download_app_box h3 strong {
+  margin-top: 1.25rem;
+}

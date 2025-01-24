@@ -1,0 +1,39 @@
+@import '@styles/imports';
+
+.container {
+  height: 6.5625rem;
+  padding: 0 0.9375rem;
+  background-color: $white-50;
+  border-top-left-radius: 1.125rem;
+  border-top-right-radius: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.title_and_icon {
+  display: flex;
+  align-items: center;
+  gap: 2.0625rem;
+  margin-left: 0.8rem;
+}
+
+.title {
+  line-height: 4.6875rem;
+  font-family: SegoeUI, $kaFont;
+  font-size: 1.5rem;
+  color: $grey-800;
+
+  span:nth-child(2) {
+    margin-left: 0.625rem;
+  }
+}

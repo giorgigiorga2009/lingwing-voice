@@ -1,0 +1,34 @@
+@import '@styles/imports';
+
+.discount__label {
+  position: absolute;
+  right: -2rem;
+  top: 1rem;
+}
+
+.discount__label__amount {
+  position: absolute;
+  right: 0.8rem;
+  top: 1.4rem;
+  font-size: 1.4rem;
+  color: $white;
+  font-family: SegoeUIBlack;
+}
+
+.discounted__totalPrice {
+  font-size: 1.6rem;
+  color: $purple-600;
+  padding-left: 1rem;
+  text-decoration: none !important;
+}
+
+.totalPrice {
+  font-size: 1.3rem;
+  color: $black-100;
+  font-family: SegoeUI-SemiBold;
+  margin-bottom: 0.5rem;
+}
+
+.old__totalPrice {
+  text-decoration: line-through;
+}

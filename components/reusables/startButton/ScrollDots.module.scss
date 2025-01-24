@@ -1,0 +1,32 @@
+@import '@styles/imports';
+
+.scrollDots {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index:101;
+
+    @include mobile {
+      display:none;
+    }
+  }
+  
+  .dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    // z-index: 1000;
+  
+    &.active {
+      background-color: white;
+    }
+  }
+  

@@ -1,0 +1,107 @@
+@import '@styles/imports';
+
+.container {
+  @extend .commonScroll;
+
+  &.secondary {
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      z-index: 5;
+      top: 2.7rem;
+      position: relative; 
+
+      .goBack {
+        background-image: url(/assets/images/back.png);
+        background-size: 1.2rem  1.2rem;
+        background-repeat: no-repeat;
+        margin-left: 4%;
+        background-position:center left;
+        cursor:pointer;
+        width:1.6rem;
+        height:1.6rem;
+      }
+
+      .close {
+        background-image: url(/assets/images/close.svg);
+        background-size: 1.2rem;
+        background-repeat: no-repeat;
+        margin-right: 4%;
+        background-position:center right;
+        cursor:pointer;
+        width:1.6rem;
+        height:1.6rem;
+      }
+    }
+
+    @include mobile {
+      // height: 100%;
+
+      .wrapper {
+        height: calc(100% - 3rem);
+        margin-top: 0;
+        border-radius: 0;
+        position:relative;
+
+        padding-top: 7rem;
+        max-width:100%;
+        // padding-top:2rem;
+      }
+
+      .btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        z-index: 5;
+        top: 2.7rem;
+        position: fixed;
+
+        .goBack {
+          background-image: url(/assets/images/back.svg);
+          background-size: 1.2rem  1.2rem;
+          background-repeat: no-repeat;
+          margin-left: 4%;
+          background-position:center left;
+          cursor:pointer;
+          width:1.6rem;
+          height:1.6rem;
+        }
+
+        .close {
+          background-image: url(/assets/images/close.svg);
+          background-size: 1.2rem;
+          background-repeat: no-repeat;
+          margin-right: 4%;
+          background-position:center right;
+          cursor:pointer;
+          width:1.6rem;
+          height:1.6rem;
+        }
+      }
+    }
+  }
+}
+
+
+.wrapper {
+  height: calc(100vh - 12rem);
+  max-width: 40rem;
+  background-color: $white;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 3rem;
+  margin-top: 0.2rem;
+  border-radius: 1rem;
+  padding: 0 4%;
+  width: 100%;
+  overflow-y: auto;
+
+
+  @include mobile {
+    padding: 0px;
+  }
+}

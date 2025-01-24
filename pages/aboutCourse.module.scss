@@ -1,0 +1,15 @@
+@import '@styles/imports.scss';
+
+.mainConainer {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: $white-70;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+}

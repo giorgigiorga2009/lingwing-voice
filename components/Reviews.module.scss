@@ -1,0 +1,154 @@
+@import '@styles/imports';
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  bottom: 3rem;
+  margin-top: -1rem;
+
+  @include smallDesktopHeight {
+    margin-top: 0;
+  }
+  @include tablet {
+    margin-top: 0rem;
+  }
+
+  @include smallWidth {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  width: 40.6rem;
+  height: 12.62rem;
+  border-radius: 1.88rem;
+  overflow: hidden;
+}
+
+.label {
+  font-family: SegoeUI-SemiBold;
+  font-size: 1rem;
+  color: $grey-700;
+  margin-top: 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    color: $black;
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 40.6rem;
+  height: 12.62rem;
+  margin: auto;
+  border-radius: 1.88rem;
+  background: radial-gradient(at top, $purple-600, $purple-500);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: fit-content;
+  gap: 0.5rem;
+}
+
+.star {
+  background-image: url('/assets/images/ratingStar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1.06rem;
+  width: 1.06rem;
+}
+
+.quote {
+  position: relative;
+  max-width: 95%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quoteMarkTop {
+  background-image: url('/assets/images/apostrof.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 0.7rem;
+  height: 1.13rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.quoteMarkBot {
+  background-image: url('/assets/images/apostrof.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 0.7rem;
+  height: 1.13rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.text {
+  max-width: 96%;
+  width: auto;
+  font-family: $kaFont;
+  text-align: center;
+  max-height: 4.5rem;
+  color: $white;
+
+  @include mobile {
+    font-size: 0.8rem;
+    max-width: 24rem;
+    max-height: 6rem;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.38rem;
+  width: 2.38rem;
+  border-radius: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $orange-500;
+}
+
+.avatar {
+  height: 2.2rem;
+  width: 2.43rem;
+  border-radius: 100%;
+}
+
+.userName {
+  color: $orange-500;
+  font-family: SegoeUI-SemiBold;
+  font-weight: 700;
+  font-style: italic;
+}

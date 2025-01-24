@@ -1,0 +1,221 @@
+@import '@styles/imports';
+
+.progressContainer {
+  height: 15px;
+  border-radius: 0px;
+  background-color: #eaeaea;
+  position: relative;
+  cursor:pointer;
+  transition:height 0.3s, opacity 0.1s;
+
+
+  @include mobile {
+    border-radius: 0;
+  }
+
+  .lines {
+    display: flex;
+
+    .lineWrapper {
+      height: 15px;
+      position: relative;
+      width: 100%;
+
+      .circle {
+        width: 18px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* transform: translateY(10px); */
+        padding-bottom: 2px;
+        border-radius: 50%;
+        font-size: 12px;
+        transform: translateX(-11px) translateY(-6px);
+        position: absolute;
+        top: 2px;
+        cursor: pointer;
+        z-index: 4;
+        // box-shadow: 0px 0px 2px 1px rgb(204 214 229 / 56%);
+        font-family: SegoeUI, 'Helvetica Neue GEO 75 MT';
+        // animation: animate 500 1700ms linear;
+        // transition: 500ms ease-in-out;
+        // &:hover {
+        //   transform: translateX(-11px) translateY(-6px) rotateX(720deg) scale(1.5);
+        // }
+      }
+
+      .textUnder {
+        height: 100%;
+        width: 100%;
+        text-wrap: nowrap;
+        display: flex;
+        font-size: 8px;
+        position: absolute;
+        white-space: nowrap;
+        align-items: center;
+        top: 0px;
+        font-family: SegoeUI, 'Helvetica Neue GEO 75 MT';
+        justify-content: space-between;
+
+        font-size: 10px;
+
+        .resultLabel {
+          position: absolute;
+          text-align: center;
+        }
+
+        .successStatisticNumbers {
+          display: flex;
+          color: #692e96;
+          margin-left: 6px;
+
+          gap: 9px;
+
+          p {
+            margin: 0px;
+            display: flex;
+            gap: 3px;
+            justify-content: space-between;
+            align-items: center;
+            &::after {
+              content: '';
+              display: block;
+              // transform: translateY(1px);
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+            }
+
+            &.correctNumber {
+              &::after {
+                background: #c3ea78;
+              }
+            }
+
+            &.mistakeNumber {
+              &::after {
+                background: #f9102c;
+              }
+            }
+          }
+        }
+
+        .progressLabel {
+          display: flex;
+          color: #692e96;
+          margin-right: 6px;
+
+          p {
+            margin: 0px;
+            display: flex;
+            gap: 3px;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+
+      .textOver {
+        height: 100%;
+        width: 100%;
+        text-wrap: nowrap;
+        display: flex;
+        font-size: 8px;
+        position: relative;
+        white-space: nowrap;
+        align-items: center;
+        top: 0px;
+        font-family: SegoeUI, 'Helvetica Neue GEO 75 MT';
+        justify-content: space-between;
+        font-size: 10px;
+
+        z-index: 2;
+
+        .overline {
+          white-space: nowrap;
+          overflow: hidden;
+          position: relative;
+          height: 100%;
+          transition: 200ms;
+          width: 77%;
+          background-color: transparent;
+
+          .resultLabel {
+            color: white;
+            margin: 0px;
+            width: 100%;
+            text-align: center;
+          }
+
+          .box::after {
+            content: '';
+            position: absolute;
+            width: calc(100% - 9px);
+            height: 100%;
+            background-color: #692e96;
+            margin: 0px;
+            top: 0px;
+            // clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+            clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 0 100%);
+
+            @include smallWidth {
+                 height: 100%;
+                //  clip-path: polygon(0 0, 100% 0, 100% 50%, 95% 100%, 0 100%); 
+             }
+          }
+        }
+
+        .successStatisticNumbers {
+          display: flex;
+          color: white;
+          margin-left: 6px;
+
+          gap: 9px;
+
+          p {
+            margin: 0px;
+            display: flex;
+            gap: 3px;
+            justify-content: space-between;
+            align-items: center;
+            &::after {
+              content: '';
+              display: block;
+              // transform: translateY(1px);
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+            }
+
+            &.correctNumber {
+              &::after {
+                background: #c3ea78;
+              }
+            }
+
+            &.mistakeNumber {
+              &::after {
+                background: #f9102c;
+              }
+            }
+          }
+        }
+
+        .progressLabel {
+          display: flex;
+          color: white;
+          margin-right: 6px;
+
+          p {
+            margin: 0px;
+            display: flex;
+            gap: 3px;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@font-face {
+  font-family: HVDComicSerifPro;
+  src: url("../public/assets/fonts/HVDComicSerifPro/HVDComicSerifPro.eot?#iefix") format("embedded-opentype"), url("../public/assets/fonts/HVDComicSerifPro/HVDComicSerifPro.otf") format("opentype"), url("../public/assets/fonts/HVDComicSerifPro/HVDComicSerifPro.woff") format("woff"), url("../public/assets/fonts/HVDComicSerifPro/HVDComicSerifPro.ttf") format("truetype"), url("../public/assets/fonts/HVDComicSerifPro/HVDComicSerifPro.svg#HVDComicSerifPro") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: NexaBold;
+  src: url("../public/assets/fonts/nexabold/nexabold-webfont.woff") format("woff"), url("../public/assets/fonts/nexabold/nexabold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: CalibriRegular;
+  src: url("../public/assets/fonts/calibri-regular/Calibri.woff") format("woff"), url("../public/assets/fonts/calibri-regular/Calibri.ttf") format("truetype"), url("../public/assets/fonts/calibri-regular/Calibri.eot?#iefix") format("embedded-opentype"), url("../public/assets/fonts/calibri-regular/Calibri.svg#SegoeUI-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: SegoeUI;
+  src: url("../public/assets/fonts/SegoeUI-Bold/SegoeUI-Bold.eot") format("embedded-opentype"), url("../public/assets/fonts/SegoeUI-Bold/SegoeUI-Bold.woff") format("woff"), url("../public/assets/fonts/SegoeUI-Bold/SegoeUI-Bold.ttf") format("truetype"), url("../public/assets/fonts/SegoeUI-Bold/SegoeUI-Bold.svg#SegoeUI-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-00FF, U+0100-017F, U+0180-024F;
+}
+@font-face {
+  font-family: SegoeUIBlack;
+  src: url("../public/assets/fonts/segoe/SegoeUIBlack.eot") format("embedded-opentype"), url("../public/assets/fonts/segoe/SegoeUIBlack.woff") format("woff"), url("../public/assets/fonts/segoe/SegoeUIBlack.ttf") format("truetype"), url("../public/assets/fonts/segoe/SegoeUIBlack.svg#SegoeUIBlack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: SegoeUI-SemiBold;
+  src: url("../public/assets/fonts/SegoeUI-SemiBold/SegoeUI-SemiBold.eot") format("embedded-opentype"), url("../public/assets/fonts/SegoeUI-SemiBold/SegoeUI-SemiBold.woff") format("woff"), url("../public/assets/fonts/SegoeUI-SemiBold/SegoeUI-SemiBold.ttf") format("truetype"), url("../public/assets/fonts/SegoeUI-SemiBold/SegoeUI-SemiBold.svg#SegoeUI-SemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BPG Nino Mtavruli";
+  src: url("../public/assets/fonts/BPG-Nino-Mtavruli/bpg-nino-mtavruli-webfont.eot") format("embedded-opentype"), url("../public/assets/fonts/BPG-Nino-Mtavruli/bpg-nino-mtavruli-webfont.woff2") format("woff2"), url("../public/assets/fonts/BPG-Nino-Mtavruli/bpg-nino-mtavruli-webfont.woff") format("woff"), url("../public/assets/fonts/BPG-Nino-Mtavruli/bpg-nino-mtavruli-webfont.ttf") format("truetype"), url("../public/assets/fonts/BPG-Nino-Mtavruli/bpg-nino-mtavruli-webfont.svg#bpg_nino_mtavruliregular") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "BPG Nino Mtavruli Bold";
+  src: url("../public/assets/fonts/BGP-Nino-Mtavruli-Bold/bpg-nino-mtavruli-bold-webfont.eot") format("embedded-opentype"), url("../public/assets/fonts/BGP-Nino-Mtavruli-Bold/bpg-nino-mtavruli-bold-webfont.woff2") format("woff2"), url("../public/assets/fonts/BGP-Nino-Mtavruli-Bold/bpg-nino-mtavruli-bold-webfont.woff") format("woff"), url("../public/assets/fonts/BGP-Nino-Mtavruli-Bold/bpg-nino-mtavruli-bold-webfont.ttf") format("truetype"), url("../public/assets/fonts/BGP-Nino-Mtavruli-Bold/bpg-nino-mtavruli-bold-webfont.svg#bpg_nino_mtavrulibold") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "bpg_arial_2009";
+  src: url("../public/assets/fonts/bpg_arial_2009.eot") format("embedded-opentype"), url("../public/assets/fonts/bpg_arial_2009.woff2") format("woff2"), url("../public/assets/fonts/bpg_arial_2009.woff") format("woff"), url("../public/assets/fonts/bpg_arial_2009.ttf") format("truetype"), url("../public/assets/fonts/bpg_arial_2009.svg#bpg_arial_2009") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "BPG Ingiri";
+  src: url("../public/assets/fonts/BGP-Ingiri/bpg-ingiri-webfont.eot") format("embedded-opentype"), url("../public/assets/fonts/BGP-Ingiri/bpg-ingiri-webfont.woff2") format("woff2"), url("../public/assets/fonts/BGP-Ingiri/bpg-ingiri-webfont.woff") format("woff"), url("../public/assets/fonts/BGP-Ingiri/bpg-ingiri-webfont.ttf") format("truetype"), url("../public/assets/fonts/BGP-Ingiri/bpg-ingiri-webfont.svg#bpg_ingiriregular") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: Loyola;
+  src: url("../public/assets/fonts/loyola/Loyola.eot") format("embedded-opentype"), url("../public/assets/fonts/loyola/Loyola.woff2") format("woff2"), url("../public/assets/fonts/loyola/Loyola.woff") format("woff"), url("../public/assets/fonts/loyola/Loyola.ttf") format("truetype"), url("../public/assets/fonts/loyola/Loyola.svg#Loyola") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue GEO 75 MT";
+  src: url("../public/assets/fonts/Helvetica-GEO-75-MT/HelveticaNeueLTGEO75Mt-Bold.eot") format("embedded-opentype"), url("../public/assets/fonts/Helvetica-GEO-75-MT/HelveticaNeueLTGEO75Mt-Bold.woff2") format("woff2"), url("../public/assets/fonts/Helvetica-GEO-75-MT/HelveticaNeueLTGEO75Mt-Bold.woff") format("woff"), url("../public/assets/fonts/Helvetica-GEO-75-MT/HelveticaNeueLTGEO75Mt-Bold.ttf") format("truetype"), url("../public/assets/fonts/Helvetica-GEO-75-MT/HelveticaNeueLTGEO75Mt-Bold.svg") format("SVG");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Georgian Medium";
+  src: url("../public/assets/fonts/NotoSansGeorgian-Medium/NotoSansGeorgian-Medium.eot") format("embedded-opentype"), url("../public/assets/fonts/NotoSansGeorgian-Medium/NotoSansGeorgian-Medium.woff2") format("woff2"), url("../public/assets/fonts/NotoSansGeorgian-Medium/NotoSansGeorgian-Medium.woff") format("woff"), url("../public/assets/fonts/NotoSansGeorgian-Medium/NotoSansGeorgian-Medium.ttf") format("truetype"), url("../public/assets/fonts/NotoSansGeorgian-Medium/NotoSansGeorgian-Medium.svg") format("SVG");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Georgian SemiBold";
+  src: url("../public/assets/fonts/NotoSansGeorgian-SemiBold/NotoSansGeorgian-SemiBold.eot") format("embedded-opentype"), url("../public/assets/fonts/NotoSansGeorgian-SemiBold/NotoSansGeorgian-SemiBold.woff2") format("woff2"), url("../public/assets/fonts/NotoSansGeorgian-SemiBold/NotoSansGeorgian-SemiBold.woff") format("woff"), url("../public/assets/fonts/NotoSansGeorgian-SemiBold/NotoSansGeorgian-SemiBold.ttf") format("truetype"), url("../public/assets/fonts/NotoSansGeorgian-SemiBold/NotoSansGeorgian-SemiBold.svg") format("SVG");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+10A0-10FF;
+}
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes fadeInBlurForModals {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.commonScroll ::-webkit-scrollbar-thumb {
+  background: #d7d7d7;
+  border-radius: 1rem;
+}
+.commonScroll ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1rem;
+}
+.commonScroll ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.commonScroll * {
+  scrollbar-width: thin;
+  /* Firefox 64 and later */
+}/*# sourceMappingURL=imports.css.map */

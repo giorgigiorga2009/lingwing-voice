@@ -1,0 +1,212 @@
+@import './imports';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
+
+  @include mobile {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  background-color: $purple-600;
+  // background-image: url('/themes/images/v2/BG.png'),
+  background-image: url('/assets/images/background-letters.svg'),
+    -webkit-radial-gradient(center, circle cover, rgba(255, 255, 255, 0.15) 0, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 5% 0;
+  box-sizing: border-box;
+
+
+
+  @include mobile {
+    min-height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+.styledTitle {
+  font-family: $notoSansGeorgian;
+  text-align: center;
+  // font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0 0 0 / 60%);
+  color: $purple-400;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.title {
+  // font-family: $notoSansGeorgian !important;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: $white;
+  font-size: 3.2rem;
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 60%);
+  width: 100%;
+  text-align: center;
+  font-family: HVDComicSerifPro, $notoSansGeorgian;
+
+  &:lang(ka) {
+    font-family: $notoSansGeorgian;
+  }
+ 
+  &:lang(ru) {
+    font-family: Loyola;
+  }
+
+
+  span {
+    font-family: HVDComicSerifPro, $notoSansGeorgian;
+
+    &:lang(ka) {
+      font-family: $notoSansGeorgian;
+    }
+   
+    &:lang(ru) {
+      font-family: Loyola;
+    }
+  }
+
+
+  @include smallWidth {
+    font-size: 1rem !important;
+  }
+
+  @include mobile {
+    // font-size: 1.5rem;
+    // margin: 1rem 0 0;
+
+    width: 70%;
+
+    color: #FFF;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.60);
+    // font-family: $archyedit;
+    font-size: 1.375rem !important;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.8125rem;
+    /* 131.818% */
+    text-transform: uppercase;
+
+    margin-top: 4.4rem;
+    margin-bottom: 2.4rem;
+
+    span {
+      // font-family: $notoSansGeorgian;
+    }
+
+    @include smallHeight {
+      font-size: 1.1rem !important;
+      margin-top: 3rem;
+      margin-bottom: 1rem !important;
+      line-height: 1.5rem;
+      width: 80%;
+      word-spacing: 0.5rem;
+
+      span {
+        margin: 0px 0.5rem;
+        word-spacing: 0.5rem;
+
+      }
+    }
+  }
+
+  @include tablet {
+    margin-top: 0;
+    font-size: 4vw;
+  }
+
+  @include smallDesktopHeight {
+    font-size: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3.7rem;
+  // padding: 0 1%;
+  max-width: 75rem;
+  height: auto;
+  // overflow-y: auto;
+
+  @include smallDesktopHeight {
+    margin-top: 1.2rem;
+    row-gap: 1rem;
+  }
+
+  @include tablet {
+    margin-top: 8rem;
+  }
+
+  @include mobile {
+    margin-top: 0rem;
+    row-gap: 0;
+  }
+
+
+}
+
+.parrot {
+  z-index: 1;
+  background-image: url('/assets/images/parrot.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: center;
+  transform: translateX(-400px);
+  width: 22rem;
+  height: 22rem;
+
+
+  @include smallHeight {
+    width: 17rem;
+    height: 17rem;
+  }
+
+
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+
+  @include mobile {
+    height: calc(var(--vh, 1vh) * 100);
+
+    &:nth-child(2) {
+      // display: none;
+    }
+
+    &:nth-child(3) {
+      // display: none;
+    }
+  }
+}

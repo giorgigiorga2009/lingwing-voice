@@ -1,0 +1,42 @@
+@import '@styles/imports';
+
+.flag {
+  width: 1.62rem;
+  height: 1.12rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.eng {
+    background-image: url('/assets/images/flags/rectangle/English.png');
+  }
+
+  &.esp {
+    background-image: url('/assets/images/flags/rectangle/Spanish.png');
+  }
+
+  &.ben {
+    background-image: url('/assets/images/flags/rectangle/Bengali.png');
+  }
+
+  &.tur {
+    background-image: url('/assets/images/flags/rectangle/Turkish.png');
+  }
+
+  &.rus {
+    background-image: url('/assets/images/flags/rectangle/Russian.png');
+  }
+
+  &.geo {
+    background-image: url('/assets/images/flags/rectangle/Georgian.png');
+  }
+
+  @include mobile {
+    // width: 1rem;
+    // height: 0.66rem;
+
+
+    width: 1.5rem;
+    height: 1.0625rem;
+  }
+}
