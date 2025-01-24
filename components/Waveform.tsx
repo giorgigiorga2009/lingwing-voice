@@ -11,19 +11,20 @@ interface WaveformProps {
 const Waveform: React.FC<WaveformProps> = ({
   audioUrl,
   isPaused = true,
-  width = '100%',
+  width = '25%',
 }) => {
   const waveformRef = useRef<HTMLDivElement>(null);
   const wavesurfer = useRef<WaveSurfer | null>(null);
+  const [isPlaying, setIsPlaying] = React.useState(false);
 
   useEffect(() => {
-    if (waveformRef.current){
+    if (waveformRef.current) {
       wavesurfer.current = WaveSurfer.create({
         container: waveformRef.current,
         waveColor: '#D1D6DA',
         progressColor: '#2D3436',
         cursorColor: 'transparent',
-        barWidth: 2,
+        barWidth: 1,
         barRadius: 3,
         barGap: 3,
         height: 40,
@@ -33,9 +34,17 @@ const Waveform: React.FC<WaveformProps> = ({
       const wavesurferInstance = wavesurfer.current;
 
       return () => {
-        if (wavesurferInstance) {
-          wavesurferInstance.destroy();
-          wavesurferInstance.unAll();
+        try {
+          if (wavesurferInstance) {
+            setTimeout(() => {
+              if (wavesurferInstance) {
+                wavesurferInstance.unAll();
+                wavesurferInstance.destroy();
+              }
+            }, 100);
+          }
+        } catch (error) {
+          console.error('Error during wavesurfer cleanup:', error);
         }
       };
     }
@@ -45,8 +54,10 @@ const Waveform: React.FC<WaveformProps> = ({
     if (wavesurfer.current) {
       if (isPaused) {
         wavesurfer.current.pause();
+        setIsPlaying(false);
       } else {
         wavesurfer.current.play();
+        setIsPlaying(true);
       }
     }
   }, [isPaused]);
