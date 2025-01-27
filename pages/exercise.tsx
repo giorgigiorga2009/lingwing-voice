@@ -1,16 +1,13 @@
 import Image from 'next/image';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Header } from '../components/header/Header';
+import { InvertedWaveShape, WaveShape } from '../components/overlaybutton';
 import Waveform from '../components/Waveform';
 import VoiceUrl from '../public/assets/sounds/testVoice.mp3';
 import CaptionsIcon from '../public/themes/images/v2/voice/captions.svg';
 import coloredPlayButton from '../public/themes/images/v2/voice/coloredPlayButton.svg';
-import LeftPart from '../public/themes/images/v2/voice/leftpart.svg';
-import LeftPartText from '../public/themes/images/v2/voice/leftPartText.svg';
 import PlayButton from '../public/themes/images/v2/voice/playButton.svg';
 import ProgressBar from '../public/themes/images/v2/voice/progressBar.svg';
-import RightPart from '../public/themes/images/v2/voice/rightpart.svg';
-import RightPartText from '../public/themes/images/v2/voice/rightPartText.svg';
 import SkipIcon from '../public/themes/images/v2/voice/skipIcon.svg';
 import TextMenuPlayButton from '../public/themes/images/v2/voice/textMenuPlayButton.svg';
 import TextMenuPlayButtonGray from '../public/themes/images/v2/voice/textMenuPlayButtonGray.svg';
@@ -18,6 +15,7 @@ import TranslateIcon from '../public/themes/images/v2/voice/translate.svg';
 import VoiceIcon from '../public/themes/images/v2/voice/voice.svg';
 import VoiceCircle from '../public/themes/images/v2/voice/voiceCircle.svg';
 import style from './exercise.module.scss';
+import { OvalProgressBar } from '../components/progressBar';
 const Exercise: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [displayContent, setDisplayContent] = useState<string>('');
@@ -67,6 +65,9 @@ const Exercise: React.FC = () => {
     const goodCount = scores.filter((score) => score === 'good').length;
     const percentage = Math.round((goodCount / scores.length) * 100);
     return `${percentage}%`;
+  };
+  const handleRightPartTextClick = () => {
+    console.log('clicked');
   };
 
   const handleWordClick = (
@@ -231,8 +232,8 @@ const Exercise: React.FC = () => {
             <Image
               src={CaptionsIcon}
               alt="Caption"
-              width={42}
-              height={42}
+              width={25}
+              height={25}
               className={style.caption}
             />
           </div>
@@ -241,8 +242,8 @@ const Exercise: React.FC = () => {
               src={TranslateIcon}
               alt="Translate"
               className={style.translate}
-              width={42}
-              height={42}
+              width={25}
+              height={25}
             />
           </div>
           <div className={style.textBox}>
@@ -484,25 +485,26 @@ const Exercise: React.FC = () => {
         </div>
 
         <div className={style.bottomBox}>
-          <Image
+          {/* <Image
             src={LeftPart}
             alt="Left Part"
             width={356}
             height={456}
             className={style.leftPart}
-          />
-          <Image
+          /> */}
+          {/* <Image
             src={RightPart}
             alt="Right Part"
             width={356}
             height={456}
             className={style.rightPart}
-          />
-          <Image
+          /> */}
+          {/* <Image
             src={ProgressBar}
             alt="Progress Bar"
             className={style.progressBar}
-          />
+          /> */}
+          <OvalProgressBar progress={50} maxProgress={100} />
           <div className={style.scoreBox}>
             <div className={style.scoreText}>0/</div>
             <div className={style.finalScoreText}>120</div>
@@ -518,16 +520,23 @@ const Exercise: React.FC = () => {
             <div className={style.skipText}>Skip</div>
             <Image src={SkipIcon} alt="Skip Icon" className={style.skipIcon} />
           </div>
-          <Image
+          {/* <Image
             src={LeftPartText}
             alt="Left Part Text"
             className={style.leftPartText}
-          />
-          <Image
-            src={RightPartText}
-            alt="Right Part Text"
-            className={style.rightPartText}
-          />
+          /> */}
+          {/* <div onClick={handleRightPartTextClick} style={{ cursor: 'pointer' }}>
+            <Image
+              src={RightPartText}
+              alt="Right Part Text"
+              className={style.rightPartText}
+              
+            /> */}
+          {/* </div> */}
+          <div className={style.waveShapeBox}>
+            <InvertedWaveShape />
+            <WaveShape />
+          </div>
         </div>
       </div>
     </div>
