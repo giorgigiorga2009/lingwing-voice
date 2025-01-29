@@ -179,8 +179,6 @@ export const WaveShape: React.FC<WaveShapeProps> = () => {
       progressContainer.style.display = 'flex';
       progressContainer.style.gap = '4px';
       progressContainer.style.alignItems = 'center';
-
-      // Current score
       const currentScore = document.createElement('span');
       currentScore.textContent = category.progress.split('/')[0];
       currentScore.style.color = '#EC9506';
@@ -195,12 +193,10 @@ export const WaveShape: React.FC<WaveShapeProps> = () => {
       currentScore.style.letterSpacing = '0.14px';
       currentScore.style.textTransform = 'uppercase';
 
-      // Separator
       const separator = document.createElement('span');
       separator.textContent = '/';
       separator.style.color = '#3C3C3C';
-
-      // Max score
+      
       const maxScore = document.createElement('span');
       maxScore.textContent = category.progress.split('/')[1];
       maxScore.style.color = '#3C3C3C';
@@ -256,20 +252,17 @@ export const WaveShape: React.FC<WaveShapeProps> = () => {
     closeButtonContainer.style.width = '100%';
     closeButtonContainer.style.padding = '8px';
 
-    // Close button as image
     const closeButton = document.createElement('img');
     closeButton.src = '/themes/images/v2/voice/Xbutton.svg';
     closeButton.style.cursor = 'pointer';
     closeButton.style.width = '26px';
     closeButton.style.height = '26px';
 
-    // Update click handler to remove both overlay and container
     const closeModal = () => {
       document.body.removeChild(overlay);
       document.body.removeChild(mainContainer);
     };
-
-    // Update close button onclick
+          
     closeButton.onclick = closeModal;
 
     // Update outside click handler
@@ -386,8 +379,6 @@ interface InvertedWaveShapeProps {}
 export const InvertedWaveShape: React.FC<InvertedWaveShapeProps> = () => {
   const handleLeisureActivitiesClick = (event: React.MouseEvent) => {
     event.stopPropagation();
-    // Same modal creation code as handleCelebrationsClick
-    // Copy the entire modal creation code from above and paste it here
   };
 
   return (
