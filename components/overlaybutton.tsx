@@ -179,6 +179,7 @@ export const WaveShape: React.FC<WaveShapeProps> = () => {
       progressContainer.style.display = 'flex';
       progressContainer.style.gap = '4px';
       progressContainer.style.alignItems = 'center';
+
       const currentScore = document.createElement('span');
       currentScore.textContent = category.progress.split('/')[0];
       currentScore.style.color = '#EC9506';
@@ -196,7 +197,7 @@ export const WaveShape: React.FC<WaveShapeProps> = () => {
       const separator = document.createElement('span');
       separator.textContent = '/';
       separator.style.color = '#3C3C3C';
-      
+
       const maxScore = document.createElement('span');
       maxScore.textContent = category.progress.split('/')[1];
       maxScore.style.color = '#3C3C3C';
@@ -262,7 +263,7 @@ export const WaveShape: React.FC<WaveShapeProps> = () => {
       document.body.removeChild(overlay);
       document.body.removeChild(mainContainer);
     };
-          
+
     closeButton.onclick = closeModal;
 
     // Update outside click handler

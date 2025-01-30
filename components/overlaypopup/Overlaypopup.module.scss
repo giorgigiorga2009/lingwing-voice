@@ -1,0 +1,168 @@
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.3);
+   z-index: 999;
+}
+
+.mainContainer {
+   position: fixed;
+   top: 53%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 30%;
+   height: 87.5%;
+   background-color: rgba(240, 241, 242, 0.9);
+   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+   border-radius: 20px;
+   padding: 20px;
+   z-index: 1000;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.headerBox {
+   background-color: white;
+   padding: 16px;
+   border-radius: 16px;
+   text-align: center;
+}
+
+.title {
+   // content: 'CHOOSE A CATEGORY'; // ver gavige
+   color: #6b21a8;
+   font-weight: 600;
+   font-size: 18px;
+   margin: 0;
+}
+
+.categoriesContainer {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   overflow-y: auto;
+}
+
+.categoryBox {
+   background-color: white;
+   border-radius: 16px;
+   padding: 12px;
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.iconContainer {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   background-color: #f3e8ff; // gaugebari
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.iconImage {
+   //gaugebari background-image
+   width: 70px;
+   height: 70px;
+}
+
+.textContainer {
+   flex: 1;
+}
+
+.name {
+   // content: category.name;
+   font-weight: 500;
+   font-size: 14px;
+}
+
+.progressContainer {
+   display: flex;
+   gap: 4px;
+   align-items: center;
+}
+
+.currentScore {
+   // content gaugebari
+   color: #ec9506;
+   text-align: center;
+   font-variant-numeric: lining-nums proportional-nums;
+   font-feature-settings: 'dlig' on;
+   font-family: 'Noto Sans Georgian';
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 20px;
+   letter-spacing: 0.14px;
+   text-transform: uppercase;
+}
+
+.seperator {
+   //content
+   color: #ec9506;
+   text-align: center;
+   font-variant-numeric: lining-nums proportional-nums;
+   font-feature-settings: 'dlig' on;
+   font-family: 'Noto Sans Georgian';
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 20px;
+   letter-spacing: 0.14px;
+   text-transform: uppercase;
+}
+.maxScore {
+   color: #3c3c3c;
+   font-variant-numeric: lining-nums proportional-nums;
+   font-feature-settings: 'dlig' on;
+   font-family: 'Noto Sans Georgian';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 20px;
+   letter-spacing: 0.16px;
+   text-transform: uppercase;
+}
+
+.button {
+   border-radius: 37px;
+   background: #ec9506;
+   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset;
+   display: flex;
+   padding: 4px 10px;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   color: #fff;
+   text-align: center;
+   font-variant-numeric: lining-nums proportional-nums;
+   font-feature-settings: 'dlig' on;
+   font-family: 'Noto Sans Georgian';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 20px; /* 125% */
+   letter-spacing: 0.16px;
+   text-transform: uppercase;
+   border: none;
+}
+
+.closeButtonContainer {
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+   padding: 8px;
+}
+
+.closeButton {
+   background-image: url('/themes/images/v2/voice/Xbutton.svg');
+   cursor: pointer;
+   width: 26px;
+   height: 26px;
+}

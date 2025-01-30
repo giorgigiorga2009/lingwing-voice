@@ -15,6 +15,7 @@ import TranslateIcon from '../public/themes/images/v2/voice/translate.svg';
 import VoiceIcon from '../public/themes/images/v2/voice/voice.svg';
 import VoiceCircle from '../public/themes/images/v2/voice/voiceCircle.svg';
 import style from './exercise.module.scss';
+import OverlayPopup from '@components/overlaypopup/Overlaypopup';
 
 const Exercise: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -201,6 +202,12 @@ const Exercise: React.FC = () => {
     };
   }, [originalAudio, copyAudio]);
 
+  const newDivStyle = {
+    backgroundColor: 'black',
+    width: '100%',
+  };
+
+  return <OverlayPopup />;
   return (
     <div className={style.exerciseContainer}>
       <Header
@@ -216,7 +223,7 @@ const Exercise: React.FC = () => {
         showLogo={false}
         hideAuthBox={true}
       />
-
+      <div style={newDivStyle}></div>
       <div className={style.exerciseBox}>
         <div className={style.topBox}>
           <div className={style.voiceBox}>
